@@ -1,0 +1,214 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix univTitul: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Titulacion> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univTitul: a owl:Ontology ;
+    dc:creator "Víctor Morcuende" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "Template Ontology" ;
+    owl:versionInfo "0.0.1" .
+
+univTitul:cod_grado_presencialidad a owl:DatatypeProperty ;
+    rdfs:label "cod_grado_presencialidad" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_idioma_extranjero a owl:DatatypeProperty ;
+    rdfs:label "cod_idioma_extranjero" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_impartido a owl:DatatypeProperty ;
+    rdfs:label "cod_impartido" ;
+    rdfs:domain univTitul:impartido ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_interuniversitario a owl:DatatypeProperty ;
+    rdfs:label "cod_interuniversitario" ;
+    rdfs:domain univTitul:interuniversitario ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_rama a owl:DatatypeProperty ;
+    rdfs:label "cod_rama" ;
+    rdfs:domain univTitul:rama ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_rol_coordinacion a owl:DatatypeProperty ;
+    rdfs:label "cod_rol_coordinacion" ;
+    rdfs:domain univTitul:rol_coordinacion ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_situacion_actual a owl:DatatypeProperty ;
+    rdfs:label "cod_situacion_actual" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_tipo_estudio a owl:DatatypeProperty ;
+    rdfs:label "cod_tipo_estudio" ;
+    rdfs:domain univTitul:tipo_estudio ;
+    rdfs:range xsd:string .
+
+univTitul:cod_tipo_unidad_responsable a owl:DatatypeProperty ;
+    rdfs:label "cod_tipo_unidad_responsable" ;
+    rdfs:domain univTitul:unidad_responsable ;
+    rdfs:range xsd:integer .
+
+univTitul:cod_titulacion a owl:DatatypeProperty ;
+    rdfs:label "cod_titulacion" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:string .
+
+univTitul:cod_unidad_responsable a owl:DatatypeProperty ;
+    rdfs:label "cod_unidad_responsable" ;
+    rdfs:domain univTitul:unidad_responsable ;
+    rdfs:range xsd:string .
+
+univTitul:cod_universidad a owl:DatatypeProperty ;
+    rdfs:label "cod_universidad" ;
+    rdfs:domain univTitul:universidad ;
+    rdfs:range xsd:string .
+
+univTitul:estaAsociadoA a owl:ObjectProperty ;
+    rdfs:label "esta asociado a" ;
+    rdfs:domain univTitul:curso_academico ;
+    rdfs:range univTitul:universidad .
+
+univTitul:grado_presencialidad a owl:DatatypeProperty ;
+    rdfs:label "grado_presencialidad" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:string .
+
+univTitul:idioma_extranjero a owl:DatatypeProperty ;
+    rdfs:label "idioma_extranjero" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:string .
+
+univTitul:num_creditos_necesarios a owl:DatatypeProperty ;
+    rdfs:label "num_creditos_necesarios" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:num_creditos_ofertados a owl:DatatypeProperty ;
+    rdfs:label "num_creditos_ofertados" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:situacion_actual a owl:DatatypeProperty ;
+    rdfs:label "situacion_actual" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range xsd:string .
+
+univTitul:tipo_unidad_responsable a owl:DatatypeProperty ;
+    rdfs:label "tipo_unidad_responsable" ;
+    rdfs:domain univTitul:unidad_responsable ;
+    rdfs:range xsd:string .
+
+univTitul:anio_inicio a owl:Class ;
+    rdfs:label "anio_inicio" .
+
+univTitul:correspondeA a owl:ObjectProperty ;
+    rdfs:label "corresponde a" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range univTitul:rama .
+
+univTitul:creadaEn a owl:ObjectProperty ;
+    rdfs:label "creada en" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range univTitul:anio_inicio .
+
+univTitul:curso_academico a owl:Class ;
+    rdfs:label "curso_academico" .
+
+univTitul:estaAsociadaA a owl:ObjectProperty ;
+    rdfs:label "esta asociada a" ;
+    rdfs:domain univTitul:titulacion .
+
+univTitul:ofrece a owl:ObjectProperty ;
+    rdfs:label "ofrece" ;
+    rdfs:domain univTitul:universidad ;
+    rdfs:range univTitul:tipo_estudio .
+
+univTitul:perteneceA a owl:ObjectProperty ;
+    rdfs:label "pertenece a" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range univTitul:tipo_estudio .
+
+univTitul:precio_credito a owl:Class ;
+    rdfs:label "precio_credito" .
+
+univTitul:precio_tutela a owl:Class ;
+    rdfs:label "precio_tutela" .
+
+univTitul:tiene a owl:ObjectProperty ;
+    rdfs:label "tiene" ;
+    rdfs:domain univTitul:interuniversitario ;
+    rdfs:range univTitul:rol_coordinacion .
+
+univTitul:cuesta a owl:ObjectProperty ;
+    rdfs:label "cuesta" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range univTitul:precio_credito,
+        univTitul:precio_tutela .
+
+univTitul:es a owl:ObjectProperty ;
+    rdfs:label "es" ;
+    rdfs:domain univTitul:titulacion ;
+    rdfs:range univTitul:impartido,
+        univTitul:interuniversitario .
+
+univTitul:impartido a owl:Class ;
+    rdfs:label "impartido" .
+
+univTitul:rama a owl:Class ;
+    rdfs:label "rama" .
+
+univTitul:rol_coordinacion a owl:Class ;
+    rdfs:label "rol_coordinacion" .
+
+univTitul:interuniversitario a owl:Class ;
+    rdfs:label "interuniversitario" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:tiene ] .
+
+univTitul:tipo_estudio a owl:Class ;
+    rdfs:label "tipo_estudio" .
+
+univTitul:unidad_responsable a owl:Class ;
+    rdfs:label "unidad_responsable" .
+
+univTitul:universidad a owl:Class ;
+    rdfs:label "universidad" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:ofrece ] .
+
+univTitul:titulacion a owl:Class ;
+    rdfs:label "titulacion" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:perteneceA ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:correspondeA ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:es ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:estaAsociadaA ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:es ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:creadaEn ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:cuesta ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:cuesta ] .
+
