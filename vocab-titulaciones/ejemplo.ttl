@@ -1,0 +1,40 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix univTitul: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Titulacion> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univTitul:Grado_en_Ingenieria_Informatica a univTitul:Titulacion ;
+    dct:identifier "2500397" ;
+    univTitul:idiomaExtranjero "Ingles"^^xsd:string ;
+    univTitul:impartida "true"^^xsd:boolean ;
+    univTitul:numCreditosNecesarios "240"^^xsd:integer ;
+    univTitul:numCreditosOfertados "470"^^xsd:integer ;
+    univTitul:anioCreada "20070701"^^xsd:date ;
+    univTitul:tipoEstudio <http://vocab.universidadesabiertas.es/kos/tipo-estudio/grado> ;
+    univTitul:rama <http://vocab.universidadesabiertas.es/kos/rama/ingenieria-y-arquitectura> ;
+    univTitul:situacionActual <http://vocab.universidadesabiertas.es/kos/situacion-actual/activo> ;
+    univTitul:gradoPresencialidad <http://vocab.universidadesabiertas.es/kos/grado-presencialidad/presencial> ;
+    univTitul:es univTitul:Interuniversitario ;
+    univTitul:cuesta univTitul:Precio ;
+    univTitul:estaAsociadaA "ETSIINF" .
+    
+univTitul:UPM univTitul:ofrece univTitul:Grado_en_Ingenieria_Informatica ;
+    dct:identifier "025"^^xsd:string ;
+    univTitul:tieneAsociado "2021-22"^^xsd:string .
+
+univTitul:ETSIINF dct:identifier "28027114" ;
+    univTitul:tipoUnidadResponsable <http://vocab.universidadesabiertas.es/kos/tipo-unidad-responsable/centro> .
+
+univTitul:Interuniversitario dct:identifier "1"^^xsd:string ;
+    univTitul:rolCoordinacion <http://vocab.universidadesabiertas.es/kos/rol-coordinacion/universidad-es-coordinadora> .
+
+univTitul:Precio univTitul:precioCredMatr1 "21,94"^^xsd:double ;
+    univTitul:precioCredMatr2 "41,05"^^xsd:double ;
+    univTitul:precioCredMatr3 "82,3"^^xsd:double ;
+    univTitul:precioCredMatr4 "113,71"^^xsd:double ;
+    univTitul:precioCredMatr5 "201,94"^^xsd:double .
