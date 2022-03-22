@@ -1,0 +1,203 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix univTitul: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Titulacion> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+dct:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:domain univTitul:Universidad ;
+    rdfs:range xsd:string .
+
+univTitul: a owl:Ontology ;
+    dc:creator "Víctor Morcuende" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "Template Ontology" ;
+    owl:versionInfo "0.0.2" .
+
+univTitul:anioCreada a owl:DatatypeProperty ;
+    rdfs:label "anio creada" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:estaAsociadoA a owl:ObjectProperty ;
+    rdfs:label "esta asociado a" ;
+    rdfs:domain univTitul:CursoAcademico ;
+    rdfs:range univTitul:Universidad .
+
+univTitul:gradoPresencialidad a owl:ObjectProperty ;
+    rdfs:label "grado presencialidad" ;
+    rdfs:domain univTitul:Titulacion .
+
+univTitul:idiomaExtranjero a owl:DatatypeProperty ;
+    rdfs:label "idioma extranjero" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range xsd:string .
+
+univTitul:impartida a owl:DatatypeProperty ;
+    rdfs:label "impartida" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range xsd:boolean .
+
+univTitul:numCreditosNecesarios a owl:DatatypeProperty ;
+    rdfs:label "num creditos necesarios" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:numCreditosOfertados a owl:DatatypeProperty ;
+    rdfs:label "num creditos ofertados" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range xsd:integer .
+
+univTitul:precioCredMatr1 a owl:DatatypeProperty ;
+    rdfs:label "precio cred matr1" ;
+    rdfs:domain univTitul:Precio ;
+    rdfs:range xsd:double .
+
+univTitul:precioCredMatr2 a owl:DatatypeProperty ;
+    rdfs:label "precio cred matr2" ;
+    rdfs:domain univTitul:Precio ;
+    rdfs:range xsd:double .
+
+univTitul:precioCredMatr3 a owl:DatatypeProperty ;
+    rdfs:label "precio cred matr3" ;
+    rdfs:domain univTitul:Precio ;
+    rdfs:range xsd:double .
+
+univTitul:precioCredMatr4 a owl:DatatypeProperty ;
+    rdfs:label "precio cred matr4" ;
+    rdfs:domain univTitul:Precio ;
+    rdfs:range xsd:double .
+
+univTitul:precioCredMatr5 a owl:DatatypeProperty ;
+    rdfs:label "precio cred matr5" ;
+    rdfs:domain univTitul:Precio ;
+    rdfs:range xsd:double .
+
+univTitul:precioTutela a owl:DatatypeProperty ;
+    rdfs:label "precio tutela" ;
+    rdfs:domain univTitul:Precio ;
+    rdfs:range xsd:integer .
+
+univTitul:rama a owl:ObjectProperty ;
+    rdfs:label "rama" ;
+    rdfs:domain univTitul:Titulacion .
+
+univTitul:rolCoordinacion a owl:ObjectProperty ;
+    rdfs:label "rol coordinacion" ;
+    rdfs:domain univTitul:Interuniversitario .
+
+univTitul:situacionActual a owl:ObjectProperty ;
+    rdfs:label "situacion actual" ;
+    rdfs:domain univTitul:Titulacion .
+
+univTitul:tipoEstudio a owl:ObjectProperty ;
+    rdfs:label "tipo estudio" ;
+    rdfs:domain univTitul:Titulacion .
+
+univTitul:tipoUnidadResponsable a owl:ObjectProperty ;
+    rdfs:label "tipo unidad responsable" ;
+    rdfs:domain univTitul:UnidadResponsable .
+
+geo:lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:double .
+
+geo:long a owl:DatatypeProperty ;
+    rdfs:label "long" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:double .
+
+geosparql:asWKT a owl:DatatypeProperty ;
+    rdfs:label "as w k t" ;
+    rdfs:domain geosparql:Geometry ;
+    rdfs:range xsd:wKTLiteral .
+
+geosparql:hasGeometry a owl:ObjectProperty ;
+    rdfs:label "has geometry" ;
+    rdfs:domain geosparql:Geometry ;
+    rdfs:range geosparql:Feature .
+
+org:hasSite a owl:ObjectProperty ;
+    rdfs:label "has site" ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Site .
+
+univTitul:CursoAcademico a owl:Class ;
+    rdfs:label "Curso Academico" .
+
+univTitul:cuesta a owl:ObjectProperty ;
+    rdfs:label "cuesta" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range univTitul:Precio .
+
+univTitul:es a owl:ObjectProperty ;
+    rdfs:label "es" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range univTitul:Interuniversitario .
+
+univTitul:estaAsociadaA a owl:ObjectProperty ;
+    rdfs:label "esta asociada a" ;
+    rdfs:domain univTitul:Titulacion ;
+    rdfs:range univTitul:UnidadResponsable .
+
+univTitul:ofrece a owl:ObjectProperty ;
+    rdfs:label "ofrece" ;
+    rdfs:domain univTitul:Universidad ;
+    rdfs:range univTitul:Titulacion .
+
+org:Site a owl:Class ;
+    rdfs:label "Site" ;
+    rdfs:subClassOf geosparql:Feature .
+
+univTitul:Interuniversitario a owl:Class ;
+    rdfs:label "Interuniversitario" .
+
+univTitul:UnidadResponsable a owl:Class ;
+    rdfs:label "Unidad Responsable" .
+
+geosparql:Feature a owl:Class ;
+    rdfs:label "Feature" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+geosparql:Point a owl:Class ;
+    rdfs:label "Point" ;
+    rdfs:subClassOf geosparql:Geometry .
+
+geosparql:SpatialObject a owl:Class ;
+    rdfs:label "Spatial Object" .
+
+org:Organization a owl:Class ;
+    rdfs:label "Organization" .
+
+univTitul:Universidad a owl:Class ;
+    rdfs:label "Universidad" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:ofrece ],
+        org:Organization .
+
+geosparql:Geometry a owl:Class ;
+    rdfs:label "Geometry" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+univTitul:Precio a owl:Class ;
+    rdfs:label "Precio" .
+
+univTitul:Titulacion a owl:Class ;
+    rdfs:label "Titulacion" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:es ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:estaAsociadaA ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univTitul:cuesta ] .
+
