@@ -1,0 +1,394 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix univAcceso: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Acceso> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univAcceso: a owl:Ontology ;
+    dc:creator "Víctor Morcuende" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "Template Ontology" ;
+    owl:versionInfo "0.0.1" .
+
+univAcceso:anio_acceso_SUE a owl:Class ;
+    rdfs:label "anio_acceso_ S U E" .
+
+univAcceso:anio_fin_estudio_acceso a owl:DatatypeProperty ;
+    rdfs:label "anio_fin_estudio_acceso" ;
+    rdfs:domain univAcceso:estudio_acceso ;
+    rdfs:range xsd:integer .
+
+univAcceso:anio_nacimiento a owl:Class ;
+    rdfs:label "anio_nacimiento" .
+
+univAcceso:cod_agregacion_paises_fin_estudio_acceso a owl:DatatypeProperty ;
+    rdfs:label "cod_agregacion_paises_fin_estudio_acceso" ;
+    rdfs:domain univAcceso:agregacion_paises_fin_estudio_acceso ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_agregacion_paises_nacionalidad a owl:DatatypeProperty ;
+    rdfs:label "cod_agregacion_paises_nacionalidad" ;
+    rdfs:domain univAcceso:agregacion_paises_nacionalidad ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_agregacion_paises_residencia a owl:DatatypeProperty ;
+    rdfs:label "cod_agregacion_paises_residencia" ;
+    rdfs:domain univAcceso:agregacion_paises_residencia ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_campus a owl:DatatypeProperty ;
+    rdfs:label "cod_campus" ;
+    rdfs:domain univAcceso:campus ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_centro a owl:DatatypeProperty ;
+    rdfs:label "cod_centro" ;
+    rdfs:domain univAcceso:centro ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_comunidad_centro_sec a owl:DatatypeProperty ;
+    rdfs:label "cod_comunidad_centro_sec" ;
+    rdfs:domain univAcceso:comunidad_centro_sec ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_continente_fin_estudio_acceso a owl:DatatypeProperty ;
+    rdfs:label "cod_continente_fin_estudio_acceso" ;
+    rdfs:domain univAcceso:continente_fin_estudio_acceso ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_continente_nacionalidad a owl:DatatypeProperty ;
+    rdfs:label "cod_continente_nacionalidad" ;
+    rdfs:domain univAcceso:continente_nacionalidad ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_continente_residencia a owl:DatatypeProperty ;
+    rdfs:label "cod_continente_residencia" ;
+    rdfs:domain univAcceso:continente_residencia ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_cupacion_estudiante a owl:DatatypeProperty ;
+    rdfs:label "cod_cupacion_estudiante" ;
+    rdfs:domain univAcceso:ocupacion_estudiante ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_cupacion_madre a owl:DatatypeProperty ;
+    rdfs:label "cod_cupacion_madre" ;
+    rdfs:domain univAcceso:ocupacion_madre ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_cupacion_padre a owl:DatatypeProperty ;
+    rdfs:label "cod_cupacion_padre" ;
+    rdfs:domain univAcceso:ocupacion_padre ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_dedicacion a owl:DatatypeProperty ;
+    rdfs:label "cod_dedicacion" ;
+    rdfs:domain univAcceso:dedicacion ;
+    rdfs:range xsd:integer .
+
+univAcceso:cod_especialidad_acceso a owl:DatatypeProperty ;
+    rdfs:label "cod_especialidad_acceso" ;
+    rdfs:domain univAcceso:estudio_acceso ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_estudio_acceso a owl:DatatypeProperty ;
+    rdfs:label "cod_estudio_acceso" ;
+    rdfs:domain univAcceso:estudio_acceso ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_familia_numerosa a owl:DatatypeProperty ;
+    rdfs:label "cod_familia_numerosa" ;
+    rdfs:domain univAcceso:familia_numerosa ;
+    rdfs:range xsd:integer .
+
+univAcceso:cod_forma_admision a owl:DatatypeProperty ;
+    rdfs:label "cod_forma_admision" ;
+    rdfs:domain univAcceso:admision ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_genero a owl:DatatypeProperty ;
+    rdfs:label "cod_genero" ;
+    rdfs:domain univAcceso:genero ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_municipio_centro_sec a owl:DatatypeProperty ;
+    rdfs:label "cod_municipio_centro_sec" ;
+    rdfs:domain univAcceso:municipio_centro_sec ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_naturaleza_centro a owl:DatatypeProperty ;
+    rdfs:label "cod_naturaleza_centro" ;
+    rdfs:domain univAcceso:centro ;
+    rdfs:range xsd:integer .
+
+univAcceso:cod_naturaleza_centro_sec a owl:DatatypeProperty ;
+    rdfs:label "cod_naturaleza_centro_sec" ;
+    rdfs:domain univAcceso:naturaleza_centro_sec ;
+    rdfs:range xsd:integer .
+
+univAcceso:cod_nivel_estudios_madre a owl:DatatypeProperty ;
+    rdfs:label "cod_nivel_estudios_madre" ;
+    rdfs:domain univAcceso:nivel_estudios_madre ;
+    rdfs:range xsd:integer .
+
+univAcceso:cod_nivel_estudios_padre a owl:DatatypeProperty ;
+    rdfs:label "cod_nivel_estudios_padre" ;
+    rdfs:domain univAcceso:nivel_estudios_padre ;
+    rdfs:range xsd:integer .
+
+univAcceso:cod_pais_fin_estudio_acceso a owl:DatatypeProperty ;
+    rdfs:label "cod_pais_fin_estudio_acceso" ;
+    rdfs:domain univAcceso:pais_fin_estudio_acceso ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_pais_nacionalidad a owl:DatatypeProperty ;
+    rdfs:label "cod_pais_nacionalidad" ;
+    rdfs:domain univAcceso:pais_nacionalidad ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_pais_residencia a owl:DatatypeProperty ;
+    rdfs:label "cod_pais_residencia" ;
+    rdfs:domain univAcceso:pais_residencia ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_provincia_centro_sec a owl:DatatypeProperty ;
+    rdfs:label "cod_provincia_centro_sec" ;
+    rdfs:domain univAcceso:provincia_centro_sec ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_tipo_estudio a owl:DatatypeProperty ;
+    rdfs:label "cod_tipo_estudio" ;
+    rdfs:domain univAcceso:tipo_estudio ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_titulacion a owl:DatatypeProperty ;
+    rdfs:label "cod_titulacion" ;
+    rdfs:domain univAcceso:titulacion ;
+    rdfs:range xsd:string .
+
+univAcceso:cod_universidad a owl:DatatypeProperty ;
+    rdfs:label "cod_universidad" ;
+    rdfs:domain univAcceso:universidad ;
+    rdfs:range xsd:string .
+
+univAcceso:especialidad_acceso a owl:DatatypeProperty ;
+    rdfs:label "especialidad_acceso" ;
+    rdfs:domain univAcceso:estudio_acceso ;
+    rdfs:range xsd:string .
+
+univAcceso:estaAsociadoA a owl:ObjectProperty ;
+    rdfs:label "esta asociado a" ;
+    rdfs:domain univAcceso:curso_academico ;
+    rdfs:range univAcceso:universidad .
+
+univAcceso:forma_admision a owl:DatatypeProperty ;
+    rdfs:label "forma_admision" ;
+    rdfs:domain univAcceso:admision ;
+    rdfs:range xsd:string .
+
+univAcceso:ind_accede_al_sue_por_1a_vez a owl:Class ;
+    rdfs:label "ind_accede_al_sue_por_1a_vez" .
+
+univAcceso:ind_curso_adaptacion a owl:Class ;
+    rdfs:label "ind_curso_adaptacion" .
+
+univAcceso:ind_se_matricula_en_primero a owl:Class ;
+    rdfs:label "ind_se_matricula_en_primero" .
+
+univAcceso:naturaleza_centro a owl:DatatypeProperty ;
+    rdfs:label "naturaleza_centro" ;
+    rdfs:domain univAcceso:centro ;
+    rdfs:range xsd:string .
+
+univAcceso:nota_admision a owl:DatatypeProperty ;
+    rdfs:label "nota_admision" ;
+    rdfs:domain univAcceso:admision ;
+    rdfs:range xsd:decimal .
+
+univAcceso:tipo_especialidad_acceso a owl:DatatypeProperty ;
+    rdfs:label "tipo_especialidad_acceso" ;
+    rdfs:domain univAcceso:estudio_acceso ;
+    rdfs:range xsd:string .
+
+geo:lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:decimal .
+
+geo:long a owl:DatatypeProperty ;
+    rdfs:label "long" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:decimal .
+
+geosparql:asWKT a owl:DatatypeProperty ;
+    rdfs:label "as w k t" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:wKTLiteral .
+
+geosparql:hasGeometry a owl:ObjectProperty ;
+    rdfs:label "has geometry" ;
+    rdfs:domain geosparql:Feature ;
+    rdfs:range geosparql:Geometry .
+
+univAcceso:agregacion_paises_fin_estudio_acceso a owl:Class ;
+    rdfs:label "agregacion_paises_fin_estudio_acceso" ;
+    rdfs:subClassOf univAcceso:continente_fin_estudio_acceso .
+
+univAcceso:agregacion_paises_nacionalidad a owl:Class ;
+    rdfs:label "agregacion_paises_nacionalidad" ;
+    rdfs:subClassOf univAcceso:continente_nacionalidad .
+
+univAcceso:agregacion_paises_residencia a owl:Class ;
+    rdfs:label "agregacion_paises_residencia" ;
+    rdfs:subClassOf univAcceso:continente_residencia .
+
+univAcceso:curso_academico a owl:Class ;
+    rdfs:label "curso_academico" .
+
+univAcceso:dedicacion a owl:Class ;
+    rdfs:label "dedicacion" .
+
+univAcceso:estaUbicado a owl:ObjectProperty ;
+    rdfs:label "esta ubicado" ;
+    rdfs:domain univAcceso:centro ;
+    rdfs:range univAcceso:campus .
+
+univAcceso:familia_numerosa a owl:Class ;
+    rdfs:label "familia_numerosa" .
+
+univAcceso:genero a owl:Class ;
+    rdfs:label "genero" .
+
+univAcceso:municipio_centro_sec a owl:Class ;
+    rdfs:label "municipio_centro_sec" ;
+    rdfs:subClassOf univAcceso:provincia_centro_sec,
+        geosparql:Feature .
+
+univAcceso:naturaleza_centro_sec a owl:Class ;
+    rdfs:label "naturaleza_centro_sec" .
+
+univAcceso:nivel_estudios_madre a owl:Class ;
+    rdfs:label "nivel_estudios_madre" .
+
+univAcceso:nivel_estudios_padre a owl:Class ;
+    rdfs:label "nivel_estudios_padre" .
+
+univAcceso:ocupacion_estudiante a owl:Class ;
+    rdfs:label "ocupacion_estudiante" .
+
+univAcceso:ocupacion_madre a owl:Class ;
+    rdfs:label "ocupacion_madre" .
+
+univAcceso:ocupacion_padre a owl:Class ;
+    rdfs:label "ocupacion_padre" .
+
+univAcceso:ofrece a owl:ObjectProperty ;
+    rdfs:label "ofrece" ;
+    rdfs:domain univAcceso:universidad ;
+    rdfs:range univAcceso:tipo_estudio .
+
+univAcceso:pais_nacionalidad a owl:Class ;
+    rdfs:label "pais_nacionalidad" ;
+    rdfs:subClassOf univAcceso:continente_nacionalidad,
+        geosparql:Feature .
+
+univAcceso:pais_residencia a owl:Class ;
+    rdfs:label "pais_residencia" ;
+    rdfs:subClassOf univAcceso:continente_residencia,
+        geosparql:Feature .
+
+univAcceso:perteneceA a owl:ObjectProperty ;
+    rdfs:label "pertenece a" ;
+    rdfs:domain univAcceso:titulacion .
+
+univAcceso:posee a owl:ObjectProperty ;
+    rdfs:label "posee" ;
+    rdfs:domain univAcceso:universidad ;
+    rdfs:range univAcceso:centro .
+
+univAcceso:seAccedeCon a owl:ObjectProperty ;
+    rdfs:label "se accede con" ;
+    rdfs:domain univAcceso:universidad .
+
+univAcceso:seRealizaEn a owl:ObjectProperty ;
+    rdfs:label "se realiza en" ;
+    rdfs:domain univAcceso:estudio_acceso ;
+    rdfs:range univAcceso:pais_fin_estudio_acceso .
+
+univAcceso:campus a owl:Class ;
+    rdfs:label "campus" .
+
+univAcceso:comunidad_centro_sec a owl:Class ;
+    rdfs:label "comunidad_centro_sec" .
+
+univAcceso:pais_fin_estudio_acceso a owl:Class ;
+    rdfs:label "pais_fin_estudio_acceso" ;
+    rdfs:subClassOf univAcceso:continente_fin_estudio_acceso,
+        geosparql:Feature .
+
+univAcceso:provincia_centro_sec a owl:Class ;
+    rdfs:label "provincia_centro_sec" ;
+    rdfs:subClassOf univAcceso:comunidad_centro_sec .
+
+univAcceso:tipo_estudio a owl:Class ;
+    rdfs:label "tipo_estudio" .
+
+univAcceso:titulacion a owl:Class ;
+    rdfs:label "titulacion" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univAcceso:perteneceA ] .
+
+geosparql:Geometry a owl:Class ;
+    rdfs:label "Geometry" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+geosparql:SpatialObject a owl:Class ;
+    rdfs:label "Spatial Object" .
+
+univAcceso:admision a owl:Class ;
+    rdfs:label "admision" .
+
+univAcceso:continente_fin_estudio_acceso a owl:Class ;
+    rdfs:label "continente_fin_estudio_acceso" .
+
+univAcceso:continente_nacionalidad a owl:Class ;
+    rdfs:label "continente_nacionalidad" .
+
+univAcceso:continente_residencia a owl:Class ;
+    rdfs:label "continente_residencia" .
+
+geosparql:Point a owl:Class ;
+    rdfs:label "Point" ;
+    rdfs:subClassOf geosparql:Geometry .
+
+univAcceso:centro a owl:Class ;
+    rdfs:label "centro" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univAcceso:estaUbicado ] .
+
+univAcceso:universidad a owl:Class ;
+    rdfs:label "universidad" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univAcceso:ofrece ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univAcceso:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univAcceso:seAccedeCon ] .
+
+geosparql:Feature a owl:Class ;
+    rdfs:label "Feature" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+univAcceso:estudio_acceso a owl:Class ;
+    rdfs:label "estudio_acceso" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univAcceso:seRealizaEn ] .
+
