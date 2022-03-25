@@ -31,7 +31,7 @@ univAcceso:David_Perea a univAcceso:Estudiante ;
     univAcceso:nivelEstudiosPadre <http://vocab.universidadesabiertas.es/kos/nivel-estudios-padre/estudios-superiores> ;
     univAcceso:estudia univAcceso:UPM ;
     univAcceso:provieneDe univAcceso:IES_La_Senda ;
-    univAcceso:posee univAcceso:España ;
+    univAcceso:posee univAcceso:Espagna ;
     univAcceso:posee univAcceso:Europa ;
     univAcceso:posee univAcceso:UnionEuropea ;
     rdfs:subClassOf schema:Person .
@@ -61,14 +61,14 @@ univAcceso:IES_La_Senda a univAcceso:CentroSec ;
     univAcceso:estaUbicado univAcceso:Madrid ;
     univAcceso:estaUbicado univAcceso:Comunidad_de_Madrid .
 
-univAcceso:España a univAcceso:PaisNacionalidad ;
+univAcceso:Espagna a univAcceso:PaisNacionalidad ;
     a univAcceso:PaisResidencia ;
     a univAcceso:PaisFinEstudioAcceso ;
     dct:identifier "108" ;
     rdfs:subClassOf univAcceso:ContinenteNacionalidad ;
     rdfs:subClassOf univAcceso:ContinenteResidencia ;
     rdfs:subClassOf univAcceso:ContinenteFinEstudioAcceso ;
-    rdfs:subClassOf geosparql:Feature_España .
+    rdfs:subClassOf geosparql:Feature_Espagna .
 
 univAcceso:Europa a univAcceso:ContinenteNacionalidad ;
     a univAcceso:ContinenteResidencia ;
@@ -95,12 +95,12 @@ univAcceso:Madrid a univAcceso:ProvinciaCentroSec ;
 univAcceso:Comunidad_de_Madrid a univAcceso:ComunidadCentroSec ;
     dct:identifier "13" .
 
-geosparql:Feature_España geosparql:hasGeometry geosparql:Geometry_España .
+geosparql:Feature_Espagna geosparql:hasGeometry geosparql:Geometry_Espagna .
 
-geosparql:Geometry_España a geosparql:Point_España ;
+geosparql:Geometry_Espagna a geosparql:Point_Espagna ;
     geosparql:asWKT "POINT (1.601554,42.546245)"^^geosparql:wktLiteral .
 
-univAcceso:Point_España a geosparql:Point ;
+univAcceso:Point_Espagna a geosparql:Point ;
     geo:long "1.601554"^^xsd:double ;
     geo:lat "42.546245"^^xsd:double .
 
