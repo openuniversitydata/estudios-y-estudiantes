@@ -21,13 +21,18 @@ univTitul:Grado_en_Ingenieria_Informatica a univTitul:Titulacion ;
     univTitul:gradoPresencialidad <http://vocab.universidadesabiertas.es/kos/grado-presencialidad/presencial> ;
     univTitul:es univTitul:Interuniversitario ;
     univTitul:cuesta univTitul:Precio ;
-    univTitul:estaAsociadaA "ETSIINF" .
+    univTitul:estaAsociadaA univTitul:ETSIINF .
     
-univTitul:UPM univTitul:ofrece univTitul:Grado_en_Ingenieria_Informatica ;
+univTitul:UPM a univTitul:Universidad ;
     dct:identifier "025"^^xsd:string ;
-    univTitul:tieneAsociado "2021-22"^^xsd:string .
+    univTitul:ofrece univTitul:Grado_en_Ingenieria_Informatica ;
+    univTitul:tieneAsociado univTitul:2021_22 ;
+    rdfs:subClassOf org:Organization .
 
-univTitul:ETSIINF dct:identifier "28027114" ;
+univTitul:2021_22 a univTitul:CursoAcademico .
+
+univTitul:ETSIINF a univTitul:UnidadResponsable ;
+    dct:identifier "28027114" ;
     univTitul:tipoUnidadResponsable <http://vocab.universidadesabiertas.es/kos/tipo-unidad-responsable/centro> .
 
 univTitul:Interuniversitario dct:identifier "1"^^xsd:string ;
