@@ -33,20 +33,20 @@ univMov:UPM a univMov:Universidad ;
 univMov:Universidade_Lusofona_Do_Porto a univMov:UniversidadDestino ;
     dct:identifier "P Porto57"^^xsd:string ;
     univMov:ambitoUnivDestino <http://vocab.universidadesabiertas.es/kos/ambito-univ-destino/informatica> ;
-    univMov:estaUbicada univMatr:Espagna ;
-    univMov:estaUbicada univMatr:Europa ;
-    univMov:estaUbicada univMatr:UnionEuropea ;
-    univMov:estaUbicada univMatr:Getafe ;
-    univMov:estaUbicada univMatr:Madrid ;
-    univMov:estaUbicada univMatr:Comunidad_de_Madrid .
+    univMov:estaUbicada univMov:Espagna ;
+    univMov:estaUbicada univMov:Europa ;
+    univMov:estaUbicada univMov:UnionEuropea ;
+    univMov:estaUbicada univMov:Getafe ;
+    univMov:estaUbicada univMov:Madrid ;
+    univMov:estaUbicada univMov:Comunidad_de_Madrid .
 
 univMov:UPM a univMov:UniversidadProcedencia ;
     dct:identifier "025"^^xsd:string ;
     univMov:ambitoUnivProcedencia <http://vocab.universidadesabiertas.es/kos/ambito-univ-procedencia/informatica> ;
-    univMov:estaUbicada univMatr:Espagna ;
-    univMov:estaUbicada univMatr:Europa ;
-    univMov:estaUbicada univMatr:UnionEuropea ;
-    univMov:estaUbicada univMatr:Madrid .
+    univMov:estaUbicada univMov:Espagna ;
+    univMov:estaUbicada univMov:Europa ;
+    univMov:estaUbicada univMov:UnionEuropea ;
+    univMov:estaUbicada univMov:Madrid .
 
 univMov:2021_22 a univMov:CursoAcademico .
 
