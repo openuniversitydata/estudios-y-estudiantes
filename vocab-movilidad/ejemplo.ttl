@@ -1,0 +1,114 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix univMov: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Movilidad> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univMov:David_Perea a univMov:Estudiante ;
+    univMov:anioNacimiento "2000"^^xsd:integer ;
+    univMov:mesInicioPrograma "2021-09-01"^^xsd:date ;
+    univMov:mesFinPrograma "2022-01-15"^^xsd:date ;
+    univMov:genero <http://vocab.universidadesabiertas.es/kos/genero/hombre> ;
+    univMov:nivelFormativo <http://vocab.universidadesabiertas.es/kos/nivel-formativo/grado> ;
+    univMov:estudia univMov:UPM ;
+    univMov:cursa univMov:Grado_en_Ingenieria_Informatica ;
+    univMov:posee univMov:Espagna ;
+    univMov:posee univMov:Europa ;
+    univMov:posee univMov:UnionEuropea ;
+    univMov:tiene univMov:Universidade_Lusofona_Do_Porto ;
+    univMov:tiene univMov:UPM ;
+    rdfs:subClassOf schema:Person .
+    
+univMov:UPM a univMov:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univMov:tieneAsociado univMov:2021_22 ;
+    univMov:proporciona univMov:ERASMUS ;
+    rdfs:subClassOf org:Organization .
+
+univMov:Universidade_Lusofona_Do_Porto a univMov:UniversidadDestino ;
+    dct:identifier "P Porto57"^^xsd:string ;
+    univMov:ambitoUnivDestino <http://vocab.universidadesabiertas.es/kos/ambito-univ-destino/informatica> ;
+    univMov:estaUbicada univMatr:Espagna ;
+    univMov:estaUbicada univMatr:Europa ;
+    univMov:estaUbicada univMatr:UnionEuropea ;
+    univMov:estaUbicada univMatr:Getafe ;
+    univMov:estaUbicada univMatr:Madrid ;
+    univMov:estaUbicada univMatr:Comunidad_de_Madrid .
+
+univMov:UPM a univMov:UniversidadProcedencia ;
+    dct:identifier "025"^^xsd:string ;
+    univMov:ambitoUnivProcedencia <http://vocab.universidadesabiertas.es/kos/ambito-univ-procedencia/informatica> ;
+    univMov:estaUbicada univMatr:Espagna ;
+    univMov:estaUbicada univMatr:Europa ;
+    univMov:estaUbicada univMatr:UnionEuropea ;
+    univMov:estaUbicada univMatr:Madrid .
+
+univMov:2021_22 a univMov:CursoAcademico .
+
+univMov:ERASMUS a univMov:ProgramaMovilidad ;
+    dct:identifier "03"^^xsd:string ;
+    univMov:tipoProgramaMov <http://vocab.universidadesabiertas.es/kos/tipo-programa-mov/estudios-y-o-proyecto-fin-de-grado> .
+
+univMov:Grado_en_Ingenieria_Informatica a univMov:Titulacion ;
+    dct:identifier "2500397" .
+
+univMov:Espagna a univMov:PaisNacionalidad ;
+    a univMov:PaisUnivDestino ;
+    a univMov:PaisUnivProcedencia ;
+    dct:identifier "108" ;
+    rdfs:subClassOf univMov:ContinenteNacionalidad ;
+    rdfs:subClassOf univMov:ContinenteUnivDestino ;
+    rdfs:subClassOf univMov:ContinenteUnivProcedencia ;
+    rdfs:subClassOf geosparql:Feature_Espagna .
+
+univMov:Europa a univMov:ContinenteNacionalidad ;
+    a univMov:ContinenteUnivDestino ;
+    a univMov:ContinenteUnivProcedencia ;
+    dct:identifier "01" .
+
+univMov:UnionEuropea a univMov:AgregacionPaisesNacionalidad ;
+    a univMov:AgregacionPaisesUnivDestino ;
+    a univMov:AgregacionPaisesUnivProcedencia ;
+    dct:identifier "11" ;
+    rdfs:subClassOf univMov:ContinenteNacionalidad ;
+    rdfs:subClassOf univMov:ContinenteUnivDestino ;
+    rdfs:subClassOf univMov:ContinenteUnivProcedencia .
+
+univMov:Getafe a univMov:MunicipioDestino ;
+    dct:identifier "065" ;
+    rdfs:subClassOf univMov:ProvinciaDestino ;
+    rdfs:subClassOf geosparql:Feature_Getafe .
+
+univMov:Madrid a univMov:ProvinciaDestino ;
+    dct:identifier "28" ;
+    rdfs:subClassOf univMov:ComunidadDestino .
+
+univMov:Comunidad_de_Madrid a univMov:ComunidadDestino ;
+    dct:identifier "13" .
+
+univMov:Madrid a univMov:MunicipioUnivProcedencia ;
+    dct:identifier "079" ;
+    rdfs:subClassOf univMov:PaisUnivProcedencia .
+
+geosparql:Feature_Espagna geosparql:hasGeometry geosparql:Geometry_Espagna .
+
+geosparql:Geometry_Espagna a geosparql:Point_Espagna ;
+    geosparql:asWKT "POINT (1.601554,42.546245)"^^geosparql:wktLiteral .
+
+univMov:Point_Espagna a geosparql:Point ;
+    geo:long "1.601554"^^xsd:double ;
+    geo:lat "42.546245"^^xsd:double .
+
+geosparql:Feature_Getafe geosparql:hasGeometry geosparql:Geometry_Getafe .
+
+geosparql:Geometry_Getafe a geosparql:Point_Getafe ;
+    geosparql:asWKT "POINT (-3.732585,40.308263)"^^geosparql:wktLiteral .
+
+univMov:Point_Getafe a geosparql:Point ;
+    geo:long "-3.732585"^^xsd:double ;
+    geo:lat "40.308263"^^xsd:double .
