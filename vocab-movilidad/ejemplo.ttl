@@ -38,7 +38,8 @@ univMov:Universidade_Lusofona_Do_Porto a univMov:UniversidadDestino ;
     univMov:estaUbicada univMov:UnionEuropea ;
     univMov:estaUbicada univMov:Getafe ;
     univMov:estaUbicada univMov:Madrid ;
-    univMov:estaUbicada univMov:Comunidad_de_Madrid .
+    univMov:estaUbicada univMov:Comunidad_de_Madrid ;
+    rdfs:subClassOf org:Organization .
 
 univMov:UPM a univMov:UniversidadProcedencia ;
     dct:identifier "025"^^xsd:string ;
@@ -46,7 +47,8 @@ univMov:UPM a univMov:UniversidadProcedencia ;
     univMov:estaUbicada univMov:Espagna ;
     univMov:estaUbicada univMov:Europa ;
     univMov:estaUbicada univMov:UnionEuropea ;
-    univMov:estaUbicada univMov:Madrid .
+    univMov:estaUbicada univMov:Madrid ;
+    rdfs:subClassOf org:Organization .
 
 univMov:2021_22 a univMov:CursoAcademico .
 
