@@ -52,8 +52,12 @@ univAcceso:Grado_en_Ingenieria_Informatica a univAcceso:Titulacion ;
 univAcceso:ETSIINF a univAcceso:Centro ;
     dct:identifier "28027114" ;
     univAcceso:naturalezaCentro <http://vocab.universidadesabiertas.es/kos/naturaleza-centro/publico> ;
+    univAcceso:estaUbicado univAcceso:Campus_de_Montegancedo;
     org:subOrganizationOf univAcceso:UPM ;
     rdfs:subClassOf org:Organization .
+
+univAcceso:Campus_de_Montegancedo a univAcceso:Campus;
+    dct:identifier "02214" .
 
 univAcceso:IES_La_Senda a univAcceso:CentroSec ;
     univAcceso:naturalezaCentroSec <http://vocab.universidadesabiertas.es/kos/naturaleza-centro-sec/publico> ;
