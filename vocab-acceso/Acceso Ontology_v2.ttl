@@ -41,8 +41,7 @@ univAcceso: a owl:Ontology ;
     owl:versionInfo "0.0.2" .
 
 univAcceso:Campus a owl:Class ;
-    rdfs:label "Campus" ;
-    rdfs:subClassOf org:Organization .
+    rdfs:label "Campus" .
 
 univAcceso:anioAccesoSUE a owl:DatatypeProperty ;
     rdfs:label "anio acceso s u e" ;
@@ -250,7 +249,8 @@ univAcceso:Centro a owl:Class ;
     rdfs:label "Centro" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univAcceso:estaUbicado ] .
+            owl:onProperty univAcceso:estaUbicado ],
+        org:Organization .
 
 univAcceso:CentroSec a owl:Class ;
     rdfs:label "Centro Sec" ;
