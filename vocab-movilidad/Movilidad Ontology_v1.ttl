@@ -189,9 +189,6 @@ geosparql:Point a owl:Class ;
 geosparql:SpatialObject a owl:Class ;
     rdfs:label "Spatial Object" .
 
-org:Organization a owl:Class ;
-    rdfs:label "Organization" .
-
 univMov:ContinenteNacionalidad a owl:Class ;
     rdfs:label "Continente Nacionalidad" .
 
@@ -220,7 +217,8 @@ univMov:UniversidadDestino a owl:Class ;
             owl:onProperty univMov:estaUbicada ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univMov:estaUbicada ] .
+            owl:onProperty univMov:estaUbicada ],
+        org:Organization .
 
 univMov:UniversidadProcedencia a owl:Class ;
     rdfs:label "Universidad Procedencia" ;
@@ -235,7 +233,8 @@ univMov:UniversidadProcedencia a owl:Class ;
             owl:onProperty univMov:estaUbicada ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univMov:estaUbicada ] .
+            owl:onProperty univMov:estaUbicada ],
+        org:Organization .
 
 univMov:posee a owl:ObjectProperty ;
     rdfs:label "posee" ;
@@ -251,6 +250,9 @@ geosparql:Geometry a owl:Class ;
 univMov:Universidad a owl:Class ;
     rdfs:label "Universidad" ;
     rdfs:subClassOf org:Organization .
+
+org:Organization a owl:Class ;
+    rdfs:label "Organization" .
 
 schema:Person a owl:Class ;
     rdfs:label "Person" .
