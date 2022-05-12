@@ -1,45 +1,47 @@
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
 @prefix geo: <http://www.owl-ontologies.com/geo#> .
 @prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
 @prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix univTitul: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Titulacion> .
+@prefix univ: <http://openuniversitydata/def#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-univTitul:Grado_en_Ingenieria_Informatica a univTitul:Titulacion ;
+<http://openuniversitydata/recurso/Grado_en_Ingenieria_Informatica> a estud:Titulacion ;
     dct:identifier "2500397" ;
-    univTitul:idiomaExtranjero "Ingles"^^xsd:string ;
-    univTitul:impartida "true"^^xsd:boolean ;
-    univTitul:numCreditosNecesarios "240"^^xsd:integer ;
-    univTitul:numCreditosOfertados "470"^^xsd:integer ;
-    univTitul:anioCreada "20070701"^^xsd:date ;
-    univTitul:tipoEstudio <http://vocab.universidadesabiertas.es/kos/tipo-estudio/grado> ;
-    univTitul:rama <http://vocab.universidadesabiertas.es/kos/rama/ingenieria-y-arquitectura> ;
-    univTitul:situacionActual <http://vocab.universidadesabiertas.es/kos/situacion-actual/activo> ;
-    univTitul:gradoPresencialidad <http://vocab.universidadesabiertas.es/kos/grado-presencialidad/presencial> ;
-    univTitul:es univTitul:Interuniversitario ;
-    univTitul:cuesta univTitul:Precio ;
-    univTitul:estaAsociadaA univTitul:ETSIINF .
+    estud:idiomaExtranjero "Ingles"^^xsd:string ;
+    estud:impartida "true"^^xsd:boolean ;
+    estud:numCreditosNecesarios "240"^^xsd:integer ;
+    estud:numCreditosOfertados "470"^^xsd:integer ;
+    estud:anioCreada "20070701"^^xsd:date ;
+    estud:tipoEstudio <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio/grado> ;
+    estud:rama <http://openuniversitydata/kos/estudios-y-estudiantes/rama/ingenieria-y-arquitectura> ;
+    estud:situacionActual <http://openuniversitydata/kos/estudios-y-estudiantes/situacion-actual/activo> ;
+    estud:gradoPresencialidad <http://openuniversitydata/kos/estudios-y-estudiantes/grado-presencialidad/presencial> ;
+    estud:es estud:Interuniversitario ;
+    estud:cuesta estud:Precio ;
+    estud:estaAsociadaA <http://openuniversitydata/recurso/ETSIINF> .
     
-univTitul:UPM a univTitul:Universidad ;
+<http://openuniversitydata/recurso/UPM> a univ:Universidad ;
     dct:identifier "025"^^xsd:string ;
-    univTitul:ofrece univTitul:Grado_en_Ingenieria_Informatica ;
-    univTitul:tieneAsociado univTitul:2021_22 ;
+    univ:ofrece <http://openuniversitydata/recurso/Grado_en_Ingenieria_Informatica> ;
+    univ:tieneAsociado <http://openuniversitydata/recurso/2021_22> ;
     rdfs:subClassOf org:Organization .
 
-univTitul:2021_22 a univTitul:CursoAcademico .
+<http://openuniversitydata/recurso/2021_22> a univ:CursoAcademico .
 
-univTitul:ETSIINF a univTitul:UnidadResponsable ;
+<http://openuniversitydata/recurso/ETSIINF> a orgser:UnidadResponsable ;
     dct:identifier "28027114" ;
-    univTitul:tipoUnidadResponsable <http://vocab.universidadesabiertas.es/kos/tipo-unidad-responsable/centro> .
+    orgser:tipoUnidadResponsable <http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable/centro> .
 
-univTitul:Interuniversitario dct:identifier "1"^^xsd:string ;
-    univTitul:rolCoordinacion <http://vocab.universidadesabiertas.es/kos/rol-coordinacion/universidad-es-coordinadora> .
+estud:Interuniversitario dct:identifier "1"^^xsd:string ;
+    estud:rolCoordinacion <http://openuniversitydata/kos/estudios-y-estudiantes/rol-coordinacion/universidad-es-coordinadora> .
 
-univTitul:Precio univTitul:precioCredMatr1 "21,94"^^xsd:double ;
-    univTitul:precioCredMatr2 "41,05"^^xsd:double ;
-    univTitul:precioCredMatr3 "82,3"^^xsd:double ;
-    univTitul:precioCredMatr4 "113,71"^^xsd:double ;
-    univTitul:precioCredMatr5 "201,94"^^xsd:double .
+estud:Precio estud:precioCredMatr1 "21,94"^^xsd:double ;
+    estud:precioCredMatr2 "41,05"^^xsd:double ;
+    estud:precioCredMatr3 "82,3"^^xsd:double ;
+    estud:precioCredMatr4 "113,71"^^xsd:double ;
+    estud:precioCredMatr5 "201,94"^^xsd:double .
