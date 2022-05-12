@@ -1,110 +1,108 @@
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
 @prefix geo: <http://www.owl-ontologies.com/geo#> .
 @prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
 @prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix univAcceso: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Acceso> .
+@prefix univ: <http://openuniversitydata/def#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-univAcceso:David_Perea a univAcceso:Estudiante ;
-    univAcceso:notaAdmision "7,5"^^xsd:decimal ;
-    univAcceso:formaAdmision <http://vocab.universidadesabiertas.es/kos/forma-admision/evau> ;
-    univAcceso:estudioAcceso <http://vocab.universidadesabiertas.es/kos/estudio-acceso/bachillerato-LOE> ;
-    univAcceso:especialidadAcceso <http://vocab.universidadesabiertas.es/kos/especialidad-acceso/ciencias-y-tecnologia> ;
-    univAcceso:tipoEspecialidadAcceso "Bachillerato - LOE"^^xsd:string ;
-    univAcceso:anioFinEstudioAcceso "2018"^^xsd:integer ;
-    univAcceso:indAccedeAlSUEPor1aVez "true"^^xsd:boolean ;
-    univAcceso:anioAccesoSUE "2018"^^xsd:integer ;
-    univAcceso:indSeMatriculaEnPrimero "true"^^xsd:boolean ;
-    univAcceso:indCursoAdaptacion "false"^^xsd:boolean ;
-    univAcceso:anioNacimiento "2000"^^xsd:integer ;
-    univAcceso:dedicacion <http://vocab.universidadesabiertas.es/kos/dedicacion/tiempo-completo> ;
-    univAcceso:genero <http://vocab.universidadesabiertas.es/kos/genero/hombre> ;
-    univAcceso:ocupacionEstudiante <http://vocab.universidadesabiertas.es/kos/ocupacion-estudiante/parado> ;
-    univAcceso:ocupacionMadre <http://vocab.universidadesabiertas.es/kos/ocupacion-madre/directora> ;
-    univAcceso:ocupacionPadre <http://vocab.universidadesabiertas.es/kos/ocupacion-padre/director> ;
-    univAcceso:familiaNumerosa <http://vocab.universidadesabiertas.es/kos/familia-numerosa/no> ;
-    univAcceso:nivelEstudiosMadre <http://vocab.universidadesabiertas.es/kos/nivel-estudios-madre/estudios-superiores> ;
-    univAcceso:nivelEstudiosPadre <http://vocab.universidadesabiertas.es/kos/nivel-estudios-padre/estudios-superiores> ;
-    univAcceso:estudia univAcceso:UPM ;
-    univAcceso:provieneDe univAcceso:IES_La_Senda ;
-    univAcceso:posee univAcceso:Espagna ;
-    univAcceso:posee univAcceso:Europa ;
-    univAcceso:posee univAcceso:UnionEuropea ;
+<http://openuniversitydata/recurso/David_Perea> a estud:Estudiante ;
+    estud:notaAdmision "7,5"^^xsd:decimal ;
+    estud:formaAdmision <http://openuniversitydata/kos/estudios-y-estudiantes/forma-admision/evau> ;
+    estud:estudioAcceso <http://openuniversitydata/kos/estudios-y-estudiantes/estudio-acceso/bachillerato-LOE> ;
+    estud:especialidadAcceso <http://openuniversitydata/kos/estudios-y-estudiantes/especialidad-acceso/ciencias-y-tecnologia> ;
+    estud:tipoEspecialidadAcceso "Bachillerato - LOE"^^xsd:string ;
+    estud:anioFinEstudioAcceso "2018"^^xsd:integer ;
+    estud:indAccedeAlSUEPor1aVez "true"^^xsd:boolean ;
+    estud:anioAccesoSUE "2018"^^xsd:integer ;
+    estud:indSeMatriculaEnPrimero "true"^^xsd:boolean ;
+    estud:indCursoAdaptacion "false"^^xsd:boolean ;
+    estud:anioNacimiento "2000"^^xsd:integer ;
+    estud:dedicacion <http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion/tiempo-completo> ;
+    estud:genero <http://openuniversitydata/kos/estudios-y-estudiantes/genero/hombre> ;
+    estud:ocupacionEstudiante <http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-estudiante/parado> ;
+    estud:ocupacionMadre <http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-madre/directora> ;
+    estud:ocupacionPadre <http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-padre/director> ;
+    estud:familiaNumerosa <http://openuniversitydata/kos/estudios-y-estudiantes/familia-numerosa/no> ;
+    estud:nivelEstudiosMadre <http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-madre/estudios-superiores> ;
+    estud:nivelEstudiosPadre <http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-padre/estudios-superiores> ;
+    estud:estudia <http://openuniversitydata/recurso/UPM> ;
+    estud:provieneDe <http://openuniversitydata/recurso/IES_La_Senda> ;
+    estud:posee <http://openuniversitydata/recurso/Espania> ;
+    estud:posee <http://openuniversitydata/recurso/Europa> ;
+    estud:posee <http://openuniversitydata/recurso/UnionEuropea> ;
     rdfs:subClassOf schema:Person .
     
-univAcceso:UPM a univAcceso:Universidad ;
+<http://openuniversitydata/recurso/UPM> a univ:Universidad ;
     dct:identifier "025"^^xsd:string ;
-    univAcceso:tieneAsociado univAcceso:2021_22 ;
-    univAcceso:ofrece univAcceso:Grado_en_Ingenieria_Informatica ;
-    org:hasSubOrganization univAcceso:ETSIINF ;
+    univ:ofrece <http://openuniversitydata/recurso/Grado_en_Ingenieria_Informatica> ;
+    univ:tieneAsociado <http://openuniversitydata/recurso/2021_22> ;
+    org:hasSubOrganization <http://openuniversitydata/recurso/ETSIINF> ;
     rdfs:subClassOf org:Organization .
 
-univAcceso:2021_22 a univAcceso:CursoAcademico .
+<http://openuniversitydata/recurso/2021_22> a univ:CursoAcademico .
 
-univAcceso:Grado_en_Ingenieria_Informatica a univAcceso:Titulacion ;
+<http://openuniversitydata/recurso/Grado_en_Ingenieria_Informatica> a estud:Titulacion ;
     dct:identifier "2500397" ;
-    univAcceso:tipoEstudio <http://vocab.universidadesabiertas.es/kos/tipo-estudio/grado> .
+    estud:tipoEstudio <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio/grado> .
 
-univAcceso:ETSIINF a univAcceso:Centro ;
+<http://openuniversitydata/recurso/ETSIINF> a orgser:Centro ;
     dct:identifier "28027114" ;
-    univAcceso:naturalezaCentro <http://vocab.universidadesabiertas.es/kos/naturaleza-centro/publico> ;
-    univAcceso:estaUbicado univAcceso:Campus_de_Montegancedo;
-    org:subOrganizationOf univAcceso:UPM ;
+    orgser:naturalezaCentro <http://openuniversitydata/kos/organizacion-y-servicios/naturaleza-centro/publico> ;
+    orgser:estaUbicado <http://openuniversitydata/recurso/Campus_de_Montegancedo> ;
+    org:subOrganizationOf <http://openuniversitydata/recurso/UPM> ;
     rdfs:subClassOf org:Organization .
 
-univAcceso:Campus_de_Montegancedo a univAcceso:Campus;
+<http://openuniversitydata/recurso/Campus_de_Montegancedo> a orgser:Campus;
     dct:identifier "02214" .
 
-univAcceso:IES_La_Senda a univAcceso:CentroSec ;
-    univAcceso:naturalezaCentroSec <http://vocab.universidadesabiertas.es/kos/naturaleza-centro-sec/publico> ;
-    univAcceso:estaUbicado univAcceso:Getafe ;
-    univAcceso:estaUbicado univAcceso:Madrid ;
-    univAcceso:estaUbicado univAcceso:Comunidad_de_Madrid .
+<http://openuniversitydata/recurso/IES_La_Senda> a orgser:CentroSec ;
+    orgser:naturalezaCentroSec <http://openuniversitydata/kos/organizacion-y-servicios/naturaleza-centro-sec/publico> ;
+    orgser:estaUbicado <http://openuniversitydata/recurso/Getafe> ;
+    orgser:estaUbicado <http://openuniversitydata/recurso/Madrid> ;
+    orgser:estaUbicado <http://openuniversitydata/recurso/Comunidad_de_Madrid> .
 
-univAcceso:Espagna a univAcceso:PaisNacionalidad ;
-    a univAcceso:PaisResidencia ;
-    a univAcceso:PaisFinEstudioAcceso ;
+<http://openuniversitydata/recurso/Espania> a estud:PaisNacionalidad ;
+    a estud:PaisResidencia ;
+    a estud:PaisFinEstudioAcceso ;
     dct:identifier "108" ;
-    rdfs:subClassOf univAcceso:ContinenteNacionalidad ;
-    rdfs:subClassOf univAcceso:ContinenteResidencia ;
-    rdfs:subClassOf univAcceso:ContinenteFinEstudioAcceso ;
-    rdfs:subClassOf geosparql:Feature_Espagna .
+    rdfs:subClassOf <http://openuniversitydata/recurso/Europa> ;
+    rdfs:subClassOf geosparql:Feature_Espania .
 
-univAcceso:Europa a univAcceso:ContinenteNacionalidad ;
-    a univAcceso:ContinenteResidencia ;
-    a univAcceso:ContinenteFinEstudioAcceso ;
+<http://openuniversitydata/recurso/Europa> a estud:ContinenteNacionalidad ;
+    a estud:ContinenteResidencia ;
+    a estud:ContinenteFinEstudioAcceso ;
     dct:identifier "01" .
 
-univAcceso:UnionEuropea a univAcceso:AgregacionPaisesNacionalidad ;
-    a univAcceso:AgregacionPaisesResidencia ;
-    a univAcceso:AgregacionPaisesFinEstudioAcceso ;
+<http://openuniversitydata/recurso/UnionEuropea> a estud:AgregacionPaisesNacionalidad ;
+    a estud:AgregacionPaisesResidencia ;
+    a estud:AgregacionPaisesFinEstudioAcceso ;
     dct:identifier "11" ;
-    rdfs:subClassOf univAcceso:ContinenteNacionalidad ;
-    rdfs:subClassOf univAcceso:ContinenteResidencia ;
-    rdfs:subClassOf univAcceso:ContinenteFinEstudioAcceso .
+    rdfs:subClassOf <http://openuniversitydata/recurso/Europa> .
 
-univAcceso:Getafe a univAcceso:MunicipioCentroSec ;
+<http://openuniversitydata/recurso/Getafe> a orgser:MunicipioCentroSec ;
     dct:identifier "065" ;
-    rdfs:subClassOf univAcceso:ProvinciaCentroSec ;
+    rdfs:subClassOf <http://openuniversitydata/recurso/Madrid> ;
     rdfs:subClassOf geosparql:Feature_Getafe .
 
-univAcceso:Madrid a univAcceso:ProvinciaCentroSec ;
+<http://openuniversitydata/recurso/Madrid> a orgser:ProvinciaCentroSec ;
     dct:identifier "28" ;
-    rdfs:subClassOf univAcceso:ComunidadCentroSec .
+    rdfs:subClassOf <http://openuniversitydata/recurso/Comunidad_de_Madrid> .
 
-univAcceso:Comunidad_de_Madrid a univAcceso:ComunidadCentroSec ;
+<http://openuniversitydata/recurso/Comunidad_de_Madrid> a orgser:ComunidadCentroSec ;
     dct:identifier "13" .
 
-geosparql:Feature_Espagna geosparql:hasGeometry geosparql:Geometry_Espagna .
+geosparql:Feature_Espania geosparql:hasGeometry geosparql:Geometry_Espania .
 
-geosparql:Geometry_Espagna a geosparql:Point_Espagna ;
+geosparql:Geometry_Espania a geosparql:Point_Espania ;
     geosparql:asWKT "POINT (1.601554,42.546245)"^^geosparql:wktLiteral .
 
-univAcceso:Point_Espagna a geosparql:Point ;
+estud:Point_Espania a geosparql:Point ;
     geo:long "1.601554"^^xsd:double ;
     geo:lat "42.546245"^^xsd:double .
 
@@ -113,7 +111,7 @@ geosparql:Feature_Getafe geosparql:hasGeometry geosparql:Geometry_Getafe .
 geosparql:Geometry_Getafe a geosparql:Point_Getafe ;
     geosparql:asWKT "POINT (-3.732585,40.308263)"^^geosparql:wktLiteral .
 
-univAcceso:Point_Getafe a geosparql:Point ;
+estud:Point_Getafe a geosparql:Point ;
     geo:long "-3.732585"^^xsd:double ;
     geo:lat "40.308263"^^xsd:double .
     
