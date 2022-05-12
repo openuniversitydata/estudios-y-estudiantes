@@ -1,116 +1,112 @@
  @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
 @prefix geo: <http://www.owl-ontologies.com/geo#> .
 @prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
 @prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@prefix univMatr: <http://vocab.universidadesabiertas.es/ontology/estudios-y-estudiantes#Matricula> .
+@prefix univ: <http://openuniversitydata/def#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-univMatr:David_Perea a univMatr:Estudiante ;
-    univMatr:anioNacimiento "2000"^^xsd:integer ;
-    univMatr:numTotalCreditosMatCurso "60"^^xsd:integer ;
-    univMatr:numCreditosMat1Curso "60"^^xsd:integer ;
-    univMatr:numCreditosMat2Curso "15"^^xsd:integer ;
-    univMatr:numCreditosMat3OMasCurso "9"^^xsd:integer ;
-    univMatr:numTotalCreditosMatInicio "240"^^xsd:integer ;
-    univMatr:numTotalCreditosPresInicio "240"^^xsd:integer ;
-    univMatr:numCreditosPresCurso "60"^^xsd:integer ;
-    univMatr:numCreditosNoPresCurso "0"^^xsd:integer ;
-    univMatr:numTotalCreditosSupCurso "60"^^xsd:integer ;
-    univMatr:numTotalCreditosNoSupCurso "0"^^xsd:integer ;
-    univMatr:numTotalCreditosSupInicio "240"^^xsd:integer ;
-    univMatr:numTotalCreditosTransfInicio "0"^^xsd:integer ;
-    univMatr:numTotalCreditosRecConvCurso "0"^^xsd:integer ;
-    univMatr:numTotalCreditosRecConvInicio "0"^^xsd:integer ;
-    univMatr:indSeTitulaCurso "true"^^xsd:boolean ;
-    univMatr:notaMediaFinal "7,5"^^xsd:double ;
-    univMatr:indTesisLeidaCurso "true"^^xsd:boolean ;
-    univMatr:indMencionIndustrial "false"^^xsd:boolean ;
-    univMatr:indMencionInternacional "false"^^xsd:boolean ;
-    univMatr:empieza univMatr:2018_19 ;
-    univMatr:accede univMatr:2018_19 ;
-    univMatr:calificacionTesis <http://vocab.universidadesabiertas.es/kos/calificacion-tesis/notable> ;
-    univMatr:dedicacion <http://vocab.universidadesabiertas.es/kos/dedicacion/tiempo-completo> ;
-    univMatr:tipoTituloAccesoMaster <http://vocab.universidadesabiertas.es/kos/tipo-titulo-acceso-master/grado> ;
-    univMatr:genero <http://vocab.universidadesabiertas.es/kos/genero/hombre> ;
-    univMatr:estudia univMatr:UPM ;
-    univMatr:posee univMatr:Espagna ;
-    univMatr:posee univMatr:Europa ;
-    univMatr:posee univMatr:UnionEuropea ;
-    univMatr:posee univMatr:Getafe ;
-    univMatr:posee univMatr:Madrid ;
-    univMatr:posee univMatr:Comunidad_de_Madrid ;
+<http://openuniversitydata/recurso/David_Perea> a estud:Estudiante ;
+    estud:anioNacimiento "2000"^^xsd:integer ;
+    estud:numTotalCreditosMatCurso "60"^^xsd:integer ;
+    estud:numCreditosMat1Curso "60"^^xsd:integer ;
+    estud:numCreditosMat2Curso "15"^^xsd:integer ;
+    estud:numCreditosMat3OMasCurso "9"^^xsd:integer ;
+    estud:numTotalCreditosMatInicio "240"^^xsd:integer ;
+    estud:numTotalCreditosPresInicio "240"^^xsd:integer ;
+    estud:numCreditosPresCurso "60"^^xsd:integer ;
+    estud:numCreditosNoPresCurso "0"^^xsd:integer ;
+    estud:numTotalCreditosSupCurso "60"^^xsd:integer ;
+    estud:numTotalCreditosNoSupCurso "0"^^xsd:integer ;
+    estud:numTotalCreditosSupInicio "240"^^xsd:integer ;
+    estud:numTotalCreditosTransfInicio "0"^^xsd:integer ;
+    estud:numTotalCreditosRecConvCurso "0"^^xsd:integer ;
+    estud:numTotalCreditosRecConvInicio "0"^^xsd:integer ;
+    estud:indSeTitulaCurso "true"^^xsd:boolean ;
+    estud:notaMediaFinal "7,5"^^xsd:double ;
+    estud:indTesisLeidaCurso "true"^^xsd:boolean ;
+    estud:indMencionIndustrial "false"^^xsd:boolean ;
+    estud:indMencionInternacional "false"^^xsd:boolean ;
+    estud:empieza <http://openuniversitydata/recurso/2018_19> ;
+    estud:accede <http://openuniversitydata/recurso/2018_19> ;
+    estud:calificacionTesis <http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis/notable> ;
+    estud:dedicacion <http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion/tiempo-completo> ;
+    estud:tipoTituloAccesoMaster <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master/grado> ;
+    estud:genero <http://openuniversitydata/kos/estudios-y-estudiantes/genero/hombre> ;
+    estud:estudia <http://openuniversitydata/recurso/UPM> ;
+    estud:posee <http://openuniversitydata/recurso/Espania> ;
+    estud:posee <http://openuniversitydata/recurso/Europa> ;
+    estud:posee <http://openuniversitydata/recurso/UnionEuropea> ;
+    estud:posee <http://openuniversitydata/recurso/Getafe> ;
+    estud:posee <http://openuniversitydata/recurso/Madrid> ;
+    estud:posee <http://openuniversitydata/recurso/Comunidad_de_Madrid> ;
     rdfs:subClassOf schema:Person .
     
-univMatr:UPM a univMatr:Universidad ;
+<http://openuniversitydata/recurso/UPM> a univ:Universidad ;
     dct:identifier "025"^^xsd:string ;
-    univMatr:tieneAsociado univMatr:2021_22 ;
-    univMatr:ofrece univMatr:Grado_en_Ingenieria_Informatica ;
-    org:hasSubOrganization univMatr:ETSIINF ;
+    univ:ofrece <http://openuniversitydata/recurso/Grado_en_Ingenieria_Informatica> ;
+    univ:tieneAsociado <http://openuniversitydata/recurso/2021_22> ;
+    org:hasSubOrganization <http://openuniversitydata/recurso/ETSIINF> ;
     rdfs:subClassOf org:Organization .
 
-univMatr:2021_22 a univMatr:CursoAcademico .
+<http://openuniversitydata/recurso/2021_22> a univ:CursoAcademico .
 
-univMatr:Grado_en_Ingenieria_Informatica a univMatr:Titulacion ;
+<http://openuniversitydata/recurso/Grado_en_Ingenieria_Informatica> a estud:Titulacion ;
     dct:identifier "2500397" ;
-    univMatr:tipoEstudio <http://vocab.universidadesabiertas.es/kos/tipo-estudio/grado> .
+    estud:tipoEstudio <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio/grado> .
 
-univMatr:ETSIINF a univMatr:Centro ;
+<http://openuniversitydata/recurso/ETSIINF> a orgser:Centro ;
     dct:identifier "28027114" ;
-    org:subOrganizationOf univMatr:UPM ;
+    org:subOrganizationOf <http://openuniversitydata/recurso/UPM> ;
     rdfs:subClassOf org:Organization .
 
-univMatr:2018_19 a univMatr:CursoAcademicoInicio ;
-    a univMatr:CursoAcademicoAccesoSUE .
+<http://openuniversitydata/recurso/2018_19> a estud:CursoAcademicoInicio ;
+    a estud:CursoAcademicoAccesoSUE .
 
-univMatr:Espagna a univMatr:PaisNacionalidad ;
-    a univMatr:PaisResidencia ;
-    a univMatr:PaisUnivProcedencia ;
+<http://openuniversitydata/recurso/Espania> a estud:PaisNacionalidad ;
+    a estud:PaisResidencia ;
+    a estud:PaisUnivProcedencia ;
     dct:identifier "108" ;
-    rdfs:subClassOf univMatr:ContinenteNacionalidad ;
-    rdfs:subClassOf univMatr:ContinenteResidencia ;
-    rdfs:subClassOf univMatr:ContinenteUnivProcedencia ;
-    rdfs:subClassOf geosparql:Feature_Espagna .
+    rdfs:subClassOf <http://openuniversitydata/recurso/Europa> ;
+    rdfs:subClassOf geosparql:Feature_Espania .
 
-univMatr:Europa a univMatr:ContinenteNacionalidad ;
-    a univMatr:ContinenteResidencia ;
-    a univMatr:ContinenteUnivProcedencia ;
+<http://openuniversitydata/recurso/Europa> a estud:ContinenteNacionalidad ;
+    a estud:ContinenteResidencia ;
+    a estud:ContinenteUnivProcedencia ;
     dct:identifier "01" .
 
-univMatr:UnionEuropea a univMatr:AgregacionPaisesNacionalidad ;
-    a univMatr:AgregacionPaisesResidencia ;
-    a univMatr:AgregacionPaisesUnivProcedencia ;
+<http://openuniversitydata/recurso/UnionEuropea> a estud:AgregacionPaisesNacionalidad ;
+    a estud:AgregacionPaisesResidencia ;
+    a estud:AgregacionPaisesUnivProcedencia ;
     dct:identifier "11" ;
-    rdfs:subClassOf univMatr:ContinenteNacionalidad ;
-    rdfs:subClassOf univMatr:ContinenteResidencia ;
-    rdfs:subClassOf univMatr:ContinenteUnivProcedencia .
+    rdfs:subClassOf <http://openuniversitydata/recurso/Europa> .
 
-univMatr:Getafe a univMatr:MunicipioResidencia ;
-    a univMatr:MunicipioCurso ;
+<http://openuniversitydata/recurso/Getafe> a estud:MunicipioResidencia ;
+    a estud:MunicipioCurso ;
     dct:identifier "065" ;
-    rdfs:subClassOf univMatr:ProvinciaResidencia ;
-    rdfs:subClassOf univMatr:ProvinciaCurso ;
+    rdfs:subClassOf <http://openuniversitydata/recurso/Madrid> ;
     rdfs:subClassOf geosparql:Feature_Getafe .
 
-univMatr:Madrid a univMatr:ProvinciaResidencia ;
-    a univMatr:ProvinciaCurso ;
+<http://openuniversitydata/recurso/Madrid> a estud:ProvinciaResidencia ;
+    a estud:ProvinciaCurso ;
     dct:identifier "28" ;
-    rdfs:subClassOf univMatr:ComunidadResidencia ;
-    rdfs:subClassOf univMatr:ComunidadCurso .
+    rdfs:subClassOf <http://openuniversitydata/recurso/Comunidad_de_Madrid> .
 
-univMatr:Comunidad_de_Madrid a univMatr:ComunidadResidencia ;
-    a univMatr:ComunidadCurso ;
+<http://openuniversitydata/recurso/Comunidad_de_Madrid> a estud:ComunidadResidencia ;
+    a estud:ComunidadCurso ;
     dct:identifier "13" .
 
-geosparql:Feature_Espagna geosparql:hasGeometry geosparql:Geometry_Espagna .
+geosparql:Feature_Espania geosparql:hasGeometry geosparql:Geometry_Espania .
 
-geosparql:Geometry_Espagna a geosparql:Point_Espagna ;
+geosparql:Geometry_Espania a geosparql:Point_Espania ;
     geosparql:asWKT "POINT (1.601554,42.546245)"^^geosparql:wktLiteral .
 
-univMatr:Point_Espagna a geosparql:Point ;
+estud:Point_Espania a geosparql:Point ;
     geo:long "1.601554"^^xsd:double ;
     geo:lat "42.546245"^^xsd:double .
 
@@ -119,6 +115,6 @@ geosparql:Feature_Getafe geosparql:hasGeometry geosparql:Geometry_Getafe .
 geosparql:Geometry_Getafe a geosparql:Point_Getafe ;
     geosparql:asWKT "POINT (-3.732585,40.308263)"^^geosparql:wktLiteral .
 
-univMatr:Point_Getafe a geosparql:Point ;
+estud:Point_Getafe a geosparql:Point ;
     geo:long "-3.732585"^^xsd:double ;
     geo:lat "40.308263"^^xsd:double .
