@@ -54,7 +54,7 @@
 <http://openuniversitydata/recurso/ETSIINF> a orgser:Centro ;
     dct:identifier "28027114" ;
     orgser:naturalezaCentro <http://openuniversitydata/kos/organizacion-y-servicios/naturaleza-centro/publico> ;
-    orgser:estaUbicado <http://openuniversitydata/recurso/Campus_de_Montegancedo> ;
+    orgser:ubicadoEn <http://openuniversitydata/recurso/Campus_de_Montegancedo> ;
     org:subOrganizationOf <http://openuniversitydata/recurso/UPM> ;
     rdfs:subClassOf org:Organization .
 
