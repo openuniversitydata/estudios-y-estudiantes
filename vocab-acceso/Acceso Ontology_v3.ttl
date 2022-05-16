@@ -330,6 +330,10 @@ orgser:MunicipioCentroSec a owl:Class ;
     rdfs:subClassOf orgser:ProvinciaCentroSec,
         geosparql:Feature .
 
+orgser:ubicadoEn a owl:ObjectProperty ;
+    rdfs:label "ubicado en" ;
+    rdfs:domain orgser:Centro .
+
 org:Site a owl:Class ;
     rdfs:label "Site" ;
     rdfs:subClassOf geosparql:Feature .
@@ -383,15 +387,13 @@ orgser:Centro a owl:Class ;
     rdfs:label "Centro" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty orgser:estaUbicado ],
+            owl:onProperty orgser:ubicadoEn ],
         org:Organization .
 
 orgser:estaUbicado a owl:ObjectProperty ;
     rdfs:label "esta ubicado" ;
-    rdfs:domain orgser:Centro,
-        orgser:CentroSec ;
-    rdfs:range orgser:Campus,
-        orgser:ComunidadCentroSec,
+    rdfs:domain orgser:CentroSec ;
+    rdfs:range orgser:ComunidadCentroSec,
         orgser:MunicipioCentroSec,
         orgser:ProvinciaCentroSec .
 
