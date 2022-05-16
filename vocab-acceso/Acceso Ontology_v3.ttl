@@ -390,7 +390,8 @@ orgser:estaUbicado a owl:ObjectProperty ;
     rdfs:label "esta ubicado" ;
     rdfs:domain orgser:Centro,
         orgser:CentroSec ;
-    rdfs:range orgser:ComunidadCentroSec,
+    rdfs:range orgser:Campus,
+        orgser:ComunidadCentroSec,
         orgser:MunicipioCentroSec,
         orgser:ProvinciaCentroSec .
 
