@@ -512,6 +512,11 @@
     <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#PaisUnivProcedencia"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesResidencia"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesUnivProcedencia"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ComunidadCurso"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ComunidadResidencia"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaCurso"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaResidencia"/>
   </owl:ObjectProperty>
