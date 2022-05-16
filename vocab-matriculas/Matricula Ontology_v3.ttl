@@ -376,6 +376,11 @@ estud:posee a owl:ObjectProperty ;
         estud:PaisNacionalidad,
         estud:PaisResidencia,
         estud:PaisUnivProcedencia,
+        estud:AgregacionPaisesNacionalidad,
+        estud:AgregacionPaisesResidencia,
+        estud:AgregacionPaisesUnivProcedencia,
+        estud:ComunidadCurso,
+        estud:ComunidadResidencia,
         estud:ProvinciaCurso,
         estud:ProvinciaResidencia .
 
