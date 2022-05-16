@@ -644,6 +644,7 @@
     <rdfs:label>esta ubicado</rdfs:label>
     <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Centro"/>
     <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#CentroSec"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Campus"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ComunidadCentroSec"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#MunicipioCentroSec"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ProvinciaCentroSec"/>
