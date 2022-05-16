@@ -633,7 +633,7 @@
     <rdfs:subClassOf>
       <owl:Restriction>
         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-        <owl:onProperty rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#estaUbicado"/>
+        <owl:onProperty rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ubicadoEn"/>
       </owl:Restriction>
     </rdfs:subClassOf>
 
@@ -642,12 +642,16 @@
 
   <owl:ObjectProperty rdf:about="http://openuniversitydata/def/organizacion-y-servicios#estaUbicado">
     <rdfs:label>esta ubicado</rdfs:label>
-    <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Centro"/>
     <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#CentroSec"/>
-    <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Campus"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ComunidadCentroSec"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#MunicipioCentroSec"/>
     <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ProvinciaCentroSec"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://openuniversitydata/def/organizacion-y-servicios#ubicadoEn">
+    <rdfs:label>ubicado en</rdfs:label>
+    <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Centro"/>
+    <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Campus"/>
   </owl:ObjectProperty>
 
   <owl:Class rdf:about="http://openuniversitydata/def#Universidad">
