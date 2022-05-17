@@ -197,6 +197,16 @@ estud:estudia a owl:ObjectProperty ;
     rdfs:domain estud:Estudiante ;
     rdfs:range univ:Universidad .
 
+estud:tiene1 a owl:ObjectProperty ;
+    rdfs:label "tiene1" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range univ:UniversidadProcedencia .
+
+estud:tiene2 a owl:ObjectProperty ;
+    rdfs:label "tiene2" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range univ:UniversidadDestino .
+
 org:Site a owl:Class ;
     rdfs:label "Site" ;
     rdfs:subClassOf geosparql:Feature .
@@ -212,12 +222,6 @@ univ:ProvinciaDestino a owl:Class ;
 
 estud:ProgramaMovilidad a owl:Class ;
     rdfs:label "Programa Movilidad" .
-
-estud:tiene a owl:ObjectProperty ;
-    rdfs:label "tiene" ;
-    rdfs:domain estud:Estudiante ;
-    rdfs:range univ:UniversidadDestino,
-        univ:UniversidadProcedencia .
 
 geosparql:Point a owl:Class ;
     rdfs:label "Point" ;
@@ -236,39 +240,31 @@ univ:UniversidadDestino a owl:Class ;
     rdfs:label "Universidad Destino" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
+            owl:onProperty univ:estaUbicada2 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
+            owl:onProperty univ:estaUbicada2 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
+            owl:onProperty univ:estaUbicada2 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
+            owl:onProperty univ:estaUbicada2 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
+            owl:onProperty univ:estaUbicada2 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
+            owl:onProperty univ:estaUbicada2 ],
         org:Organization .
 
-univ:UniversidadProcedencia a owl:Class ;
-    rdfs:label "Universidad Procedencia" ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty univ:estaUbicada ],
-        org:Organization .
+univ:estaUbicada1 a owl:ObjectProperty ;
+    rdfs:label "esta ubicada1" ;
+    rdfs:domain univ:UniversidadProcedencia ;
+    rdfs:range univ:AgregacionPaisesUnivProcedencia,
+        univ:ContinenteUnivProcedencia,
+        univ:PaisUnivProcedencia,
+        univ:MunicipioUnivProcedencia .
 
 estud:ContinenteNacionalidad a owl:Class ;
     rdfs:label "Continente Nacionalidad" .
@@ -288,8 +284,34 @@ univ:Universidad a owl:Class ;
     rdfs:label "Universidad" ;
     rdfs:subClassOf org:Organization .
 
+univ:UniversidadProcedencia a owl:Class ;
+    rdfs:label "Universidad Procedencia" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univ:estaUbicada1 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univ:estaUbicada1 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univ:estaUbicada1 ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univ:estaUbicada1 ],
+        org:Organization .
+
 org:Organization a owl:Class ;
     rdfs:label "Organization" .
+
+univ:estaUbicada2 a owl:ObjectProperty ;
+    rdfs:label "esta ubicada2" ;
+    rdfs:domain univ:UniversidadDestino ;
+    rdfs:range univ:ContinenteUnivDestino,
+        univ:MunicipioDestino,
+        univ:PaisUnivDestino,
+        univ:AgregacionPaisesUnivDestino,
+        univ:ComunidadDestino,
+        univ:ProvinciaDestino .
 
 schema:Person a owl:Class ;
     rdfs:label "Person" .
@@ -305,10 +327,10 @@ estud:Estudiante a owl:Class ;
             owl:onProperty estud:estudia ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty estud:tiene ],
+            owl:onProperty estud:tiene1 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty estud:tiene ],
+            owl:onProperty estud:tiene2 ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty estud:cursa ],
@@ -322,19 +344,6 @@ estud:Estudiante a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty estud:posee ],
         schema:Person .
-
-univ:estaUbicada a owl:ObjectProperty ;
-    rdfs:label "esta ubicada" ;
-    rdfs:domain univ:UniversidadDestino,
-        univ:UniversidadProcedencia ;
-    rdfs:range univ:AgregacionPaisesUnivProcedencia,
-        univ:ContinenteUnivDestino,
-        univ:ContinenteUnivProcedencia,
-        univ:MunicipioDestino,
-        univ:MunicipioUnivProcedencia,
-        univ:PaisUnivDestino,
-        univ:PaisUnivProcedencia,
-        univ:ProvinciaDestino .
 
 _:genid3
     a owl:Restriction ;
