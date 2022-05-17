@@ -21,8 +21,8 @@
     estud:posee <http://openuniversitydata/recurso/Espania> ;
     estud:posee <http://openuniversitydata/recurso/Europa> ;
     estud:posee <http://openuniversitydata/recurso/UnionEuropea> ;
-    estud:tiene <http://openuniversitydata/recurso/Universidade_Lusofona_Do_Porto> ;
-    estud:tiene <http://openuniversitydata/recurso/UPM> ;
+    estud:tiene1 <http://openuniversitydata/recurso/UPM> ;
+    estud:tiene2 <http://openuniversitydata/recurso/Universidade_Lusofona_Do_Porto> ;
     rdfs:subClassOf schema:Person .
     
 <http://openuniversitydata/recurso/UPM> a univ:Universidad ;
@@ -34,21 +34,21 @@
 <http://openuniversitydata/recurso/Universidade_Lusofona_Do_Porto> a univ:UniversidadDestino ;
     dct:identifier "P Porto57"^^xsd:string ;
     univ:ambitoUnivDestino <http://openuniversitydata/kos/ambito-univ-destino/informatica> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Espania> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Europa> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/UnionEuropea> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Getafe> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Madrid> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Comunidad_de_Madrid> ;
+    univ:estaUbicada2 <http://openuniversitydata/recurso/Espania> ;
+    univ:estaUbicada2 <http://openuniversitydata/recurso/Europa> ;
+    univ:estaUbicada2 <http://openuniversitydata/recurso/UnionEuropea> ;
+    univ:estaUbicada2 <http://openuniversitydata/recurso/Getafe> ;
+    univ:estaUbicada2 <http://openuniversitydata/recurso/Madrid> ;
+    univ:estaUbicada2 <http://openuniversitydata/recurso/Comunidad_de_Madrid> ;
     rdfs:subClassOf org:Organization .
 
 <http://openuniversitydata/recurso/UPM> a univ:UniversidadProcedencia ;
     dct:identifier "025"^^xsd:string ;
     univ:ambitoUnivProcedencia <http://openuniversitydata/kos/ambito-univ-procedencia/informatica> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Espania> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Europa> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/UnionEuropea> ;
-    univ:estaUbicada <http://openuniversitydata/recurso/Madrid> ;
+    univ:estaUbicada1 <http://openuniversitydata/recurso/Espania> ;
+    univ:estaUbicada1 <http://openuniversitydata/recurso/Europa> ;
+    univ:estaUbicada1 <http://openuniversitydata/recurso/UnionEuropea> ;
+    univ:estaUbicada1 <http://openuniversitydata/recurso/Madrid> ;
     rdfs:subClassOf org:Organization .
 
 <http://openuniversitydata/recurso/2021_22> a univ:CursoAcademico .
