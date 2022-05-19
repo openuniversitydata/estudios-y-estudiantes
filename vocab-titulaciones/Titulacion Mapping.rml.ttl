@@ -463,7 +463,7 @@ map:s_004 rdf:type rr:SubjectMap ;
 	rr:template "http://openuniversitydata/recurso/{des_interuniversitario}" .
 
 map:s_005 rdf:type rr:SubjectMap ;
-	rr:template "http://openuniversitydata/recurso/unidadresponsable/{des_unidad_responsable}" .
+	rr:template "http://openuniversitydata/recurso/{des_unidad_responsable}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "UC3M-2021-22.csv" ;
