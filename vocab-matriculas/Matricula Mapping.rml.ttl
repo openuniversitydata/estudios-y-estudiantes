@@ -1,0 +1,1792 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix map: <http://mapping.example.com/> .
+@prefix ma: <http://www.w3.org/ns/ma-ont#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix v: <http://rdf.data-vocabulary.org/#> .
+@prefix schema: <http://schema.org/> .
+@prefix univ: <http://openuniversitydata/def#> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+
+map:jc_000 rr:child "curso_academico" ;
+	rr:parent "curso_academico" .
+
+map:jc_001 rr:child "des_titulacion" ;
+	rr:parent "des_titulacion" .
+
+map:jc_002 rr:child "des_centro" ;
+	rr:parent "des_centro" .
+
+map:jc_003 rr:child "curso_academico_acceso_SUE" ;
+	rr:parent "curso_academico_acceso_SUE" .
+
+map:jc_004 rr:child "curso_academico_inicio" ;
+	rr:parent "curso_academico_inicio" .
+
+map:jc_005 rr:child "des_universidad" ;
+	rr:parent "des_universidad" .
+
+map:jc_006 rr:child "des_continente_nacionalidad" ;
+	rr:parent "des_continente_nacionalidad" .
+
+map:jc_007 rr:child "des_continente_residencia" ;
+	rr:parent "des_continente_residencia" .
+
+map:jc_008 rr:child "des_continente_univ_procedencia" ;
+	rr:parent "des_continente_univ_procedencia" .
+
+map:jc_009 rr:child "des_municipio_curso" ;
+	rr:parent "des_municipio_curso" .
+
+map:jc_010 rr:child "des_municipio_residencia" ;
+	rr:parent "des_municipio_residencia" .
+
+map:jc_011 rr:child "des_pais_nacionalidad" ;
+	rr:parent "des_pais_nacionalidad" .
+
+map:jc_012 rr:child "des_pais_residencia" ;
+	rr:parent "des_pais_residencia" .
+
+map:jc_013 rr:child "des_pais_univ_procedencia" ;
+	rr:parent "des_pais_univ_procedencia" .
+
+map:jc_014 rr:child "des_provincia_curso" ;
+	rr:parent "des_provincia_curso" .
+
+map:jc_015 rr:child "des_provincia_residencia" ;
+	rr:parent "des_provincia_residencia" .
+
+map:jc_016 rr:child "des_agregacion_paises_nacionalidad" ;
+	rr:parent "des_agregacion_paises_nacionalidad" .
+
+map:jc_017 rr:child "des_agregacion_paises_residencia" ;
+	rr:parent "des_agregacion_paises_residencia" .
+
+map:jc_018 rr:child "des_agregacion_paises_univ_procedencia" ;
+	rr:parent "des_agregacion_paises_univ_procedencia" .
+
+map:jc_019 rr:child "des_comunidad_curso" ;
+	rr:parent "des_comunidad_curso" .
+
+map:jc_020 rr:child "des_comunidad_residencia" ;
+	rr:parent "des_comunidad_residencia" .
+
+map:jc_021 rr:child "des_universidad" ;
+	rr:parent "des_universidad" .
+
+map:map_triplesMapAgregacionpaisesnacionalidad_000 rml:logicalSource map:source_002 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapAgregacionpaisesnacionalidad" ;
+	rr:predicateObjectMap map:pom_007, map:pom_008, map:pom_009 ;
+	rr:subjectMap map:s_002 .
+
+map:map_triplesMapAgregacionpaisesresidencia_000 rml:logicalSource map:source_004 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapAgregacionpaisesresidencia" ;
+	rr:predicateObjectMap map:pom_012, map:pom_013, map:pom_014 ;
+	rr:subjectMap map:s_004 .
+
+map:map_triplesMapAgregacionpaisesunivprocedencia_000 rml:logicalSource map:source_006 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapAgregacionpaisesunivprocedencia" ;
+	rr:predicateObjectMap map:pom_017, map:pom_018, map:pom_019 ;
+	rr:subjectMap map:s_006 .
+
+map:map_triplesMapCentro_000 rml:logicalSource map:source_015 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapCentro" ;
+	rr:predicateObjectMap map:pom_089, map:pom_090, map:pom_091, map:pom_092 ;
+	rr:subjectMap map:s_015 .
+
+map:map_triplesMapComunidadcurso_000 rml:logicalSource map:source_016 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapComunidadcurso" ;
+	rr:predicateObjectMap map:pom_093, map:pom_094 ;
+	rr:subjectMap map:s_016 .
+
+map:map_triplesMapComunidadresidencia_000 rml:logicalSource map:source_017 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapComunidadresidencia" ;
+	rr:predicateObjectMap map:pom_095, map:pom_096 ;
+	rr:subjectMap map:s_017 .
+
+map:map_triplesMapContinentenacionalidad_000 rml:logicalSource map:source_003 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapContinentenacionalidad" ;
+	rr:predicateObjectMap map:pom_010, map:pom_011 ;
+	rr:subjectMap map:s_003 .
+
+map:map_triplesMapContinenteresidencia_000 rml:logicalSource map:source_005 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapContinenteresidencia" ;
+	rr:predicateObjectMap map:pom_015, map:pom_016 ;
+	rr:subjectMap map:s_005 .
+
+map:map_triplesMapContinenteunivprocedencia_000 rml:logicalSource map:source_007 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapContinenteunivprocedencia" ;
+	rr:predicateObjectMap map:pom_020, map:pom_021 ;
+	rr:subjectMap map:s_007 .
+
+map:map_triplesMapCursoacademico_000 rml:logicalSource map:source_001 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapCursoacademico" ;
+	rr:predicateObjectMap map:pom_006 ;
+	rr:subjectMap map:s_001 .
+
+map:map_triplesMapCursoacademicoaccesosue_000 rml:logicalSource map:source_018 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapCursoacademicoaccesosue" ;
+	rr:predicateObjectMap map:pom_097 ;
+	rr:subjectMap map:s_018 .
+
+map:map_triplesMapCursoacademicoinicio_000 rml:logicalSource map:source_019 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapCursoacademicoinicio" ;
+	rr:predicateObjectMap map:pom_098 ;
+	rr:subjectMap map:s_019 .
+
+map:map_triplesMapEstudiante_000 rml:logicalSource map:source_008 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapEstudiante" ;
+	rr:predicateObjectMap map:pom_022, map:pom_023, map:pom_024, map:pom_025, map:pom_026, map:pom_027, map:pom_028, map:pom_029, map:pom_030, map:pom_031, map:pom_032, map:pom_033, map:pom_034, map:pom_035, map:pom_036, map:pom_037, map:pom_038, map:pom_039, map:pom_040, map:pom_041, map:pom_042, map:pom_043, map:pom_044, map:pom_045, map:pom_046, map:pom_047, map:pom_048, map:pom_049, map:pom_050, map:pom_051, map:pom_052, map:pom_053, map:pom_054, map:pom_055, map:pom_056, map:pom_057, map:pom_058, map:pom_059, map:pom_060, map:pom_061, map:pom_062, map:pom_063, map:pom_064, map:pom_065 ;
+	rr:subjectMap map:s_008 .
+
+map:map_triplesMapMunicipiocurso_000 rml:logicalSource map:source_020 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapMunicipiocurso" ;
+	rr:predicateObjectMap map:pom_099, map:pom_100, map:pom_101 ;
+	rr:subjectMap map:s_020 .
+
+map:map_triplesMapMunicipioresidencia_000 rml:logicalSource map:source_022 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapMunicipioresidencia" ;
+	rr:predicateObjectMap map:pom_105, map:pom_106, map:pom_107 ;
+	rr:subjectMap map:s_022 .
+
+map:map_triplesMapPaisnacionalidad_000 rml:logicalSource map:source_024 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPaisnacionalidad" ;
+	rr:predicateObjectMap map:pom_111, map:pom_112, map:pom_113 ;
+	rr:subjectMap map:s_024 .
+
+map:map_triplesMapPaisresidencia_000 rml:logicalSource map:source_025 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPaisresidencia" ;
+	rr:predicateObjectMap map:pom_114, map:pom_115, map:pom_116 ;
+	rr:subjectMap map:s_025 .
+
+map:map_triplesMapPaisunivprocedencia_000 rml:logicalSource map:source_026 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPaisunivprocedencia" ;
+	rr:predicateObjectMap map:pom_117, map:pom_118, map:pom_119 ;
+	rr:subjectMap map:s_026 .
+
+map:map_triplesMapPoin5_000 rml:logicalSource map:source_014 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPoin5" ;
+	rr:predicateObjectMap map:pom_085, map:pom_086, map:pom_087, map:pom_088 ;
+	rr:subjectMap map:s_014 .
+
+map:map_triplesMapPoint2_000 rml:logicalSource map:source_011 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPoint2" ;
+	rr:predicateObjectMap map:pom_073, map:pom_074, map:pom_075, map:pom_076 ;
+	rr:subjectMap map:s_011 .
+
+map:map_triplesMapPoint3_000 rml:logicalSource map:source_012 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPoint3" ;
+	rr:predicateObjectMap map:pom_077, map:pom_078, map:pom_079, map:pom_080 ;
+	rr:subjectMap map:s_012 .
+
+map:map_triplesMapPoint4_000 rml:logicalSource map:source_013 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPoint4" ;
+	rr:predicateObjectMap map:pom_081, map:pom_082, map:pom_083, map:pom_084 ;
+	rr:subjectMap map:s_013 .
+
+map:map_triplesMapPoint_000 rml:logicalSource map:source_010 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapPoint" ;
+	rr:predicateObjectMap map:pom_069, map:pom_070, map:pom_071, map:pom_072 ;
+	rr:subjectMap map:s_010 .
+
+map:map_triplesMapProvinciacurso_000 rml:logicalSource map:source_021 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapProvinciacurso" ;
+	rr:predicateObjectMap map:pom_102, map:pom_103, map:pom_104 ;
+	rr:subjectMap map:s_021 .
+
+map:map_triplesMapProvinciaresidencia_000 rml:logicalSource map:source_023 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapProvinciaresidencia" ;
+	rr:predicateObjectMap map:pom_108, map:pom_109, map:pom_110 ;
+	rr:subjectMap map:s_023 .
+
+map:map_triplesMapTitulacion_000 rml:logicalSource map:source_009 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapTitulacion" ;
+	rr:predicateObjectMap map:pom_066, map:pom_067, map:pom_068 ;
+	rr:subjectMap map:s_009 .
+
+map:map_triplesMapUniversidad_000 rml:logicalSource map:source_000 ;
+	rdf:type rr:TriplesMap ;
+	rdfs:label "triplesMapUniversidad" ;
+	rr:predicateObjectMap map:pom_000, map:pom_001, map:pom_002, map:pom_003, map:pom_004, map:pom_005 ;
+	rr:subjectMap map:s_000 .
+
+map:om_000 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def#Universidad" ;
+	rr:termType rr:IRI .
+
+map:om_001 rml:reference "cod_universidad" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_002 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.w3.org/ns/org#Organization" ;
+	rr:termType rr:Literal .
+
+map:om_003 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_000 ;
+	rr:parentTriplesMap map:map_triplesMapCursoacademico_000 .
+
+map:om_004 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_001 ;
+	rr:parentTriplesMap map:map_triplesMapTitulacion_000 .
+
+map:om_005 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_002 ;
+	rr:parentTriplesMap map:map_triplesMapCentro_000 .
+
+map:om_006 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def#CursoAcademico" ;
+	rr:termType rr:IRI .
+
+map:om_007 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad" ;
+	rr:termType rr:IRI .
+
+map:om_008 rml:reference "cod_agregacion_paises_nacionalidad" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_009 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad" ;
+	rr:termType rr:Literal .
+
+map:om_010 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad" ;
+	rr:termType rr:IRI .
+
+map:om_011 rml:reference "cod_continente_nacionalidad" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_012 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesResidencia" ;
+	rr:termType rr:IRI .
+
+map:om_013 rml:reference "cod_agregacion_paises_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_014 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia" ;
+	rr:termType rr:Literal .
+
+map:om_015 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia" ;
+	rr:termType rr:IRI .
+
+map:om_016 rml:reference "cod_continente_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_017 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesUnivProcedencia" ;
+	rr:termType rr:IRI .
+
+map:om_018 rml:reference "cod_agregacion_paises_univ_procedencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_019 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia" ;
+	rr:termType rr:Literal .
+
+map:om_020 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia" ;
+	rr:termType rr:IRI .
+
+map:om_021 rml:reference "cod_continente_univ_procedencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_022 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#Estudiante" ;
+	rr:termType rr:IRI .
+
+map:om_023 rml:reference "anio_nacimiento" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_024 rml:reference "ind_mencion_industrial" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:boolean ;
+	rr:termType rr:Literal .
+
+map:om_025 rml:reference "ind_mencion_internacional" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:boolean ;
+	rr:termType rr:Literal .
+
+map:om_026 rml:reference "ind_se_titula_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:boolean ;
+	rr:termType rr:Literal .
+
+map:om_027 rml:reference "ind_tesis_leida_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:boolean ;
+	rr:termType rr:Literal .
+
+map:om_028 rml:reference "nota_media_final" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_029 rml:reference "num_creditos_mat_1_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_030 rml:reference "num_creditos_mat_2_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_031 rml:reference "num_creditos_mat_3_o_mas_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_032 rml:reference "num_creditos_no_pres_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_033 rml:reference "num_creditos_pres_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_034 rml:reference "num_total_creditos_mat_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_035 rml:reference "num_total_creditos_mat_inicio" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_036 rml:reference "num_total_creditos_no_sup_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_037 rml:reference "num_total_creditos_pres_inicio" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_038 rml:reference "num_total_creditos_rec_conv_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_039 rml:reference "num_total_creditos_rec_conv_inicio" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_040 rml:reference "num_total_creditos_sup_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_041 rml:reference "num_total_creditos_sup_inicio" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_042 rml:reference "num_total_creditos_transf_inicio" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:integer ;
+	rr:termType rr:Literal .
+
+map:om_043 rdf:type rr:ObjectMap ;
+	rr:template "http://openuniversitydata/kos/estudios-y-estudiantes/genero/{des_genero}" ;
+	rr:termType rr:Literal .
+
+map:om_044 rdf:type rr:ObjectMap ;
+	rr:template "http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion/{des_dedicacion}" ;
+	rr:termType rr:Literal .
+
+map:om_045 rdf:type rr:ObjectMap ;
+	rr:template "http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis/{des_calificacion_tesis}" ;
+	rr:termType rr:Literal .
+
+map:om_046 rdf:type rr:ObjectMap ;
+	rr:template "http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master/{des_tipo_titulo_acceso_master}" ;
+	rr:termType rr:Literal .
+
+map:om_047 rdf:type rr:ObjectMap ;
+	rr:constant "http://schema.org/Person" ;
+	rr:termType rr:Literal .
+
+map:om_048 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_003 ;
+	rr:parentTriplesMap map:map_triplesMapCursoacademicoaccesosue_000 .
+
+map:om_049 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_004 ;
+	rr:parentTriplesMap map:map_triplesMapCursoacademicoinicio_000 .
+
+map:om_050 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_005 ;
+	rr:parentTriplesMap map:map_triplesMapUniversidad_000 .
+
+map:om_051 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_006 ;
+	rr:parentTriplesMap map:map_triplesMapContinentenacionalidad_000 .
+
+map:om_052 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_007 ;
+	rr:parentTriplesMap map:map_triplesMapContinenteresidencia_000 .
+
+map:om_053 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_008 ;
+	rr:parentTriplesMap map:map_triplesMapContinenteunivprocedencia_000 .
+
+map:om_054 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_009 ;
+	rr:parentTriplesMap map:map_triplesMapMunicipiocurso_000 .
+
+map:om_055 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_010 ;
+	rr:parentTriplesMap map:map_triplesMapMunicipioresidencia_000 .
+
+map:om_056 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_011 ;
+	rr:parentTriplesMap map:map_triplesMapPaisnacionalidad_000 .
+
+map:om_057 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_012 ;
+	rr:parentTriplesMap map:map_triplesMapPaisresidencia_000 .
+
+map:om_058 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_013 ;
+	rr:parentTriplesMap map:map_triplesMapPaisunivprocedencia_000 .
+
+map:om_059 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_014 ;
+	rr:parentTriplesMap map:map_triplesMapProvinciacurso_000 .
+
+map:om_060 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_015 ;
+	rr:parentTriplesMap map:map_triplesMapProvinciaresidencia_000 .
+
+map:om_061 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_016 ;
+	rr:parentTriplesMap map:map_triplesMapAgregacionpaisesnacionalidad_000 .
+
+map:om_062 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_017 ;
+	rr:parentTriplesMap map:map_triplesMapAgregacionpaisesresidencia_000 .
+
+map:om_063 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_018 ;
+	rr:parentTriplesMap map:map_triplesMapAgregacionpaisesunivprocedencia_000 .
+
+map:om_064 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_019 ;
+	rr:parentTriplesMap map:map_triplesMapComunidadcurso_000 .
+
+map:om_065 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_020 ;
+	rr:parentTriplesMap map:map_triplesMapComunidadresidencia_000 .
+
+map:om_066 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#Titulacion" ;
+	rr:termType rr:IRI .
+
+map:om_067 rml:reference "cod_titulacion" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_068 rdf:type rr:ObjectMap ;
+	rr:template "http://openuniversitydata/kos/organizacion-y-servicios/tipo-estudio/{des_tipo_estudio}" ;
+	rr:termType rr:Literal .
+
+map:om_069 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Point" ;
+	rr:termType rr:IRI .
+
+map:om_070 rml:reference "lat_pais_nacionalidad" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_071 rml:reference "lon_pais_nacionalidad" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_072 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Geometry" ;
+	rr:termType rr:Literal .
+
+map:om_073 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Point" ;
+	rr:termType rr:IRI .
+
+map:om_074 rml:reference "lat_pais_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_075 rml:reference "lon_pais_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_076 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Geometry" ;
+	rr:termType rr:Literal .
+
+map:om_077 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Point" ;
+	rr:termType rr:IRI .
+
+map:om_078 rml:reference "lat_municipio_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_079 rml:reference "lon_municipio_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_080 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Geometry" ;
+	rr:termType rr:Literal .
+
+map:om_081 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Point" ;
+	rr:termType rr:IRI .
+
+map:om_082 rml:reference "lat_municipio_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_083 rml:reference "lon_municipio_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_084 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Geometry" ;
+	rr:termType rr:Literal .
+
+map:om_085 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Point" ;
+	rr:termType rr:IRI .
+
+map:om_086 rml:reference "lat_pais_univ_procedencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_087 rml:reference "lon_pais_univ_procedencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:datatype xsd:double ;
+	rr:termType rr:Literal .
+
+map:om_088 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.owl-ontologies.com/geosparql#Geometry" ;
+	rr:termType rr:Literal .
+
+map:om_089 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/organizacion-y-servicios#Centro" ;
+	rr:termType rr:IRI .
+
+map:om_090 rml:reference "cod_centro" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_091 rdf:type rr:ObjectMap ;
+	rr:constant "http://www.w3.org/ns/org#Organization" ;
+	rr:termType rr:Literal .
+
+map:om_092 rdf:type rr:ObjectMap ;
+	rr:joinCondition map:jc_021 ;
+	rr:parentTriplesMap map:map_triplesMapUniversidad_000 .
+
+map:om_093 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ComunidadCurso" ;
+	rr:termType rr:IRI .
+
+map:om_094 rml:reference "cod_comunidad_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_095 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ComunidadResidencia" ;
+	rr:termType rr:IRI .
+
+map:om_096 rml:reference "cod_comunidad_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_097 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoAccesoSUE" ;
+	rr:termType rr:IRI .
+
+map:om_098 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoInicio" ;
+	rr:termType rr:IRI .
+
+map:om_099 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#MunicipioCurso" ;
+	rr:termType rr:IRI .
+
+map:om_100 rml:reference "cod_municipio_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_101 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaCurso" ;
+	rr:termType rr:Literal .
+
+map:om_102 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaCurso" ;
+	rr:termType rr:IRI .
+
+map:om_103 rml:reference "cod_provincia_curso" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_104 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ComunidadCurso" ;
+	rr:termType rr:Literal .
+
+map:om_105 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#MunicipioResidencia" ;
+	rr:termType rr:IRI .
+
+map:om_106 rml:reference "cod_municipio_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_107 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaResidencia" ;
+	rr:termType rr:Literal .
+
+map:om_108 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaResidencia" ;
+	rr:termType rr:IRI .
+
+map:om_109 rml:reference "cod_provincia_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_110 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ComunidadResidencia" ;
+	rr:termType rr:Literal .
+
+map:om_111 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad" ;
+	rr:termType rr:IRI .
+
+map:om_112 rml:reference "cod_pais_nacionalidad" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_113 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad" ;
+	rr:termType rr:Literal .
+
+map:om_114 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia" ;
+	rr:termType rr:IRI .
+
+map:om_115 rml:reference "cod_pais_residencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_116 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia" ;
+	rr:termType rr:Literal .
+
+map:om_117 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#PaisUnivProcedencia" ;
+	rr:termType rr:IRI .
+
+map:om_118 rml:reference "cod_pais_univ_procedencia" ;
+	rdf:type rr:ObjectMap ;
+	rr:termType rr:Literal .
+
+map:om_119 rdf:type rr:ObjectMap ;
+	rr:constant "http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia" ;
+	rr:termType rr:Literal .
+
+map:pm_000 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_001 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_002 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_003 rdf:type rr:PredicateMap ;
+	rr:constant univ:tieneAsociado .
+
+map:pm_004 rdf:type rr:PredicateMap ;
+	rr:constant univ:ofrece .
+
+map:pm_005 rdf:type rr:PredicateMap ;
+	rr:constant org:hasSubOrganization .
+
+map:pm_006 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_007 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_008 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_009 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_010 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_011 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_012 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_013 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_014 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_015 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_016 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_017 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_018 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_019 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_020 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_021 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_022 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_023 rdf:type rr:PredicateMap ;
+	rr:constant estud:anioNacimiento .
+
+map:pm_024 rdf:type rr:PredicateMap ;
+	rr:constant estud:indMencionIndustrial .
+
+map:pm_025 rdf:type rr:PredicateMap ;
+	rr:constant estud:indMencionInternacional .
+
+map:pm_026 rdf:type rr:PredicateMap ;
+	rr:constant estud:indSeTitulaCurso .
+
+map:pm_027 rdf:type rr:PredicateMap ;
+	rr:constant estud:indTesisLeidaCurso .
+
+map:pm_028 rdf:type rr:PredicateMap ;
+	rr:constant estud:notaMediaFinal .
+
+map:pm_029 rdf:type rr:PredicateMap ;
+	rr:constant estud:numCreditosMat1Curso .
+
+map:pm_030 rdf:type rr:PredicateMap ;
+	rr:constant estud:numCreditosMat2Curso .
+
+map:pm_031 rdf:type rr:PredicateMap ;
+	rr:constant estud:numCreditosMat3OMasCurso .
+
+map:pm_032 rdf:type rr:PredicateMap ;
+	rr:constant estud:numCreditosNoPresCurso .
+
+map:pm_033 rdf:type rr:PredicateMap ;
+	rr:constant estud:numCreditosPresCurso .
+
+map:pm_034 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosMatCurso .
+
+map:pm_035 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosMatInicio .
+
+map:pm_036 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosNoSupCurso .
+
+map:pm_037 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosPresInicio .
+
+map:pm_038 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosRecConvCurso .
+
+map:pm_039 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosRecConvInicio .
+
+map:pm_040 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosSupCurso .
+
+map:pm_041 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosSupInicio .
+
+map:pm_042 rdf:type rr:PredicateMap ;
+	rr:constant estud:numTotalCreditosTransfInicio .
+
+map:pm_043 rdf:type rr:PredicateMap ;
+	rr:constant estud:genero .
+
+map:pm_044 rdf:type rr:PredicateMap ;
+	rr:constant estud:dedicacion .
+
+map:pm_045 rdf:type rr:PredicateMap ;
+	rr:constant estud:calificacionTesis .
+
+map:pm_046 rdf:type rr:PredicateMap ;
+	rr:constant estud:tipoTituloAccesoMaster .
+
+map:pm_047 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_048 rdf:type rr:PredicateMap ;
+	rr:constant estud:accede .
+
+map:pm_049 rdf:type rr:PredicateMap ;
+	rr:constant estud:empieza .
+
+map:pm_050 rdf:type rr:PredicateMap ;
+	rr:constant estud:estudia .
+
+map:pm_051 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_052 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_053 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_054 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_055 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_056 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_057 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_058 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_059 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_060 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_061 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_062 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_063 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_064 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_065 rdf:type rr:PredicateMap ;
+	rr:constant estud:posee .
+
+map:pm_066 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_067 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_068 rdf:type rr:PredicateMap ;
+	rr:constant estud:tipoEstudio .
+
+map:pm_069 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_070 rdf:type rr:PredicateMap ;
+	rr:constant geo:lat .
+
+map:pm_071 rdf:type rr:PredicateMap ;
+	rr:constant geo:long .
+
+map:pm_072 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_073 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_074 rdf:type rr:PredicateMap ;
+	rr:constant geo:lat .
+
+map:pm_075 rdf:type rr:PredicateMap ;
+	rr:constant geo:long .
+
+map:pm_076 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_077 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_078 rdf:type rr:PredicateMap ;
+	rr:constant geo:lat .
+
+map:pm_079 rdf:type rr:PredicateMap ;
+	rr:constant geo:long .
+
+map:pm_080 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_081 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_082 rdf:type rr:PredicateMap ;
+	rr:constant geo:lat .
+
+map:pm_083 rdf:type rr:PredicateMap ;
+	rr:constant geo:long .
+
+map:pm_084 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_085 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_086 rdf:type rr:PredicateMap ;
+	rr:constant geo:lat .
+
+map:pm_087 rdf:type rr:PredicateMap ;
+	rr:constant geo:long .
+
+map:pm_088 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_089 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_090 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_091 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_092 rdf:type rr:PredicateMap ;
+	rr:constant org:subOrganizationOf .
+
+map:pm_093 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_094 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_095 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_096 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_097 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_098 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_099 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_100 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_101 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_102 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_103 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_104 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_105 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_106 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_107 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_108 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_109 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_110 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_111 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_112 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_113 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_114 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_115 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_116 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pm_117 rdf:type rr:PredicateMap ;
+	rr:constant rdf:type .
+
+map:pm_118 rdf:type rr:PredicateMap ;
+	rr:constant dct:identifier .
+
+map:pm_119 rdf:type rr:PredicateMap ;
+	rr:constant rdfs:subClassOf .
+
+map:pom_000 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_000 ;
+	rr:predicateMap map:pm_000 .
+
+map:pom_001 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_001 ;
+	rr:predicateMap map:pm_001 .
+
+map:pom_002 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_002 ;
+	rr:predicateMap map:pm_002 .
+
+map:pom_003 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_003 ;
+	rr:predicateMap map:pm_003 .
+
+map:pom_004 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_004 ;
+	rr:predicateMap map:pm_004 .
+
+map:pom_005 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_005 ;
+	rr:predicateMap map:pm_005 .
+
+map:pom_006 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_006 ;
+	rr:predicateMap map:pm_006 .
+
+map:pom_007 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_007 ;
+	rr:predicateMap map:pm_007 .
+
+map:pom_008 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_008 ;
+	rr:predicateMap map:pm_008 .
+
+map:pom_009 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_009 ;
+	rr:predicateMap map:pm_009 .
+
+map:pom_010 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_010 ;
+	rr:predicateMap map:pm_010 .
+
+map:pom_011 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_011 ;
+	rr:predicateMap map:pm_011 .
+
+map:pom_012 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_012 ;
+	rr:predicateMap map:pm_012 .
+
+map:pom_013 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_013 ;
+	rr:predicateMap map:pm_013 .
+
+map:pom_014 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_014 ;
+	rr:predicateMap map:pm_014 .
+
+map:pom_015 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_015 ;
+	rr:predicateMap map:pm_015 .
+
+map:pom_016 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_016 ;
+	rr:predicateMap map:pm_016 .
+
+map:pom_017 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_017 ;
+	rr:predicateMap map:pm_017 .
+
+map:pom_018 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_018 ;
+	rr:predicateMap map:pm_018 .
+
+map:pom_019 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_019 ;
+	rr:predicateMap map:pm_019 .
+
+map:pom_020 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_020 ;
+	rr:predicateMap map:pm_020 .
+
+map:pom_021 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_021 ;
+	rr:predicateMap map:pm_021 .
+
+map:pom_022 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_022 ;
+	rr:predicateMap map:pm_022 .
+
+map:pom_023 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_023 ;
+	rr:predicateMap map:pm_023 .
+
+map:pom_024 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_024 ;
+	rr:predicateMap map:pm_024 .
+
+map:pom_025 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_025 ;
+	rr:predicateMap map:pm_025 .
+
+map:pom_026 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_026 ;
+	rr:predicateMap map:pm_026 .
+
+map:pom_027 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_027 ;
+	rr:predicateMap map:pm_027 .
+
+map:pom_028 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_028 ;
+	rr:predicateMap map:pm_028 .
+
+map:pom_029 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_029 ;
+	rr:predicateMap map:pm_029 .
+
+map:pom_030 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_030 ;
+	rr:predicateMap map:pm_030 .
+
+map:pom_031 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_031 ;
+	rr:predicateMap map:pm_031 .
+
+map:pom_032 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_032 ;
+	rr:predicateMap map:pm_032 .
+
+map:pom_033 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_033 ;
+	rr:predicateMap map:pm_033 .
+
+map:pom_034 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_034 ;
+	rr:predicateMap map:pm_034 .
+
+map:pom_035 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_035 ;
+	rr:predicateMap map:pm_035 .
+
+map:pom_036 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_036 ;
+	rr:predicateMap map:pm_036 .
+
+map:pom_037 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_037 ;
+	rr:predicateMap map:pm_037 .
+
+map:pom_038 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_038 ;
+	rr:predicateMap map:pm_038 .
+
+map:pom_039 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_039 ;
+	rr:predicateMap map:pm_039 .
+
+map:pom_040 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_040 ;
+	rr:predicateMap map:pm_040 .
+
+map:pom_041 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_041 ;
+	rr:predicateMap map:pm_041 .
+
+map:pom_042 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_042 ;
+	rr:predicateMap map:pm_042 .
+
+map:pom_043 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_043 ;
+	rr:predicateMap map:pm_043 .
+
+map:pom_044 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_044 ;
+	rr:predicateMap map:pm_044 .
+
+map:pom_045 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_045 ;
+	rr:predicateMap map:pm_045 .
+
+map:pom_046 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_046 ;
+	rr:predicateMap map:pm_046 .
+
+map:pom_047 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_047 ;
+	rr:predicateMap map:pm_047 .
+
+map:pom_048 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_048 ;
+	rr:predicateMap map:pm_048 .
+
+map:pom_049 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_049 ;
+	rr:predicateMap map:pm_049 .
+
+map:pom_050 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_050 ;
+	rr:predicateMap map:pm_050 .
+
+map:pom_051 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_051 ;
+	rr:predicateMap map:pm_051 .
+
+map:pom_052 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_052 ;
+	rr:predicateMap map:pm_052 .
+
+map:pom_053 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_053 ;
+	rr:predicateMap map:pm_053 .
+
+map:pom_054 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_054 ;
+	rr:predicateMap map:pm_054 .
+
+map:pom_055 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_055 ;
+	rr:predicateMap map:pm_055 .
+
+map:pom_056 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_056 ;
+	rr:predicateMap map:pm_056 .
+
+map:pom_057 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_057 ;
+	rr:predicateMap map:pm_057 .
+
+map:pom_058 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_058 ;
+	rr:predicateMap map:pm_058 .
+
+map:pom_059 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_059 ;
+	rr:predicateMap map:pm_059 .
+
+map:pom_060 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_060 ;
+	rr:predicateMap map:pm_060 .
+
+map:pom_061 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_061 ;
+	rr:predicateMap map:pm_061 .
+
+map:pom_062 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_062 ;
+	rr:predicateMap map:pm_062 .
+
+map:pom_063 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_063 ;
+	rr:predicateMap map:pm_063 .
+
+map:pom_064 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_064 ;
+	rr:predicateMap map:pm_064 .
+
+map:pom_065 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_065 ;
+	rr:predicateMap map:pm_065 .
+
+map:pom_066 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_066 ;
+	rr:predicateMap map:pm_066 .
+
+map:pom_067 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_067 ;
+	rr:predicateMap map:pm_067 .
+
+map:pom_068 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_068 ;
+	rr:predicateMap map:pm_068 .
+
+map:pom_069 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_069 ;
+	rr:predicateMap map:pm_069 .
+
+map:pom_070 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_070 ;
+	rr:predicateMap map:pm_070 .
+
+map:pom_071 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_071 ;
+	rr:predicateMap map:pm_071 .
+
+map:pom_072 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_072 ;
+	rr:predicateMap map:pm_072 .
+
+map:pom_073 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_073 ;
+	rr:predicateMap map:pm_073 .
+
+map:pom_074 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_074 ;
+	rr:predicateMap map:pm_074 .
+
+map:pom_075 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_075 ;
+	rr:predicateMap map:pm_075 .
+
+map:pom_076 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_076 ;
+	rr:predicateMap map:pm_076 .
+
+map:pom_077 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_077 ;
+	rr:predicateMap map:pm_077 .
+
+map:pom_078 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_078 ;
+	rr:predicateMap map:pm_078 .
+
+map:pom_079 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_079 ;
+	rr:predicateMap map:pm_079 .
+
+map:pom_080 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_080 ;
+	rr:predicateMap map:pm_080 .
+
+map:pom_081 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_081 ;
+	rr:predicateMap map:pm_081 .
+
+map:pom_082 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_082 ;
+	rr:predicateMap map:pm_082 .
+
+map:pom_083 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_083 ;
+	rr:predicateMap map:pm_083 .
+
+map:pom_084 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_084 ;
+	rr:predicateMap map:pm_084 .
+
+map:pom_085 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_085 ;
+	rr:predicateMap map:pm_085 .
+
+map:pom_086 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_086 ;
+	rr:predicateMap map:pm_086 .
+
+map:pom_087 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_087 ;
+	rr:predicateMap map:pm_087 .
+
+map:pom_088 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_088 ;
+	rr:predicateMap map:pm_088 .
+
+map:pom_089 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_089 ;
+	rr:predicateMap map:pm_089 .
+
+map:pom_090 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_090 ;
+	rr:predicateMap map:pm_090 .
+
+map:pom_091 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_091 ;
+	rr:predicateMap map:pm_091 .
+
+map:pom_092 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_092 ;
+	rr:predicateMap map:pm_092 .
+
+map:pom_093 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_093 ;
+	rr:predicateMap map:pm_093 .
+
+map:pom_094 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_094 ;
+	rr:predicateMap map:pm_094 .
+
+map:pom_095 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_095 ;
+	rr:predicateMap map:pm_095 .
+
+map:pom_096 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_096 ;
+	rr:predicateMap map:pm_096 .
+
+map:pom_097 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_097 ;
+	rr:predicateMap map:pm_097 .
+
+map:pom_098 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_098 ;
+	rr:predicateMap map:pm_098 .
+
+map:pom_099 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_099 ;
+	rr:predicateMap map:pm_099 .
+
+map:pom_100 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_100 ;
+	rr:predicateMap map:pm_100 .
+
+map:pom_101 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_101 ;
+	rr:predicateMap map:pm_101 .
+
+map:pom_102 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_102 ;
+	rr:predicateMap map:pm_102 .
+
+map:pom_103 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_103 ;
+	rr:predicateMap map:pm_103 .
+
+map:pom_104 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_104 ;
+	rr:predicateMap map:pm_104 .
+
+map:pom_105 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_105 ;
+	rr:predicateMap map:pm_105 .
+
+map:pom_106 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_106 ;
+	rr:predicateMap map:pm_106 .
+
+map:pom_107 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_107 ;
+	rr:predicateMap map:pm_107 .
+
+map:pom_108 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_108 ;
+	rr:predicateMap map:pm_108 .
+
+map:pom_109 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_109 ;
+	rr:predicateMap map:pm_109 .
+
+map:pom_110 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_110 ;
+	rr:predicateMap map:pm_110 .
+
+map:pom_111 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_111 ;
+	rr:predicateMap map:pm_111 .
+
+map:pom_112 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_112 ;
+	rr:predicateMap map:pm_112 .
+
+map:pom_113 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_113 ;
+	rr:predicateMap map:pm_113 .
+
+map:pom_114 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_114 ;
+	rr:predicateMap map:pm_114 .
+
+map:pom_115 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_115 ;
+	rr:predicateMap map:pm_115 .
+
+map:pom_116 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_116 ;
+	rr:predicateMap map:pm_116 .
+
+map:pom_117 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_117 ;
+	rr:predicateMap map:pm_117 .
+
+map:pom_118 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_118 ;
+	rr:predicateMap map:pm_118 .
+
+map:pom_119 rdf:type rr:PredicateObjectMap ;
+	rr:objectMap map:om_119 ;
+	rr:predicateMap map:pm_119 .
+
+map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_triplesMapAgregacionpaisesnacionalidad_000, map:map_triplesMapAgregacionpaisesresidencia_000, map:map_triplesMapAgregacionpaisesunivprocedencia_000, map:map_triplesMapCentro_000, map:map_triplesMapComunidadcurso_000, map:map_triplesMapComunidadresidencia_000, map:map_triplesMapContinentenacionalidad_000, map:map_triplesMapContinenteresidencia_000, map:map_triplesMapContinenteunivprocedencia_000, map:map_triplesMapCursoacademico_000, map:map_triplesMapCursoacademicoaccesosue_000, map:map_triplesMapCursoacademicoinicio_000, map:map_triplesMapEstudiante_000, map:map_triplesMapMunicipiocurso_000, map:map_triplesMapMunicipioresidencia_000, map:map_triplesMapPaisnacionalidad_000, map:map_triplesMapPaisresidencia_000, map:map_triplesMapPaisunivprocedencia_000, map:map_triplesMapPoin5_000, map:map_triplesMapPoint2_000, map:map_triplesMapPoint3_000, map:map_triplesMapPoint4_000, map:map_triplesMapPoint_000, map:map_triplesMapProvinciacurso_000, map:map_triplesMapProvinciaresidencia_000, map:map_triplesMapTitulacion_000, map:map_triplesMapUniversidad_000 ;
+	rdf:type <http://rdfs.org/ns/void#Dataset> .
+
+map:s_000 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_universidad}" .
+
+map:s_001 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{curso_academico}" .
+
+map:s_002 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_agregacion_paises_nacionalidad}" .
+
+map:s_003 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_continente_nacionalidad}" .
+
+map:s_004 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_agregacion_paises_residencia}" .
+
+map:s_005 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_continente_residencia}" .
+
+map:s_006 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_agregacion_paises_univ_procedencia}" .
+
+map:s_007 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_continente_univ_procedencia}" .
+
+map:s_008 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{}" .
+
+map:s_009 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_titulacion}" .
+
+map:s_010 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_pais_nacionalidad}" .
+
+map:s_011 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_pais_residencia}" .
+
+map:s_012 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_municipio_residencia}" .
+
+map:s_013 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_municipio_curso}" .
+
+map:s_014 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_pais_univ_procedencia}" .
+
+map:s_015 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_centro}" .
+
+map:s_016 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_comunidad_curso}" .
+
+map:s_017 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_comunidad_residencia}" .
+
+map:s_018 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{curso_academico_acceso_SUE}" .
+
+map:s_019 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{curso_academico_inicio}" .
+
+map:s_020 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_municipio_curso}" .
+
+map:s_021 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_provincia_curso}" .
+
+map:s_022 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_municipio_residencia}" .
+
+map:s_023 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_provincia_residencia}" .
+
+map:s_024 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_pais_nacionalidad}" .
+
+map:s_025 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_pais_residencia}" .
+
+map:s_026 rdf:type rr:SubjectMap ;
+	rr:template "http://openuniversitydata/recurso/{des_pais_univ_procedencia}" .
+
+map:source_000 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_001 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_002 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_003 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_004 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_005 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_006 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_007 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_008 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_009 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_010 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_011 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_012 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_013 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_014 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_015 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_016 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_017 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_018 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_019 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_020 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_021 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_022 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_023 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_024 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_025 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
+map:source_026 rml:referenceFormulation ql:CSV ;
+	rml:source "UC3M-2019-20.csv" ;
+	rdf:type rml:LogicalSource .
+
