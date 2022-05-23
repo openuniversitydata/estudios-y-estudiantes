@@ -1,0 +1,403 @@
+<http://openuniversitydata/def#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/creator> "Víctor Morcuende" .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/title> "Titulacion Ontology" .
+<http://openuniversitydata/def#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.3" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def#ofrece
+<http://openuniversitydata/def#ofrece> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#ofrece> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://openuniversitydata/def#ofrece> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def#ofrece> <http://www.w3.org/2000/01/rdf-schema#label> "ofrece" .
+# 
+# http://openuniversitydata/def#tieneAsociado
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#CursoAcademico> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#label> "tiene asociado" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#cuesta
+<http://openuniversitydata/def/estudios-y-estudiantes#cuesta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#cuesta> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#cuesta> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#Precio> .
+<http://openuniversitydata/def/estudios-y-estudiantes#cuesta> <http://www.w3.org/2000/01/rdf-schema#label> "cuesta" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#es
+<http://openuniversitydata/def/estudios-y-estudiantes#es> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#es> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#es> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#Interuniversitario> .
+<http://openuniversitydata/def/estudios-y-estudiantes#es> <http://www.w3.org/2000/01/rdf-schema#label> "es" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#estaAsociadaA
+<http://openuniversitydata/def/estudios-y-estudiantes#estaAsociadaA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#estaAsociadaA> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#estaAsociadaA> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> .
+<http://openuniversitydata/def/estudios-y-estudiantes#estaAsociadaA> <http://www.w3.org/2000/01/rdf-schema#label> "esta asociada a" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#gradoPresencialidad
+<http://openuniversitydata/def/estudios-y-estudiantes#gradoPresencialidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#gradoPresencialidad> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#gradoPresencialidad> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/grado-presencialidad> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/grado-presencialidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#gradoPresencialidad> <http://www.w3.org/2000/01/rdf-schema#label> "grado presencialidad" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#rama
+<http://openuniversitydata/def/estudios-y-estudiantes#rama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#rama> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#rama> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/rama> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/rama> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#rama> <http://www.w3.org/2000/01/rdf-schema#label> "rama" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#rolCoordinacion
+<http://openuniversitydata/def/estudios-y-estudiantes#rolCoordinacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#rolCoordinacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Interuniversitario> .
+<http://openuniversitydata/def/estudios-y-estudiantes#rolCoordinacion> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/rol-coordinacion> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/rol-coordinacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#rolCoordinacion> <http://www.w3.org/2000/01/rdf-schema#label> "rol coordinacion" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#situacionActual
+<http://openuniversitydata/def/estudios-y-estudiantes#situacionActual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#situacionActual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#situacionActual> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/situacion-actual> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/situacion-actual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#situacionActual> <http://www.w3.org/2000/01/rdf-schema#label> "situacion actual" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio> <http://www.w3.org/2000/01/rdf-schema#label> "tipo estudio" .
+# 
+# http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> .
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#range> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid21 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable> .
+<http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/organizacion-y-servicios#tipoUnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#label> "tipo unidad responsable" .
+# 
+# http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#wKTLiteral> .
+<http://www.w3.org/2001/XMLSchema#wKTLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.owl-ontologies.com/geosparql#hasGeometry
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry" .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+# 
+# http://www.w3.org/ns/org#hasSite
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Site> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#label> "has site" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#anioCreada
+<http://openuniversitydata/def/estudios-y-estudiantes#anioCreada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#anioCreada> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#anioCreada> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/estudios-y-estudiantes#anioCreada> <http://www.w3.org/2000/01/rdf-schema#label> "anio creada" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#idiomaExtranjero
+<http://openuniversitydata/def/estudios-y-estudiantes#idiomaExtranjero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#idiomaExtranjero> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#idiomaExtranjero> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://openuniversitydata/def/estudios-y-estudiantes#idiomaExtranjero> <http://www.w3.org/2000/01/rdf-schema#label> "idioma extranjero" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#impartida
+<http://openuniversitydata/def/estudios-y-estudiantes#impartida> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#impartida> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#impartida> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://openuniversitydata/def/estudios-y-estudiantes#impartida> <http://www.w3.org/2000/01/rdf-schema#label> "impartida" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#numCreditosNecesarios
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosNecesarios> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosNecesarios> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosNecesarios> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosNecesarios> <http://www.w3.org/2000/01/rdf-schema#label> "num creditos necesarios" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#numCreditosOfertados
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosOfertados> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosOfertados> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosOfertados> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosOfertados> <http://www.w3.org/2000/01/rdf-schema#label> "num creditos ofertados" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr1
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr1> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Precio> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr1> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr1> <http://www.w3.org/2000/01/rdf-schema#label> "precio cred matr1" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr2
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr2> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Precio> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr2> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr2> <http://www.w3.org/2000/01/rdf-schema#label> "precio cred matr2" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr3
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr3> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Precio> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr3> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr3> <http://www.w3.org/2000/01/rdf-schema#label> "precio cred matr3" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr4
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr4> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Precio> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr4> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr4> <http://www.w3.org/2000/01/rdf-schema#label> "precio cred matr4" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr5
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr5> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Precio> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr5> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioCredMatr5> <http://www.w3.org/2000/01/rdf-schema#label> "precio cred matr5" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#precioTutela
+<http://openuniversitydata/def/estudios-y-estudiantes#precioTutela> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioTutela> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Precio> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioTutela> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/estudios-y-estudiantes#precioTutela> <http://www.w3.org/2000/01/rdf-schema#label> "precio tutela" .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://www.owl-ontologies.com/geo#lat
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Point> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#label> "lat" .
+# 
+# http://www.owl-ontologies.com/geo#long
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Point> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#label> "long" .
+# 
+# http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def#CursoAcademico
+<http://openuniversitydata/def#CursoAcademico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#CursoAcademico> <http://www.w3.org/2000/01/rdf-schema#label> "Curso Academico" .
+# 
+# http://openuniversitydata/def#Universidad
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def#ofrece> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#Interuniversitario
+<http://openuniversitydata/def/estudios-y-estudiantes#Interuniversitario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Interuniversitario> <http://www.w3.org/2000/01/rdf-schema#label> "Interuniversitario" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#Precio
+<http://openuniversitydata/def/estudios-y-estudiantes#Precio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Precio> <http://www.w3.org/2000/01/rdf-schema#label> "Precio" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#Titulacion
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/estudios-y-estudiantes#cuesta> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/estudios-y-estudiantes#es> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/estudios-y-estudiantes#estaAsociadaA> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> <http://www.w3.org/2000/01/rdf-schema#label> "Titulacion" .
+# 
+# http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable
+<http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/organizacion-y-servicios#UnidadResponsable> <http://www.w3.org/2000/01/rdf-schema#label> "Unidad Responsable" .
+# 
+# http://www.owl-ontologies.com/geosparql#Feature
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#SpatialObject> .
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
+# http://www.owl-ontologies.com/geosparql#Geometry
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#SpatialObject> .
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry" .
+# 
+# http://www.owl-ontologies.com/geosparql#Point
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+# 
+# http://www.owl-ontologies.com/geosparql#SpatialObject
+<http://www.owl-ontologies.com/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Object" .
+# 
+# http://www.w3.org/2001/XMLSchema#wKTLiteral
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+# 
+# http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# http://www.w3.org/ns/org#Site
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/grado-presencialidad
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/rama
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/rol-coordinacion
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/situacion-actual
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio
+# 
+# http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#label> "as w k t" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
