@@ -1,0 +1,47 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix univ: <http://openuniversitydata/def#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.org/openuniversitydata/titulacion/Grado-en-Ingenieria-Informatica> a estud:Titulacion ;
+    dct:identifier "2500397" ;
+    estud:idiomaExtranjero "Ingles"^^xsd:string ;
+    estud:impartida "true"^^xsd:boolean ;
+    estud:numCreditosNecesarios "240"^^xsd:integer ;
+    estud:numCreditosOfertados "470"^^xsd:integer ;
+    estud:anioCreada "2007-07-01"^^xsd:date ;
+    estud:tipoEstudio <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio/grado> ;
+    estud:rama <http://openuniversitydata/kos/estudios-y-estudiantes/rama/ingenieria-y-arquitectura> ;
+    estud:situacionActual <http://openuniversitydata/kos/estudios-y-estudiantes/situacion-actual/activo> ;
+    estud:gradoPresencialidad <http://openuniversitydata/kos/estudios-y-estudiantes/grado-presencialidad/presencial> ;
+    estud:es <http://www.example.org/openuniversitydata/interuniversitario/Interuniversitario-con-Universidades-espaniolas> ;
+    estud:cuesta <http://www.example.org/openuniversitydata/precio/Precio-Grado-en-Ingenieria-Informatica> ;
+    estud:estaAsociadaA <http://www.example.org/openuniversitydata/unidad-responsable/ETSIINF> .
+    
+<http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univ:ofrece <http://www.example.org/openuniversitydata/titulacion/Grado-en-Ingenieria-Informatica> ;
+    univ:tieneAsociado <http://www.example.org/openuniversitydata/curso/2021-22> .
+
+<http://www.example.org/openuniversitydata/curso/2021-22> a univ:CursoAcademico .
+
+<http://www.example.org/openuniversitydata/unidad-responsable/ETSIINF> a orgser:UnidadResponsable ;
+    dct:identifier "28027114" ;
+    orgser:tipoUnidadResponsable <http://openuniversitydata/kos/organizacion-y-servicios/tipo-unidad-responsable/centro> .
+
+<http://www.example.org/openuniversitydata/interuniversitario/Interuniversitario-con-Universidades-espaniolas> dct:identifier "1"^^xsd:string ;
+    estud:rolCoordinacion <http://openuniversitydata/kos/estudios-y-estudiantes/rol-coordinacion/universidad-es-coordinadora> .
+
+<http://www.example.org/openuniversitydata/precio/Precio-Grado-en-Ingenieria-Informatica> a estud:Precio ;
+    estud:precioCredMatr1 "21,94"^^xsd:double ;
+    estud:precioCredMatr2 "41,05"^^xsd:double ;
+    estud:precioCredMatr3 "82,3"^^xsd:double ;
+    estud:precioCredMatr4 "113,71"^^xsd:double ;
+    estud:precioCredMatr5 "201,94"^^xsd:double .
