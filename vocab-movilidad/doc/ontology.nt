@@ -1,0 +1,479 @@
+<http://openuniversitydata/def#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/creator> "Víctor Morcuende" .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" .
+<http://openuniversitydata/def#> <http://purl.org/dc/elements/1.1/title> "Movilidad Ontology" .
+<http://openuniversitydata/def#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def#ambitoUnivDestino
+<http://openuniversitydata/def#ambitoUnivDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#ambitoUnivDestino> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#UniversidadDestino> .
+<http://openuniversitydata/def#ambitoUnivDestino> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/ambito-univ-destino> .
+<http://openuniversitydata/kos/ambito-univ-destino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def#ambitoUnivDestino> <http://www.w3.org/2000/01/rdf-schema#label> "ambito univ destino" .
+# 
+# http://openuniversitydata/def#ambitoUnivProcedencia
+<http://openuniversitydata/def#ambitoUnivProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#ambitoUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#UniversidadProcedencia> .
+<http://openuniversitydata/def#ambitoUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#range> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/ambito-univ-procedencia> .
+<http://openuniversitydata/kos/ambito-univ-procedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def#ambitoUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "ambito univ procedencia" .
+# 
+# http://openuniversitydata/def#estaUbicada
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#UniversidadDestino> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#UniversidadProcedencia> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#AgregacionPaisesUnivProcedencia> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#ContinenteUnivDestino> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#ContinenteUnivProcedencia> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#MunicipioDestino> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#MunicipioUnivProcedencia> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#PaisUnivDestino> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#PaisUnivProcedencia> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#ProvinciaDestino> .
+<http://openuniversitydata/def#estaUbicada> <http://www.w3.org/2000/01/rdf-schema#label> "esta ubicada" .
+# 
+# http://openuniversitydata/def#proporciona
+<http://openuniversitydata/def#proporciona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#proporciona> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://openuniversitydata/def#proporciona> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#ProgramaMovilidad> .
+<http://openuniversitydata/def#proporciona> <http://www.w3.org/2000/01/rdf-schema#label> "proporciona" .
+# 
+# http://openuniversitydata/def#tieneAsociado
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#CursoAcademico> .
+<http://openuniversitydata/def#tieneAsociado> <http://www.w3.org/2000/01/rdf-schema#label> "tiene asociado" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#cursa
+<http://openuniversitydata/def/estudios-y-estudiantes#cursa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#cursa> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#cursa> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> .
+<http://openuniversitydata/def/estudios-y-estudiantes#cursa> <http://www.w3.org/2000/01/rdf-schema#label> "cursa" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#estudia
+<http://openuniversitydata/def/estudios-y-estudiantes#estudia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#estudia> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#estudia> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#Universidad> .
+<http://openuniversitydata/def/estudios-y-estudiantes#estudia> <http://www.w3.org/2000/01/rdf-schema#label> "estudia" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#genero
+<http://openuniversitydata/def/estudios-y-estudiantes#genero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#genero> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#genero> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/genero> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/genero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#genero> <http://www.w3.org/2000/01/rdf-schema#label> "genero" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#nivelFormativo
+<http://openuniversitydata/def/estudios-y-estudiantes#nivelFormativo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#nivelFormativo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#nivelFormativo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid13 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/nivel-formativo> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/nivel-formativo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#nivelFormativo> <http://www.w3.org/2000/01/rdf-schema#label> "nivel formativo" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#posee
+<http://openuniversitydata/def/estudios-y-estudiantes#posee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#posee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#posee> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad> .
+<http://openuniversitydata/def/estudios-y-estudiantes#posee> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> .
+<http://openuniversitydata/def/estudios-y-estudiantes#posee> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad> .
+<http://openuniversitydata/def/estudios-y-estudiantes#posee> <http://www.w3.org/2000/01/rdf-schema#label> "posee" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#tiene
+<http://openuniversitydata/def/estudios-y-estudiantes#tiene> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tiene> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tiene> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#UniversidadDestino> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tiene> <http://www.w3.org/2000/01/rdf-schema#range> <http://openuniversitydata/def#UniversidadProcedencia> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tiene> <http://www.w3.org/2000/01/rdf-schema#label> "tiene" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#tipoProgramaMov
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoProgramaMov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoProgramaMov> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#ProgramaMovilidad> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoProgramaMov> <http://www.w3.org/2000/01/rdf-schema#range> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-programa-mov> .
+<http://openuniversitydata/kos/estudios-y-estudiantes/tipo-programa-mov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoProgramaMov> <http://www.w3.org/2000/01/rdf-schema#label> "tipo programa mov" .
+# 
+# http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#wKTLiteral> .
+<http://www.w3.org/2001/XMLSchema#wKTLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.owl-ontologies.com/geosparql#hasGeometry
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://www.owl-ontologies.com/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry" .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+# 
+# http://www.w3.org/ns/org#hasSite
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Organization> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Site> .
+<http://www.w3.org/ns/org#hasSite> <http://www.w3.org/2000/01/rdf-schema#label> "has site" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento
+<http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento> <http://www.w3.org/2000/01/rdf-schema#label> "anio nacimiento" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#mesFinPrograma
+<http://openuniversitydata/def/estudios-y-estudiantes#mesFinPrograma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#mesFinPrograma> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#mesFinPrograma> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://openuniversitydata/def/estudios-y-estudiantes#mesFinPrograma> <http://www.w3.org/2000/01/rdf-schema#label> "mes fin programa" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#mesInicioPrograma
+<http://openuniversitydata/def/estudios-y-estudiantes#mesInicioPrograma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://openuniversitydata/def/estudios-y-estudiantes#mesInicioPrograma> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> .
+<http://openuniversitydata/def/estudios-y-estudiantes#mesInicioPrograma> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://openuniversitydata/def/estudios-y-estudiantes#mesInicioPrograma> <http://www.w3.org/2000/01/rdf-schema#label> "mes inicio programa" .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openuniversitydata/def#Universidad> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://schema.org/birthDate
+<http://schema.org/birthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/birthDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/birthDate> <http://www.w3.org/2000/01/rdf-schema#label> "birth date" .
+# 
+# http://schema.org/familyName
+<http://schema.org/familyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/familyName> <http://www.w3.org/2000/01/rdf-schema#label> "family name" .
+# 
+# http://schema.org/gender
+<http://schema.org/gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/gender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/gender> <http://www.w3.org/2000/01/rdf-schema#label> "gender" .
+# 
+# http://schema.org/givenName
+<http://schema.org/givenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/givenName> <http://www.w3.org/2000/01/rdf-schema#label> "given name" .
+# 
+# http://schema.org/identifier
+<http://schema.org/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/Person> .
+<http://schema.org/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://www.owl-ontologies.com/geo#lat
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Point> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.owl-ontologies.com/geo#lat> <http://www.w3.org/2000/01/rdf-schema#label> "lat" .
+# 
+# http://www.owl-ontologies.com/geo#long
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.owl-ontologies.com/geosparql#Point> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://www.owl-ontologies.com/geo#long> <http://www.w3.org/2000/01/rdf-schema#label> "long" .
+# 
+# http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/def#AgregacionPaisesUnivDestino
+<http://openuniversitydata/def#AgregacionPaisesUnivDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#AgregacionPaisesUnivDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ContinenteUnivDestino> .
+<http://openuniversitydata/def#AgregacionPaisesUnivDestino> <http://www.w3.org/2000/01/rdf-schema#label> "Agregacion Paises Univ Destino" .
+# 
+# http://openuniversitydata/def#AgregacionPaisesUnivProcedencia
+<http://openuniversitydata/def#AgregacionPaisesUnivProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#AgregacionPaisesUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ContinenteUnivProcedencia> .
+<http://openuniversitydata/def#AgregacionPaisesUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Agregacion Paises Univ Procedencia" .
+# 
+# http://openuniversitydata/def#ComunidadDestino
+<http://openuniversitydata/def#ComunidadDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#ComunidadDestino> <http://www.w3.org/2000/01/rdf-schema#label> "Comunidad Destino" .
+# 
+# http://openuniversitydata/def#ContinenteUnivDestino
+<http://openuniversitydata/def#ContinenteUnivDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#ContinenteUnivDestino> <http://www.w3.org/2000/01/rdf-schema#label> "Continente Univ Destino" .
+# 
+# http://openuniversitydata/def#ContinenteUnivProcedencia
+<http://openuniversitydata/def#ContinenteUnivProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#ContinenteUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Continente Univ Procedencia" .
+# 
+# http://openuniversitydata/def#CursoAcademico
+<http://openuniversitydata/def#CursoAcademico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#CursoAcademico> <http://www.w3.org/2000/01/rdf-schema#label> "Curso Academico" .
+# 
+# http://openuniversitydata/def#MunicipioDestino
+<http://openuniversitydata/def#MunicipioDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#MunicipioDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ProvinciaDestino> .
+<http://openuniversitydata/def#MunicipioDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://openuniversitydata/def#MunicipioDestino> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio Destino" .
+# 
+# http://openuniversitydata/def#MunicipioUnivProcedencia
+<http://openuniversitydata/def#MunicipioUnivProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#MunicipioUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#PaisUnivProcedencia> .
+<http://openuniversitydata/def#MunicipioUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Municipio Univ Procedencia" .
+# 
+# http://openuniversitydata/def#PaisUnivDestino
+<http://openuniversitydata/def#PaisUnivDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#PaisUnivDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ContinenteUnivDestino> .
+<http://openuniversitydata/def#PaisUnivDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://openuniversitydata/def#PaisUnivDestino> <http://www.w3.org/2000/01/rdf-schema#label> "Pais Univ Destino" .
+# 
+# http://openuniversitydata/def#PaisUnivProcedencia
+<http://openuniversitydata/def#PaisUnivProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#PaisUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ContinenteUnivProcedencia> .
+<http://openuniversitydata/def#PaisUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://openuniversitydata/def#PaisUnivProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Pais Univ Procedencia" .
+# 
+# http://openuniversitydata/def#ProvinciaDestino
+<http://openuniversitydata/def#ProvinciaDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#ProvinciaDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def#ComunidadDestino> .
+<http://openuniversitydata/def#ProvinciaDestino> <http://www.w3.org/2000/01/rdf-schema#label> "Provincia Destino" .
+# 
+# http://openuniversitydata/def#Universidad
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://openuniversitydata/def#Universidad> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad" .
+# 
+# http://openuniversitydata/def#UniversidadDestino
+<http://openuniversitydata/def#UniversidadDestino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#UniversidadDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://openuniversitydata/def#UniversidadDestino> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def#estaUbicada> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def#UniversidadDestino> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad Destino" .
+# 
+# http://openuniversitydata/def#UniversidadProcedencia
+<http://openuniversitydata/def#UniversidadProcedencia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def#UniversidadProcedencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> .
+<http://openuniversitydata/def#UniversidadProcedencia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def#estaUbicada> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def#UniversidadProcedencia> <http://www.w3.org/2000/01/rdf-schema#label> "Universidad Procedencia" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad
+<http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> .
+<http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "Agregacion Paises Nacionalidad" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad
+<http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "Continente Nacionalidad" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#Estudiante
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Person> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/estudios-y-estudiantes#estudia> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/estudios-y-estudiantes#cursa> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/estudios-y-estudiantes#posee> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://openuniversitydata/def/estudios-y-estudiantes#tiene> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> <http://www.w3.org/2000/01/rdf-schema#label> "Estudiante" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad
+<http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> .
+<http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad> <http://www.w3.org/2000/01/rdf-schema#label> "Pais Nacionalidad" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#ProgramaMovilidad
+<http://openuniversitydata/def/estudios-y-estudiantes#ProgramaMovilidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#ProgramaMovilidad> <http://www.w3.org/2000/01/rdf-schema#label> "Programa Movilidad" .
+# 
+# http://openuniversitydata/def/estudios-y-estudiantes#Titulacion
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> <http://www.w3.org/2000/01/rdf-schema#label> "Titulacion" .
+# 
+# http://schema.org/Person
+<http://schema.org/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person" .
+# 
+# http://www.owl-ontologies.com/geosparql#Feature
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#SpatialObject> .
+<http://www.owl-ontologies.com/geosparql#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature" .
+# 
+# http://www.owl-ontologies.com/geosparql#Geometry
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#SpatialObject> .
+<http://www.owl-ontologies.com/geosparql#Geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry" .
+# 
+# http://www.owl-ontologies.com/geosparql#Point
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Geometry> .
+<http://www.owl-ontologies.com/geosparql#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
+# 
+# http://www.owl-ontologies.com/geosparql#SpatialObject
+<http://www.owl-ontologies.com/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.owl-ontologies.com/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Object" .
+# 
+# http://www.w3.org/2001/XMLSchema#wKTLiteral
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+# 
+# http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" .
+# 
+# http://www.w3.org/ns/org#Site
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.owl-ontologies.com/geosparql#Feature> .
+<http://www.w3.org/ns/org#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://openuniversitydata/kos/ambito-univ-destino
+# 
+# http://openuniversitydata/kos/ambito-univ-procedencia
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/genero
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/nivel-formativo
+# 
+# http://openuniversitydata/kos/estudios-y-estudiantes/tipo-programa-mov
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://www.owl-ontologies.com/geosparql#asWKT> <http://www.w3.org/2000/01/rdf-schema#label> "as w k t" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
