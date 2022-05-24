@@ -1,0 +1,891 @@
+prefixes:
+  xsd: http://www.w3.org/2001/XMLSchema#
+  rr: http://www.w3.org/ns/r2rml#
+  rml: http://semweb.mmlab.be/ns/rml#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  ql: http://semweb.mmlab.be/ns/ql#
+  rdfs: http://www.w3.org/2000/01/rdf-schema#
+  foaf: http://xmlns.com/foaf/0.1/
+  schema: http://schema.org/
+  dc: http://purl.org/dc/elements/1.1/
+  skos: http://www.w3.org/2004/02/skos/core#
+  univ: http://openuniversitydata/def#
+  estud: http://openuniversitydata/def/estudios-y-estudiantes#
+  geosparql: http://www.owl-ontologies.com/geosparql#
+  org: http://www.w3.org/ns/org#
+  orgser: http://openuniversitydata/def/organizacion-y-servicios#
+  dct: http://purl.org/dc/terms/
+  geo: http://www.owl-ontologies.com/geo#
+  
+mappings:
+  triplesMapUniversidad:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/universidad/$(des_universidad)
+    po:
+      - [a, univ:Universidad]
+      - [dct:identifier, $(cod_universidad)]
+      - [rdfs:subClassOf, org:Organization]
+      - p: univ:tieneAsociado
+        o:
+        - mapping: triplesMapCursoacademico
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(curso_academico), o]
+              - [str2, $(curso_academico), o]
+      - p: univ:ofrece
+        o:
+        - mapping: triplesMapTitulacion
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_titulacion), o]
+              - [str2, $(des_titulacion), o]
+      - p: org:hasSubOrganization
+        o:
+        - mapping: triplesMapCentro
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_centro), o]
+              - [str2, $(des_centro), o]
+
+  triplesMapUniversidad2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/universidad/$(des_universidad)
+    po:
+      - [a, univ:Universidad]
+      - [dct:identifier, $(cod_universidad)]
+      - [rdfs:subClassOf, org:Organization]
+      - p: univ:tieneAsociado
+        o:
+        - mapping: triplesMapCursoacademico2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(curso_academico), o]
+              - [str2, $(curso_academico), o]
+      - p: univ:ofrece
+        o:
+        - mapping: triplesMapTitulacion2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_titulacion), o]
+              - [str2, $(des_titulacion), o]
+      - p: org:hasSubOrganization
+        o:
+        - mapping: triplesMapCentro2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_centro), o]
+              - [str2, $(des_centro), o]
+
+  triplesMapCursoacademico:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/curso/$(curso_academico)
+    po:
+      - [a, univ:CursoAcademico]
+
+  triplesMapCursoacademico2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/curso/$(curso_academico)
+    po:
+      - [a, univ:CursoAcademico]
+  
+  triplesMapAgregacionpaisesnacionalidad:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/$(des_agregacion_paises_nacionalidad)
+    po:
+      - [a, estud:AgregacionPaisesNacionalidad]
+      - [dct:identifier, $(cod_agregacion_paises_nacionalidad)]
+      - [rdfs:subClassOf, estud:ContinenteNacionalidad]
+
+  triplesMapAgregacionpaisesnacionalidad2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/$(des_agregacion_paises_nacionalidad)
+    po:
+      - [a, estud:AgregacionPaisesNacionalidad]
+      - [dct:identifier, $(cod_agregacion_paises_nacionalidad)]
+      - [rdfs:subClassOf, estud:ContinenteNacionalidad]  
+
+  triplesMapContinentenacionalidad:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/continente-nacionalidad/$(des_continente_nacionalidad)
+    po:
+      - [a, estud:ContinenteNacionalidad]
+      - [dct:identifier, $(cod_continente_nacionalidad)]
+
+  triplesMapContinentenacionalidad2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/continente-nacionalidad/$(des_continente_nacionalidad)
+    po:
+      - [a, estud:ContinenteNacionalidad]
+      - [dct:identifier, $(cod_continente_nacionalidad)] 
+
+  triplesMapAgregacionpaisesresidencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/agregacion-paises-residencia/$(des_agregacion_paises_residencia)
+    po:
+      - [a, estud:AgregacionPaisesResidencia]
+      - [dct:identifier, $(cod_agregacion_paises_residencia)]
+      - [rdfs:subClassOf, estud:ContinenteResidencia]
+
+  triplesMapAgregacionpaisesresidencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/agregacion-paises-residencia/$(des_agregacion_paises_residencia)
+    po:
+      - [a, estud:AgregacionPaisesResidencia]
+      - [dct:identifier, $(cod_agregacion_paises_residencia)]
+      - [rdfs:subClassOf, estud:ContinenteResidencia] 
+
+  triplesMapContinenteresidencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/continente-residencia/$(des_continente_residencia)
+    po:
+      - [a, estud:ContinenteResidencia]
+      - [dct:identifier, $(cod_continente_residencia)]
+
+  triplesMapContinenteresidencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/continente-residencia/$(des_continente_residencia)
+    po:
+      - [a, estud:ContinenteResidencia]
+      - [dct:identifier, $(cod_continente_residencia)]
+
+  triplesMapAgregacionpaisesunivprocedencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/agregacion-paises-univ-procedencia/$(des_agregacion_paises_univ_procedencia)
+    po:
+      - [a, estud:AgregacionPaisesUnivProcedencia]
+      - [dct:identifier, $(cod_agregacion_paises_univ_procedencia)]
+      - [rdfs:subClassOf, estud:ContinenteUnivProcedencia]
+
+  triplesMapAgregacionpaisesunivprocedencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/agregacion-paises-univ-procedencia/$(des_agregacion_paises_univ_procedencia)
+    po:
+      - [a, estud:AgregacionPaisesUnivProcedencia]
+      - [dct:identifier, $(cod_agregacion_paises_univ_procedencia)]
+      - [rdfs:subClassOf, estud:ContinenteUnivProcedencia]
+
+  triplesMapContinenteunivprocedencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/continente-univ-procedencia/$(des_continente_univ_procedencia)
+    po:
+      - [a, estud:ContinenteUnivProcedencia]
+      - [dct:identifier, $(cod_continente_univ_procedencia)]
+
+  triplesMapContinenteunivprocedencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/continente-univ-procedencia/$(des_continente_univ_procedencia)
+    po:
+      - [a, estud:ContinenteUnivProcedencia]
+      - [dct:identifier, $(cod_continente_univ_procedencia)]
+
+  triplesMapEstudiante:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/estudiante/$()
+    po:
+      - [a, estud:Estudiante]
+      - [estud:anioNacimiento, $(anio_nacimiento), xsd:integer]
+      - [estud:indMencionIndustrial, $(ind_mencion_industrial), xsd:boolean]
+      - [estud:indMencionInternacional, $(ind_mencion_internacional), xsd:boolean]
+      - [estud:indSeTitulaCurso, $(ind_se_titula_curso), xsd:boolean]
+      - [estud:indTesisLeidaCurso, $(ind_tesis_leida_curso), xsd:boolean]
+      - [estud:notaMediaFinal, $(nota_media_final), xsd:double]
+      - [estud:numCreditosMat1Curso, $(num_creditos_mat_1_curso), xsd:integer]
+      - [estud:numCreditosMat2Curso, $(num_creditos_mat_2_curso), xsd:integer]
+      - [estud:numCreditosMat3OMasCurso, $(num_creditos_mat_3_o_mas_curso), xsd:integer]
+      - [estud:numCreditosNoPresCurso, $(num_creditos_no_pres_curso), xsd:integer]
+      - [estud:numCreditosPresCurso, $(num_creditos_pres_curso), xsd:integer]
+      - [estud:numTotalCreditosMatCurso, $(num_total_creditos_mat_curso), xsd:integer]
+      - [estud:numTotalCreditosMatInicio, $(num_total_creditos_mat_inicio), xsd:integer]
+      - [estud:numTotalCreditosNoSupCurso, $(num_total_creditos_no_sup_curso), xsd:integer]
+      - [estud:numTotalCreditosPresInicio, $(num_total_creditos_pres_inicio), xsd:integer]
+      - [estud:numTotalCreditosRecConvCurso, $(num_total_creditos_rec_conv_curso), xsd:integer]
+      - [estud:numTotalCreditosRecConvInicio, $(num_total_creditos_rec_conv_inicio), xsd:integer]
+      - [estud:numTotalCreditosSupCurso, $(num_total_creditos_sup_curso), xsd:integer]
+      - [estud:numTotalCreditosSupInicio, $(num_total_creditos_sup_inicio), xsd:integer]
+      - [estud:numTotalCreditosTransfInicio, $(num_total_creditos_transf_inicio), xsd:integer]
+      - [estud:genero, http://openuniversitydata/kos/estudios-y-estudiantes/genero/$(des_genero)]
+      - [estud:dedicacion, http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion/$(des_dedicacion)]
+      - [estud:calificacionTesis, http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis/$(des_calificacion_tesis)]
+      - [estud:tipoTituloAccesoMaster, http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master/$(des_tipo_titulo_acceso_master)]
+      - [rdfs:subClassOf, schema:Person]
+      - p: estud:accede
+        o:
+        - mapping: triplesMapCursoacademicoaccesosue
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(curso_academico_acceso_SUE), o]
+              - [str2, $(curso_academico_acceso_SUE), o]
+      - p: estud:empieza
+        o:
+        - mapping: triplesMapCursoacademicoinicio
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(curso_academico_inicio), o]
+              - [str2, $(curso_academico_inicio), o]
+      - p: estud:estudia
+        o:
+        - mapping: triplesMapUniversidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_universidad), o]
+              - [str2, $(des_universidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapContinentenacionalidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_continente_nacionalidad), o]
+              - [str2, $(des_continente_nacionalidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapContinenteresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_continente_residencia), o]
+              - [str2, $(des_continente_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapContinenteunivprocedencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_continente_univ_procedencia), o]
+              - [str2, $(des_continente_univ_procedencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapMunicipiocurso
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_municipio_curso), o]
+              - [str2, $(des_municipio_curso), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapMunicipioresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_municipio_residencia), o]
+              - [str2, $(des_municipio_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapPaisnacionalidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_pais_nacionalidad), o]
+              - [str2, $(des_pais_nacionalidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapPaisresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_pais_residencia), o]
+              - [str2, $(des_pais_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapPaisunivprocedencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_pais_univ_procedencia), o]
+              - [str2, $(des_pais_univ_procedencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapProvinciacurso
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_provincia_curso), o]
+              - [str2, $(des_provincia_curso), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapProvinciaresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_provincia_residencia), o]
+              - [str2, $(des_provincia_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapAgregacionpaisesnacionalidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_agregacion_paises_nacionalidad), o]
+              - [str2, $(des_agregacion_paises_nacionalidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapAgregacionpaisesresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_agregacion_paises_residencia), o]
+              - [str2, $(des_agregacion_paises_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapAgregacionpaisesunivprocedencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_agregacion_paises_univ_procedencia), o]
+              - [str2, $(des_agregacion_paises_univ_procedencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapComunidadcurso
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_comunidad_curso), o]
+              - [str2, $(des_comunidad_curso), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapComunidadresidencia
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_comunidad_residencia), o]
+              - [str2, $(des_comunidad_residencia), o]
+
+  triplesMapEstudiante2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/estudiante/$()
+    po:
+      - [a, estud:Estudiante]
+      - [estud:anioNacimiento, $(anio_nacimiento), xsd:integer]
+      - [estud:indMencionIndustrial, $(ind_mencion_industrial), xsd:boolean]
+      - [estud:indMencionInternacional, $(ind_mencion_internacional), xsd:boolean]
+      - [estud:indSeTitulaCurso, $(ind_se_titula_curso), xsd:boolean]
+      - [estud:indTesisLeidaCurso, $(ind_tesis_leida_curso), xsd:boolean]
+      - [estud:notaMediaFinal, $(nota_media_final), xsd:double]
+      - [estud:numCreditosMat1Curso, $(num_creditos_mat_1_curso), xsd:integer]
+      - [estud:numCreditosMat2Curso, $(num_creditos_mat_2_curso), xsd:integer]
+      - [estud:numCreditosMat3OMasCurso, $(num_creditos_mat_3_o_mas_curso), xsd:integer]
+      - [estud:numCreditosNoPresCurso, $(num_creditos_no_pres_curso), xsd:integer]
+      - [estud:numCreditosPresCurso, $(num_creditos_pres_curso), xsd:integer]
+      - [estud:numTotalCreditosMatCurso, $(num_total_creditos_mat_curso), xsd:integer]
+      - [estud:numTotalCreditosMatInicio, $(num_total_creditos_mat_inicio), xsd:integer]
+      - [estud:numTotalCreditosNoSupCurso, $(num_total_creditos_no_sup_curso), xsd:integer]
+      - [estud:numTotalCreditosPresInicio, $(num_total_creditos_pres_inicio), xsd:integer]
+      - [estud:numTotalCreditosRecConvCurso, $(num_total_creditos_rec_conv_curso), xsd:integer]
+      - [estud:numTotalCreditosRecConvInicio, $(num_total_creditos_rec_conv_inicio), xsd:integer]
+      - [estud:numTotalCreditosSupCurso, $(num_total_creditos_sup_curso), xsd:integer]
+      - [estud:numTotalCreditosSupInicio, $(num_total_creditos_sup_inicio), xsd:integer]
+      - [estud:numTotalCreditosTransfInicio, $(num_total_creditos_transf_inicio), xsd:integer]
+      - [estud:genero, http://openuniversitydata/kos/estudios-y-estudiantes/genero/$(des_genero)]
+      - [estud:dedicacion, http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion/$(des_dedicacion)]
+      - [estud:calificacionTesis, http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis/$(des_calificacion_tesis)]
+      - [estud:tipoTituloAccesoMaster, http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master/$(des_tipo_titulo_acceso_master)]
+      - [rdfs:subClassOf, schema:Person]
+      - p: estud:accede
+        o:
+        - mapping: triplesMapCursoacademicoaccesosue2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(curso_academico_acceso_SUE), o]
+              - [str2, $(curso_academico_acceso_SUE), o]
+      - p: estud:empieza
+        o:
+        - mapping: triplesMapCursoacademicoinicio2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(curso_academico_inicio), o]
+              - [str2, $(curso_academico_inicio), o]
+      - p: estud:estudia
+        o:
+        - mapping: triplesMapUniversidad2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_universidad), o]
+              - [str2, $(des_universidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapContinentenacionalidad2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_continente_nacionalidad), o]
+              - [str2, $(des_continente_nacionalidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapContinenteresidencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_continente_residencia), o]
+              - [str2, $(des_continente_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapContinenteunivprocedencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_continente_univ_procedencia), o]
+              - [str2, $(des_continente_univ_procedencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapMunicipiocurso2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_municipio_curso), o]
+              - [str2, $(des_municipio_curso), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapMunicipioresidencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_municipio_residencia), o]
+              - [str2, $(des_municipio_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapPaisnacionalidad2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_pais_nacionalidad), o]
+              - [str2, $(des_pais_nacionalidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapPaisresidencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_pais_residencia), o]
+              - [str2, $(des_pais_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapPaisunivprocedencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_pais_univ_procedencia), o]
+              - [str2, $(des_pais_univ_procedencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapProvinciacurso2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_provincia_curso), o]
+              - [str2, $(des_provincia_curso), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapProvinciaresidencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_provincia_residencia), o]
+              - [str2, $(des_provincia_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapAgregacionpaisesnacionalidad2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_agregacion_paises_nacionalidad), o]
+              - [str2, $(des_agregacion_paises_nacionalidad), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapAgregacionpaisesresidencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_agregacion_paises_residencia), o]
+              - [str2, $(des_agregacion_paises_residencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapAgregacionpaisesunivprocedencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_agregacion_paises_univ_procedencia), o]
+              - [str2, $(des_agregacion_paises_univ_procedencia), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapComunidadcurso2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_comunidad_curso), o]
+              - [str2, $(des_comunidad_curso), o]
+      - p: estud:posee
+        o:
+        - mapping: triplesMapComunidadresidencia2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_comunidad_residencia), o]
+              - [str2, $(des_comunidad_residencia), o]
+
+  triplesMapTitulacion:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/titulacion/$(des_titulacion)
+    po:
+      - [a, estud:Titulacion]
+      - [dct:identifier, $(cod_titulacion)]
+      - [estud:tipoEstudio, http://openuniversitydata/kos/organizacion-y-servicios/tipo-estudio/$(des_tipo_estudio)]
+
+  triplesMapTitulacion2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/titulacion/$(des_titulacion)
+    po:
+      - [a, estud:Titulacion]
+      - [dct:identifier, $(cod_titulacion)]
+      - [estud:tipoEstudio, http://openuniversitydata/kos/organizacion-y-servicios/tipo-estudio/$(des_tipo_estudio)]
+  
+  triplesMapPoint:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_pais_nacionalidad), xsd:double]
+      - [geo:long, $(lon_pais_nacionalidad), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint21:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_pais_nacionalidad), xsd:double]
+      - [geo:long, $(lon_pais_nacionalidad), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint2:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-residencia/$(des_pais_residencia)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_pais_residencia), xsd:double]
+      - [geo:long, $(lon_pais_residencia), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint22:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-residencia/$(des_pais_residencia)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_pais_residencia), xsd:double]
+      - [geo:long, $(lon_pais_residencia), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint3:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-residencia/$(des_municipio_residencia)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_municipio_residencia), xsd:double]
+      - [geo:long, $(lon_municipio_residencia), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint32:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-residencia/$(des_municipio_residencia)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_municipio_residencia), xsd:double]
+      - [geo:long, $(lon_municipio_residencia), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint4:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-curso/$(des_municipio_curso)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_municipio_curso), xsd:double]
+      - [geo:long, $(lon_municipio_curso), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoint42:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-curso/$(des_municipio_curso)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_municipio_curso), xsd:double]
+      - [geo:long, $(lon_municipio_curso), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoin5:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-univ-procedencia/$(des_pais_univ_procedencia)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_pais_univ_procedencia), xsd:double]
+      - [geo:long, $(lon_pais_univ_procedencia), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+
+  triplesMapPoin52:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-univ-procedencia/$(des_pais_univ_procedencia)
+    po:
+      - [a, geosparql:Point]
+      - [geo:lat, $(lat_pais_univ_procedencia), xsd:double]
+      - [geo:long, $(lon_pais_univ_procedencia), xsd:double]
+      - [rdfs:subClassOf, geosparql:Geometry]
+  
+  triplesMapCentro:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/centro/$(des_centro)
+    po:
+      - [a, orgser:Centro]
+      - [dct:identifier, $(cod_centro)]
+      - [rdfs:subClassOf, org:Organization]
+      - p: org:subOrganizationOf
+        o:
+        - mapping: triplesMapUniversidad
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_universidad), o]
+              - [str2, $(des_universidad), o]
+
+  triplesMapCentro2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/centro/$(des_centro)
+    po:
+      - [a, orgser:Centro]
+      - [dct:identifier, $(cod_centro)]
+      - [rdfs:subClassOf, org:Organization]
+      - p: org:subOrganizationOf
+        o:
+        - mapping: triplesMapUniversidad2
+          condition:
+            function: equal
+            parameters:
+              - [str1, $(des_universidad), o]
+              - [str2, $(des_universidad), o]
+
+  triplesMapComunidadcurso:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/comunidad-curso/$(des_comunidad_curso)
+    po:
+      - [a, estud:ComunidadCurso]
+      - [dct:identifier, $(cod_comunidad_curso)]
+
+  triplesMapComunidadcurso2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/comunidad-curso/$(des_comunidad_curso)
+    po:
+      - [a, estud:ComunidadCurso]
+      - [dct:identifier, $(cod_comunidad_curso)]
+
+  triplesMapComunidadresidencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/comunidad-residencia/$(des_comunidad_residencia)
+    po:
+      - [a, estud:ComunidadResidencia]
+      - [dct:identifier, $(cod_comunidad_residencia)]
+
+  triplesMapComunidadresidencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/comunidad-residencia/$(des_comunidad_residencia)
+    po:
+      - [a, estud:ComunidadResidencia]
+      - [dct:identifier, $(cod_comunidad_residencia)]
+
+  triplesMapCursoacademicoaccesosue:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/curso-acceso-SUE/$(curso_academico_acceso_SUE)
+    po:
+      - [a, estud:CursoAcademicoAccesoSUE]
+
+  triplesMapCursoacademicoaccesosue2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/curso-acceso-SUE/$(curso_academico_acceso_SUE)
+    po:
+      - [a, estud:CursoAcademicoAccesoSUE]
+
+  triplesMapCursoacademicoinicio:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/curso-inicio/$(curso_academico_inicio)
+    po:
+      - [a, estud:CursoAcademicoInicio]
+
+  triplesMapCursoacademicoinicio2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/curso-inicio/$(curso_academico_inicio)
+    po:
+      - [a, estud:CursoAcademicoInicio]
+
+  triplesMapMunicipiocurso:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-curso/$(des_municipio_curso)
+    po:
+      - [a, estud:MunicipioCurso]
+      - [dct:identifier, $(cod_municipio_curso)]
+      - [rdfs:subClassOf, estud:ProvinciaCurso]
+
+  triplesMapMunicipiocurso2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-curso/$(des_municipio_curso)
+    po:
+      - [a, estud:MunicipioCurso]
+      - [dct:identifier, $(cod_municipio_curso)]
+      - [rdfs:subClassOf, estud:ProvinciaCurso]
+
+  triplesMapProvinciacurso:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/provincia-curso/$(des_provincia_curso)
+    po:
+      - [a, estud:ProvinciaCurso]
+      - [dct:identifier, $(cod_provincia_curso)]
+      - [rdfs:subClassOf, estud:ComunidadCurso]
+
+  triplesMapProvinciacurso2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/provincia-curso/$(des_provincia_curso)
+    po:
+      - [a, estud:ProvinciaCurso]
+      - [dct:identifier, $(cod_provincia_curso)]
+      - [rdfs:subClassOf, estud:ComunidadCurso]
+
+  triplesMapMunicipioresidencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-residencia/$(des_municipio_residencia)
+    po:
+      - [a, estud:MunicipioResidencia]
+      - [dct:identifier, $(cod_municipio_residencia)]
+      - [rdfs:subClassOf, estud:ProvinciaResidencia]
+
+  triplesMapMunicipioresidencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/municipio-residencia/$(des_municipio_residencia)
+    po:
+      - [a, estud:MunicipioResidencia]
+      - [dct:identifier, $(cod_municipio_residencia)]
+      - [rdfs:subClassOf, estud:ProvinciaResidencia]
+
+  triplesMapProvinciaresidencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/provincia-residencia/$(des_provincia_residencia)
+    po:
+      - [a, estud:ProvinciaResidencia]
+      - [dct:identifier, $(cod_provincia_residencia)]
+      - [rdfs:subClassOf, estud:ComunidadResidencia]
+
+  triplesMapProvinciaresidencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/provincia-residencia/$(des_provincia_residencia)
+    po:
+      - [a, estud:ProvinciaResidencia]
+      - [dct:identifier, $(cod_provincia_residencia)]
+      - [rdfs:subClassOf, estud:ComunidadResidencia]
+
+  triplesMapPaisnacionalidad:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    po:
+      - [a, estud:PaisNacionalidad]
+      - [dct:identifier, $(cod_pais_nacionalidad)]
+      - [rdfs:subClassOf, estud:ContinenteNacionalidad]
+
+  triplesMapPaisnacionalidad2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    po:
+      - [a, estud:PaisNacionalidad]
+      - [dct:identifier, $(cod_pais_nacionalidad)]
+      - [rdfs:subClassOf, estud:ContinenteNacionalidad]
+
+  triplesMapPaisresidencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-residencia/$(des_pais_residencia)
+    po:
+      - [a, estud:PaisResidencia]
+      - [dct:identifier, $(cod_pais_residencia)]
+      - [rdfs:subClassOf, estud:ContinenteResidencia]
+
+  triplesMapPaisresidencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-residencia/$(des_pais_residencia)
+    po:
+      - [a, estud:PaisResidencia]
+      - [dct:identifier, $(cod_pais_residencia)]
+      - [rdfs:subClassOf, estud:ContinenteResidencia]
+
+  triplesMapPaisunivprocedencia:
+    sources:
+      - [UC3M-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-univ-procedencia/$(des_pais_univ_procedencia)
+    po:
+      - [a, estud:PaisUnivProcedencia]
+      - [dct:identifier, $(cod_pais_univ_procedencia)]
+      - [rdfs:subClassOf, estud:ContinenteUnivProcedencia]
+
+  triplesMapPaisunivprocedencia2:
+    sources:
+      - [UCM-2019-20.csv~csv]
+    s: http://www.example.org/openuniversitydata/pais-univ-procedencia/$(des_pais_univ_procedencia)
+    po:
+      - [a, estud:PaisUnivProcedencia]
+      - [dct:identifier, $(cod_pais_univ_procedencia)]
+      - [rdfs:subClassOf, estud:ContinenteUnivProcedencia]
