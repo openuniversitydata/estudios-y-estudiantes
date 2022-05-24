@@ -1,0 +1,1129 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://openuniversitydata/def#"
+     xml:base="http://openuniversitydata/def"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://openuniversitydata/def#">
+        <dc:creator>Víctor Morcuende</dc:creator>
+        <dc:description>Ontology code created by Chowlk</dc:description>
+        <dc:title>Acceso Ontology</dc:title>
+        <owl:versionInfo>0.0.3</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://openuniversitydata/def#ofrece -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def#ofrece">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def#Universidad"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Titulacion"/>
+        <rdfs:label>ofrece</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def#tieneAsociado -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def#tieneAsociado">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def#Universidad"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def#CursoAcademico"/>
+        <rdfs:label>tiene asociado</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#dedicacion -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#dedicacion">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>dedicacion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#especialidadAcceso -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#especialidadAcceso">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/especialidad-acceso"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>especialidad acceso</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#estudia -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#estudia">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def#Universidad"/>
+        <rdfs:label>estudia</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#estudioAcceso -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#estudioAcceso">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/estudio-acceso"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>estudio acceso</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#familiaNumerosa -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#familiaNumerosa">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/familia-numerosa"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>familia numerosa</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#formaAdmision -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#formaAdmision">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/forma-admision"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>forma admision</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#genero -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#genero">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/genero"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>genero</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#nivelEstudiosMadre -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#nivelEstudiosMadre">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-madre"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>nivel estudios madre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#nivelEstudiosPadre -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#nivelEstudiosPadre">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-padre"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>nivel estudios padre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#ocupacionEstudiante -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#ocupacionEstudiante">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-estudiante"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>ocupacion estudiante</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#ocupacionMadre -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#ocupacionMadre">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-madre"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>ocupacion madre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#ocupacionPadre -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#ocupacionPadre">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-padre"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>ocupacion padre</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#posee -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#posee">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesFinEstudioAcceso"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesResidencia"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteFinEstudioAcceso"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#PaisFinEstudioAcceso"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia"/>
+        <rdfs:label>posee</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#provieneDe -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#provieneDe">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#CentroSec"/>
+        <rdfs:label>proviene de</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Titulacion"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>tipo estudio</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#estaUbicado -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/organizacion-y-servicios#estaUbicado">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Centro"/>
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#CentroSec"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ComunidadCentroSec"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#MunicipioCentroSec"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ProvinciaCentroSec"/>
+        <rdfs:label>esta ubicado</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#naturalezaCentro -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/organizacion-y-servicios#naturalezaCentro">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Centro"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/estudios-y-estudiantes/naturaleza-centro"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>naturaleza centro</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#naturalezaCentroSec -->
+
+
+    <owl:ObjectProperty rdf:about="http://openuniversitydata/def/organizacion-y-servicios#naturalezaCentroSec">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#CentroSec"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                        <owl:hasValue rdf:resource="http://openuniversitydata/kos/organizacion-y-servicios/naturaleza-centro-sec"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label>naturaleza centro sec</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geosparql#asWKT -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/geosparql#asWKT">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/geosparql#Geometry"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#wKTLiteral"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geosparql#hasGeometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/geosparql#hasGeometry">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/geosparql#Geometry"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/geosparql#Feature"/>
+        <rdfs:label>has geometry</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasSite -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSite">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+        <rdfs:label>has site</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#hasSubOrganization -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSubOrganization">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def#Universidad"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Centro"/>
+        <rdfs:label>has sub organization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/org#subOrganizationOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#subOrganizationOf">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#Centro"/>
+        <rdfs:range rdf:resource="http://openuniversitydata/def#Universidad"/>
+        <rdfs:label>sub organization of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#anioAccesoSUE -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#anioAccesoSUE">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>anio acceso s u e</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#anioFinEstudioAcceso -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#anioFinEstudioAcceso">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>anio fin estudio acceso</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>anio nacimiento</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#indAccedeAlSUEPor1aVez -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#indAccedeAlSUEPor1aVez">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>ind accede al s u e por1a vez</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#indCursoAdaptacion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#indCursoAdaptacion">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>ind curso adaptacion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#indSeMatriculaEnPrimero -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#indSeMatriculaEnPrimero">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label>ind se matricula en primero</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#notaAdmision -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#notaAdmision">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label>nota admision</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#tipoEspecialidadAcceso -->
+
+
+    <owl:DatatypeProperty rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#tipoEspecialidadAcceso">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>tipo especialidad acceso</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+        <rdfs:domain rdf:resource="http://openuniversitydata/def#Universidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/birthDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/birthDate">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>birth date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/familyName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/familyName">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>family name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/gender -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/gender">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>gender</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/givenName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/givenName">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>given name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/identifier">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:label>identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geo#lat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/geo#lat">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/geosparql#Point"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>lat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geo#long -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/geo#long">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/geosparql#Point"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>long</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geosparql#asWKT -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/geosparql#asWKT"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://openuniversitydata/def#CursoAcademico -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def#CursoAcademico">
+        <rdfs:label>Curso Academico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def#Universidad -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def#Universidad">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openuniversitydata/def#ofrece"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Universidad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesFinEstudioAcceso -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesFinEstudioAcceso">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteFinEstudioAcceso"/>
+        <rdfs:label>Agregacion Paises Fin Estudio Acceso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad"/>
+        <rdfs:label>Agregacion Paises Nacionalidad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesResidencia -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesResidencia">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia"/>
+        <rdfs:label>Agregacion Paises Residencia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#ContinenteFinEstudioAcceso -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteFinEstudioAcceso">
+        <rdfs:label>Continente Fin Estudio Acceso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad">
+        <rdfs:label>Continente Nacionalidad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia">
+        <rdfs:label>Continente Residencia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#Estudiante -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#Estudiante">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#estudia"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#posee"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#provieneDe"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Estudiante</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#PaisFinEstudioAcceso -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#PaisFinEstudioAcceso">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteFinEstudioAcceso"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#Feature"/>
+        <rdfs:label>Pais Fin Estudio Acceso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#Feature"/>
+        <rdfs:label>Pais Nacionalidad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#Feature"/>
+        <rdfs:label>Pais Residencia</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/estudios-y-estudiantes#Titulacion -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/estudios-y-estudiantes#Titulacion">
+        <rdfs:label>Titulacion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#Campus -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/organizacion-y-servicios#Campus">
+        <rdfs:label>Campus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#Centro -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/organizacion-y-servicios#Centro">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#estaUbicado"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Centro</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#CentroSec -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/organizacion-y-servicios#CentroSec">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#estaUbicado"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Centro Sec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#ComunidadCentroSec -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/organizacion-y-servicios#ComunidadCentroSec">
+        <rdfs:label>Comunidad Centro Sec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#MunicipioCentroSec -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/organizacion-y-servicios#MunicipioCentroSec">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ProvinciaCentroSec"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#Feature"/>
+        <rdfs:label>Municipio Centro Sec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://openuniversitydata/def/organizacion-y-servicios#ProvinciaCentroSec -->
+
+
+    <owl:Class rdf:about="http://openuniversitydata/def/organizacion-y-servicios#ProvinciaCentroSec">
+        <rdfs:subClassOf rdf:resource="http://openuniversitydata/def/organizacion-y-servicios#ComunidadCentroSec"/>
+        <rdfs:label>Provincia Centro Sec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+
+    <owl:Class rdf:about="http://schema.org/Person">
+        <rdfs:label>Person</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geosparql#Feature -->
+
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/geosparql#Feature">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#SpatialObject"/>
+        <rdfs:label>Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geosparql#Geometry -->
+
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/geosparql#Geometry">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#SpatialObject"/>
+        <rdfs:label>Geometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geosparql#Point -->
+
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/geosparql#Point">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#Geometry"/>
+        <rdfs:label>Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/geosparql#SpatialObject -->
+
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/geosparql#SpatialObject">
+        <rdfs:label>Spatial Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#wKTLiteral -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2001/XMLSchema#wKTLiteral"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Organization -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Organization">
+        <rdfs:label>Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/org#Site -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/org#Site">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/geosparql#Feature"/>
+        <rdfs:label>Site</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/especialidad-acceso -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/especialidad-acceso"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/estudio-acceso -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/estudio-acceso"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/familia-numerosa -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/familia-numerosa"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/forma-admision -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/forma-admision"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/genero -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/genero"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/naturaleza-centro -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/naturaleza-centro"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-madre -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-madre"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-padre -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/nivel-estudios-padre"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-estudiante -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-estudiante"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-madre -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-madre"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-padre -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/ocupacion-padre"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio"/>
+    
+
+
+    <!-- http://openuniversitydata/kos/organizacion-y-servicios/naturaleza-centro-sec -->
+
+
+    <owl:NamedIndividual rdf:about="http://openuniversitydata/kos/organizacion-y-servicios/naturaleza-centro-sec"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/geosparql#asWKT">
+        <rdfs:label>as w k t</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
