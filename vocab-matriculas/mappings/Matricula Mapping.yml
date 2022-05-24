@@ -573,7 +573,7 @@ mappings:
   triplesMapPoint:
     sources:
       - [UC3M-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_nacionalidad)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_nacionalidad), xsd:double]
@@ -583,7 +583,7 @@ mappings:
   triplesMapPoint21:
     sources:
       - [UCM-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-nacionalidad/$(des_pais_nacionalidad)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_nacionalidad)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_nacionalidad), xsd:double]
@@ -593,7 +593,7 @@ mappings:
   triplesMapPoint2:
     sources:
       - [UC3M-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-residencia/$(des_pais_residencia)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_residencia)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_residencia), xsd:double]
@@ -603,7 +603,7 @@ mappings:
   triplesMapPoint22:
     sources:
       - [UCM-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-residencia/$(des_pais_residencia)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_residencia)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_residencia), xsd:double]
@@ -613,7 +613,7 @@ mappings:
   triplesMapPoint3:
     sources:
       - [UC3M-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/municipio-residencia/$(des_municipio_residencia)
+    s: http://www.example.org/openuniversitydata/point/$(des_municipio_residencia)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_municipio_residencia), xsd:double]
@@ -623,7 +623,7 @@ mappings:
   triplesMapPoint32:
     sources:
       - [UCM-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/municipio-residencia/$(des_municipio_residencia)
+    s: http://www.example.org/openuniversitydata/point/$(des_municipio_residencia)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_municipio_residencia), xsd:double]
@@ -633,7 +633,7 @@ mappings:
   triplesMapPoint4:
     sources:
       - [UC3M-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/municipio-curso/$(des_municipio_curso)
+    s: http://www.example.org/openuniversitydata/point/$(des_municipio_curso)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_municipio_curso), xsd:double]
@@ -643,7 +643,7 @@ mappings:
   triplesMapPoint42:
     sources:
       - [UCM-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/municipio-curso/$(des_municipio_curso)
+    s: http://www.example.org/openuniversitydata/point/$(des_municipio_curso)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_municipio_curso), xsd:double]
@@ -653,7 +653,7 @@ mappings:
   triplesMapPoin5:
     sources:
       - [UC3M-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-univ-procedencia/$(des_pais_univ_procedencia)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_univ_procedencia)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_univ_procedencia), xsd:double]
@@ -663,7 +663,7 @@ mappings:
   triplesMapPoin52:
     sources:
       - [UCM-2019-20.csv~csv]
-    s: http://www.example.org/openuniversitydata/pais-univ-procedencia/$(des_pais_univ_procedencia)
+    s: http://www.example.org/openuniversitydata/point/$(des_pais_univ_procedencia)
     po:
       - [a, geosparql:Point]
       - [geo:lat, $(lat_pais_univ_procedencia), xsd:double]
