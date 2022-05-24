@@ -1,0 +1,107 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix univ: <http://openuniversitydata/def#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.org/openuniversitydata/estudiante/David-Perea> a estud:Estudiante ;
+    estud:anioNacimiento "2000"^^xsd:integer ;
+    estud:mesInicioPrograma "2021-09-01"^^xsd:date ;
+    estud:mesFinPrograma "2022-01-15"^^xsd:date ;
+    estud:genero <http://openuniversitydata/kos/estudios-y-estudiantes/genero/hombre> ;
+    estud:nivelFormativo <http://openuniversitydata/kos/estudios-y-estudiantes/nivel-formativo/grado> ;
+    estud:estudia <http://www.example.org/openuniversitydata/universidad/UPM> ;
+    estud:cursa <http://www.example.org/openuniversitydata/titulacion/Grado-en-Ingenieria-Informatica> ;
+    estud:posee <http://www.example.org/openuniversitydata/pais/Espania> ;
+    estud:posee <http://www.example.org/openuniversitydata/continente/Europa> ;
+    estud:posee <http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> ;
+    estud:tiene1 <http://www.example.org/openuniversitydata/universidad/UPM> ;
+    estud:tiene2 <http://www.example.org/openuniversitydata/universidad/Universidade-Lusofona-Do-Porto> .
+    
+<http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univ:tieneAsociado <http://www.example.org/openuniversitydata/curso/2021-22> ;
+    univ:proporciona <http://www.example.org/openuniversitydata/programa-movilidad/ERASMUS> .
+
+<http://www.example.org/openuniversitydata/universidad/Universidade-Lusofona-Do-Porto> a univ:UniversidadDestino ;
+    dct:identifier "P Porto57"^^xsd:string ;
+    univ:ambitoUnivDestino <http://openuniversitydata/kos/ambito-univ-destino/informatica> ;
+    univ:estaUbicada2 <http://www.example.org/openuniversitydata/pais/Espania> ;
+    univ:estaUbicada2 <http://www.example.org/openuniversitydata/continente/Europa> ;
+    univ:estaUbicada2 <http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> ;
+    univ:estaUbicada2 <http://www.example.org/openuniversitydata/municipio/Getafe> ;
+    univ:estaUbicada2 <http://www.example.org/openuniversitydata/provincia/Madrid> ;
+    univ:estaUbicada2 <http://www.example.org/openuniversitydata/comunidad/Comunidad-de-Madrid> .
+
+<http://www.example.org/openuniversitydata/universidad/UPM> a univ:UniversidadProcedencia ;
+    dct:identifier "025"^^xsd:string ;
+    univ:ambitoUnivProcedencia <http://openuniversitydata/kos/ambito-univ-procedencia/informatica> ;
+    univ:estaUbicada1 <http://www.example.org/openuniversitydata/pais/Espania> ;
+    univ:estaUbicada1 <http://www.example.org/openuniversitydata/continente/Europa> ;
+    univ:estaUbicada1 <http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> ;
+    univ:estaUbicada1 <http://www.example.org/openuniversitydata/municipio/Madrid> .
+
+<http://www.example.org/openuniversitydata/curso/2021-22> a univ:CursoAcademico .
+
+<http://www.example.org/openuniversitydata/programa-movilidad/ERASMUS> a estud:ProgramaMovilidad ;
+    dct:identifier "03"^^xsd:string ;
+    estud:tipoProgramaMov <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-programa-mov/estudios-y-o-proyecto-fin-de-grado> .
+
+<http://www.example.org/openuniversitydata/titulacion/Grado-en-Ingenieria-Informatica> a estud:Titulacion ;
+    dct:identifier "2500397" .
+
+<http://www.example.org/openuniversitydata/pais/Espania> a estud:PaisNacionalidad ;
+    a univ:PaisUnivDestino ;
+    a univ:PaisUnivProcedencia ;
+    dct:identifier "108" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente/Europa> ;
+    org:hasSite <http://www.example.org/openuniversitydata/pais/Espania/site> .
+
+<http://www.example.org/openuniversitydata/continente/Europa> a estud:ContinenteNacionalidad ;
+    a univ:ContinenteUnivDestino ;
+    a univ:ContinenteUnivProcedencia ;
+    dct:identifier "01" .
+
+<http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> a estud:AgregacionPaisesNacionalidad ;
+    a univ:AgregacionPaisesUnivDestino ;
+    a univ:AgregacionPaisesUnivProcedencia ;
+    dct:identifier "11" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente/Europa> .
+
+<http://www.example.org/openuniversitydata/municipio/Getafe> a univ:MunicipioDestino ;
+    dct:identifier "065" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/provincia/Madrid> ;
+    org:hasSite <http://www.example.org/openuniversitydata/municipio/Getafe/site> .
+
+<http://www.example.org/openuniversitydata/provincia/Madrid> a univ:ProvinciaDestino ;
+    dct:identifier "28" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/comunidad/Comunidad-de-Madrid> .
+
+<http://www.example.org/openuniversitydata/comunidad/Comunidad-de-Madrid> a univ:ComunidadDestino ;
+    dct:identifier "13" .
+
+<http://www.example.org/openuniversitydata/municipio/Madrid> a univ:MunicipioUnivProcedencia ;
+    dct:identifier "079" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/pais/Espania> .
+
+<http://www.example.org/openuniversitydata/pais/Espania/site> a geosparql:Feature ;
+    geosparql:hasGeometry <http://www.example.org/openuniversitydata/pais/Espania/site/geometry> .
+
+<http://www.example.org/openuniversitydata/pais/Espania/site/geometry> a geosparql:Point ;
+    geo:long "1.601554"^^xsd:double ;
+    geo:lat "42.546245"^^xsd:double ;
+    geosparql:asWKT "POINT (1.601554 42.546245)"^^geosparql:wktLiteral .
+
+<http://www.example.org/openuniversitydata/municipio/Getafe/site> a geosparql:Feature ;
+    geosparql:hasGeometry <http://www.example.org/openuniversitydata/municipio/Getafe/site/geometry> .
+
+<http://www.example.org/openuniversitydata/municipio/Getafe/site/geometry> a geosparql:Point ;
+    geo:long "-3.732585"^^xsd:double ;
+    geo:lat "40.308263"^^xsd:double ;
+    geosparql:asWKT "POINT (-3.732585 40.308263)"^^geosparql:wktLiteral .
