@@ -1,0 +1,494 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix univ: <http://openuniversitydata/def#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+univ: a owl:Ontology ;
+    dc:creator "Víctor Morcuende" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "Matricula Ontology" ;
+    owl:versionInfo "0.0.3" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator a owl:AnnotationProperty ;
+           dc:creator "Víctor Morcuende" .
+
+
+###  http://purl.org/dc/elements/1.1/description
+dc:description a owl:AnnotationProperty ;
+               dc:description "Ontology code created by Chowlk" .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title a owl:AnnotationProperty ;
+         dc:title "Matricula Ontology" .
+
+
+###  http://www.w3.org/2002/07/owl#versionInfo
+owl:versionInfo a owl:AnnotationProperty ;
+                owl:versionInfo "0.0.3" .
+
+
+
+
+univ:tieneAsociado a owl:ObjectProperty ;
+    rdfs:label "tiene asociado" ;
+    rdfs:domain univ:Universidad ;
+    rdfs:range univ:CursoAcademico .
+
+estud:AgregacionPaisesNacionalidad a owl:Class ;
+    rdfs:label "Agregacion Paises Nacionalidad" ;
+    rdfs:subClassOf estud:ContinenteNacionalidad .
+
+estud:AgregacionPaisesResidencia a owl:Class ;
+    rdfs:label "Agregacion Paises Residencia" ;
+    rdfs:subClassOf estud:ContinenteResidencia .
+
+estud:AgregacionPaisesUnivProcedencia a owl:Class ;
+    rdfs:label "Agregacion Paises Univ Procedencia" ;
+    rdfs:subClassOf estud:ContinenteUnivProcedencia .
+
+estud:anioNacimiento a owl:DatatypeProperty ;
+    rdfs:label "anio nacimiento" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:calificacionTesis a owl:ObjectProperty ;
+    rdfs:label "calificacion tesis" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range [
+        a owl:Class ;
+        owl:intersectionOf (
+            skos:Concept
+            _:genid3
+        )
+    ] .
+
+estud:dedicacion a owl:ObjectProperty ;
+    rdfs:label "dedicacion" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range [
+        a owl:Class ;
+        owl:intersectionOf (
+            skos:Concept
+            _:genid7
+        )
+    ] .
+
+estud:genero a owl:ObjectProperty ;
+    rdfs:label "genero" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range [
+        a owl:Class ;
+        owl:intersectionOf (
+            skos:Concept
+            _:genid11
+        )
+    ] .
+
+estud:indMencionIndustrial a owl:DatatypeProperty ;
+    rdfs:label "ind mencion industrial" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:boolean .
+
+estud:indMencionInternacional a owl:DatatypeProperty ;
+    rdfs:label "ind mencion internacional" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:boolean .
+
+estud:indSeTitulaCurso a owl:DatatypeProperty ;
+    rdfs:label "ind se titula curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:boolean .
+
+estud:indTesisLeidaCurso a owl:DatatypeProperty ;
+    rdfs:label "ind tesis leida curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:boolean .
+
+estud:notaMediaFinal a owl:DatatypeProperty ;
+    rdfs:label "nota media final" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:double .
+
+estud:numCreditosMat1Curso a owl:DatatypeProperty ;
+    rdfs:label "num creditos mat1 curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numCreditosMat2Curso a owl:DatatypeProperty ;
+    rdfs:label "num creditos mat2 curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numCreditosMat3OMasCurso a owl:DatatypeProperty ;
+    rdfs:label "num creditos mat3 o mas curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numCreditosNoPresCurso a owl:DatatypeProperty ;
+    rdfs:label "num creditos no pres curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numCreditosPresCurso a owl:DatatypeProperty ;
+    rdfs:label "num creditos pres curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosMatCurso a owl:DatatypeProperty ;
+    rdfs:label "num total creditos mat curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosMatInicio a owl:DatatypeProperty ;
+    rdfs:label "num total creditos mat inicio" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosNoSupCurso a owl:DatatypeProperty ;
+    rdfs:label "num total creditos no sup curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosPresInicio a owl:DatatypeProperty ;
+    rdfs:label "num total creditos pres inicio" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosRecConvCurso a owl:DatatypeProperty ;
+    rdfs:label "num total creditos rec conv curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosRecConvInicio a owl:DatatypeProperty ;
+    rdfs:label "num total creditos rec conv inicio" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosSupCurso a owl:DatatypeProperty ;
+    rdfs:label "num total creditos sup curso" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosSupInicio a owl:DatatypeProperty ;
+    rdfs:label "num total creditos sup inicio" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:numTotalCreditosTransfInicio a owl:DatatypeProperty ;
+    rdfs:label "num total creditos transf inicio" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range xsd:integer .
+
+estud:tipoEstudio a owl:ObjectProperty ;
+    rdfs:label "tipo estudio" ;
+    rdfs:domain estud:Titulacion ;
+    rdfs:range [
+        a owl:Class ;
+        owl:intersectionOf (
+            skos:Concept
+            _:genid15
+        )
+    ] .
+
+estud:tipoTituloAccesoMaster a owl:ObjectProperty ;
+    rdfs:label "tipo titulo acceso master" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range [
+        a owl:Class ;
+        owl:intersectionOf (
+            skos:Concept
+            _:genid19
+        )
+    ] .
+
+dct:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:domain univ:Universidad ;
+    rdfs:range xsd:string .
+
+schema:birthDate a owl:DatatypeProperty ;
+    rdfs:label "birth date" ;
+    rdfs:domain schema:Person .
+
+schema:familyName a owl:DatatypeProperty ;
+    rdfs:label "family name" ;
+    rdfs:domain schema:Person .
+
+schema:gender a owl:DatatypeProperty ;
+    rdfs:label "gender" ;
+    rdfs:domain schema:Person .
+
+schema:givenName a owl:DatatypeProperty ;
+    rdfs:label "given name" ;
+    rdfs:domain schema:Person .
+
+schema:identifier a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:domain schema:Person .
+
+geo:lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:double .
+
+geo:long a owl:DatatypeProperty ;
+    rdfs:label "long" ;
+    rdfs:domain geosparql:Point ;
+    rdfs:range xsd:double .
+
+geosparql:asWKT a owl:DatatypeProperty ;
+    rdfs:label "as w k t" ;
+    rdfs:domain geosparql:Geometry ;
+    rdfs:range xsd:wKTLiteral .
+
+geosparql:hasGeometry a owl:ObjectProperty ;
+    rdfs:label "has geometry" ;
+    rdfs:domain geosparql:Geometry ;
+    rdfs:range geosparql:Feature .
+
+org:hasSite a owl:ObjectProperty ;
+    rdfs:label "has site" ;
+    rdfs:domain org:Organization ;
+    rdfs:range org:Site .
+
+org:hasSubOrganization a owl:ObjectProperty ;
+    rdfs:label "has sub organization" ;
+    rdfs:domain univ:Universidad .
+
+org:subOrganizationOf a owl:ObjectProperty ;
+    rdfs:label "sub organization of" ;
+    rdfs:domain orgser:Centro ;
+    rdfs:range univ:Universidad .
+
+univ:CursoAcademico a owl:Class ;
+    rdfs:label "Curso Academico" .
+
+univ:ofrece a owl:ObjectProperty ;
+    rdfs:label "ofrece" ;
+    rdfs:domain univ:Universidad ;
+    rdfs:range estud:Titulacion .
+
+estud:ComunidadCurso a owl:Class ;
+    rdfs:label "Comunidad Curso" .
+
+estud:ComunidadResidencia a owl:Class ;
+    rdfs:label "Comunidad Residencia" .
+
+estud:CursoAcademicoAccesoSUE a owl:Class ;
+    rdfs:label "Curso Academico Acceso S U E" .
+
+estud:CursoAcademicoInicio a owl:Class ;
+    rdfs:label "Curso Academico Inicio" .
+
+estud:MunicipioCurso a owl:Class ;
+    rdfs:label "Municipio Curso" ;
+    rdfs:subClassOf estud:ProvinciaCurso,
+        geosparql:Feature .
+
+estud:MunicipioResidencia a owl:Class ;
+    rdfs:label "Municipio Residencia" ;
+    rdfs:subClassOf estud:ProvinciaResidencia,
+        geosparql:Feature .
+
+estud:PaisNacionalidad a owl:Class ;
+    rdfs:label "Pais Nacionalidad" ;
+    rdfs:subClassOf estud:ContinenteNacionalidad,
+        geosparql:Feature .
+
+estud:PaisResidencia a owl:Class ;
+    rdfs:label "Pais Residencia" ;
+    rdfs:subClassOf estud:ContinenteResidencia,
+        geosparql:Feature .
+
+estud:PaisUnivProcedencia a owl:Class ;
+    rdfs:label "Pais Univ Procedencia" ;
+    rdfs:subClassOf estud:ContinenteUnivProcedencia,
+        geosparql:Feature .
+
+estud:accede a owl:ObjectProperty ;
+    rdfs:label "accede" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range estud:CursoAcademicoAccesoSUE .
+
+estud:empieza a owl:ObjectProperty ;
+    rdfs:label "empieza" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range estud:CursoAcademicoInicio .
+
+estud:estudia a owl:ObjectProperty ;
+    rdfs:label "estudia" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range univ:Universidad .
+
+orgser:Centro a owl:Class ;
+    rdfs:label "Centro" ;
+    rdfs:subClassOf org:Organization .
+
+org:Site a owl:Class ;
+    rdfs:label "Site" ;
+    rdfs:subClassOf geosparql:Feature .
+
+estud:ProvinciaCurso a owl:Class ;
+    rdfs:label "Provincia Curso" ;
+    rdfs:subClassOf estud:ComunidadCurso .
+
+estud:ProvinciaResidencia a owl:Class ;
+    rdfs:label "Provincia Residencia" ;
+    rdfs:subClassOf estud:ComunidadResidencia .
+
+estud:Titulacion a owl:Class ;
+    rdfs:label "Titulacion" .
+
+geosparql:Point a owl:Class ;
+    rdfs:label "Point" ;
+    rdfs:subClassOf geosparql:Geometry .
+
+geosparql:SpatialObject a owl:Class ;
+    rdfs:label "Spatial Object" .
+
+estud:ContinenteNacionalidad a owl:Class ;
+    rdfs:label "Continente Nacionalidad" .
+
+estud:ContinenteResidencia a owl:Class ;
+    rdfs:label "Continente Residencia" .
+
+estud:ContinenteUnivProcedencia a owl:Class ;
+    rdfs:label "Continente Univ Procedencia" .
+
+geosparql:Geometry a owl:Class ;
+    rdfs:label "Geometry" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+org:Organization a owl:Class ;
+    rdfs:label "Organization" .
+
+univ:Universidad a owl:Class ;
+    rdfs:label "Universidad" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty univ:ofrece ],
+        org:Organization .
+
+schema:Person a owl:Class ;
+    rdfs:label "Person" .
+
+geosparql:Feature a owl:Class ;
+    rdfs:label "Feature" ;
+    rdfs:subClassOf geosparql:SpatialObject .
+
+estud:posee a owl:ObjectProperty ;
+    rdfs:label "posee" ;
+    rdfs:domain estud:Estudiante ;
+    rdfs:range estud:ContinenteNacionalidad,
+        estud:ContinenteResidencia,
+        estud:ContinenteUnivProcedencia,
+        estud:MunicipioCurso,
+        estud:MunicipioResidencia,
+        estud:PaisNacionalidad,
+        estud:PaisResidencia,
+        estud:PaisUnivProcedencia,
+        estud:AgregacionPaisesNacionalidad,
+        estud:AgregacionPaisesResidencia,
+        estud:AgregacionPaisesUnivProcedencia,
+        estud:ComunidadCurso,
+        estud:ComunidadResidencia,
+        estud:ProvinciaCurso,
+        estud:ProvinciaResidencia .
+
+estud:Estudiante a owl:Class ;
+    rdfs:label "Estudiante" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:accede ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:empieza ],
+        [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:estudia ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty estud:posee ],
+        schema:Person .
+
+_:genid3
+    a owl:Restriction ;
+    owl:onProperty skos:inScheme ;
+    owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis> .
+
+_:genid7
+    a owl:Restriction ;
+    owl:onProperty skos:inScheme ;
+    owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion> .
+
+_:genid11
+    a owl:Restriction ;
+    owl:onProperty skos:inScheme ;
+    owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/genero> .
+
+_:genid15
+    a owl:Restriction ;
+    owl:onProperty skos:inScheme ;
+    owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio> .
+
+_:genid19
+    a owl:Restriction ;
+    owl:onProperty skos:inScheme ;
+    owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master> .
