@@ -21,5 +21,5 @@ Mappings de las ontologías: <br>
 https://github.com/openuniversitydata/estudios-y-estudiantes/blob/main/vocab-titulaciones/mappings/Titulacion%20Mapping.yml <br>
  <br><br>
 Grafos de conocimientos RDF: <br>
-https://github.com/openuniversitydata/estudios-y-estudiantes/blob/main/vocab-titulaciones/Titulacion%20Knowledge%20Graph.nt <br>
+https://github.com/openuniversitydata/estudios-y-estudiantes/blob/main/vocab-titulaciones/examples/Titulacion%20Knowledge%20Graph.nt <br>
  <br><br>
