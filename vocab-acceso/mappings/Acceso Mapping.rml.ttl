@@ -2752,28 +2752,28 @@ map:s_013 rdf:type rr:SubjectMap ;
 	rr:template "http://www.example.org/openuniversitydata/centro-secundaria/{}" .
 
 map:s_014 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-nacionalidad/{des_pais_nacionalidad}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_nacionalidad}" .
 
 map:s_015 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-nacionalidad/{des_pais_nacionalidad}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_nacionalidad}" .
 
 map:s_016 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/municipio-centro-sec/{des_municipio_centro_sec}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_municipio_centro_sec}" .
 
 map:s_017 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/municipio-centro-sec/{des_municipio_centro_sec}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_municipio_centro_sec}" .
 
 map:s_018 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-residencia/{des_pais_residencia}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_residencia}" .
 
 map:s_019 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-residencia/{des_pais_residencia}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_residencia}" .
 
 map:s_020 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-fin-estudio-acceso/{des_pais_fin_estudio_acceso}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_fin_estudio_acceso}" .
 
 map:s_021 rdf:type rr:SubjectMap ;
-	rr:template "http://www.example.org/openuniversitydata/pais-fin-estudio-acceso/{des_pais_fin_estudio_acceso}" .
+	rr:template "http://www.example.org/openuniversitydata/point/{des_pais_fin_estudio_acceso}" .
 
 map:s_022 rdf:type rr:SubjectMap ;
 	rr:template "http://www.example.org/openuniversitydata/agregacion-paises-fin-estudio-acceso/{des_agregacion_paises_fin_estudio_acceso}" .
