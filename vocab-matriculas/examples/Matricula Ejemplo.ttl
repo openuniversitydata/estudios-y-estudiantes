@@ -1,0 +1,115 @@
+ @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix estud: <http://openuniversitydata/def/estudios-y-estudiantes#> .
+@prefix geo: <http://www.owl-ontologies.com/geo#> .
+@prefix geosparql: <http://www.owl-ontologies.com/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgser: <http://openuniversitydata/def/organizacion-y-servicios#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix univ: <http://openuniversitydata/def#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.org/openuniversitydata/estudiante/David-Perea> a estud:Estudiante ;
+    estud:anioNacimiento "2000"^^xsd:integer ;
+    estud:numTotalCreditosMatCurso "60"^^xsd:integer ;
+    estud:numCreditosMat1Curso "60"^^xsd:integer ;
+    estud:numCreditosMat2Curso "15"^^xsd:integer ;
+    estud:numCreditosMat3OMasCurso "9"^^xsd:integer ;
+    estud:numTotalCreditosMatInicio "240"^^xsd:integer ;
+    estud:numTotalCreditosPresInicio "240"^^xsd:integer ;
+    estud:numCreditosPresCurso "60"^^xsd:integer ;
+    estud:numCreditosNoPresCurso "0"^^xsd:integer ;
+    estud:numTotalCreditosSupCurso "60"^^xsd:integer ;
+    estud:numTotalCreditosNoSupCurso "0"^^xsd:integer ;
+    estud:numTotalCreditosSupInicio "240"^^xsd:integer ;
+    estud:numTotalCreditosTransfInicio "0"^^xsd:integer ;
+    estud:numTotalCreditosRecConvCurso "0"^^xsd:integer ;
+    estud:numTotalCreditosRecConvInicio "0"^^xsd:integer ;
+    estud:indSeTitulaCurso "true"^^xsd:boolean ;
+    estud:notaMediaFinal "7,5"^^xsd:double ;
+    estud:indTesisLeidaCurso "true"^^xsd:boolean ;
+    estud:indMencionIndustrial "false"^^xsd:boolean ;
+    estud:indMencionInternacional "false"^^xsd:boolean ;
+    estud:calificacionTesis <http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis/notable> ;
+    estud:dedicacion <http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion/tiempo-completo> ;
+    estud:tipoTituloAccesoMaster <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master/grado> ;
+    estud:genero <http://openuniversitydata/kos/estudios-y-estudiantes/genero/hombre> ;
+    estud:empieza <http://www.example.org/openuniversitydata/curso/2018-19> ;
+    estud:accede <http://www.example.org/openuniversitydata/curso/2018-19> ;
+    estud:estudia <http://www.example.org/openuniversitydata/universidad/UPM> ;
+    estud:posee <http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> ;
+    estud:posee <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
+    estud:posee <http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> ;
+    estud:posee <http://www.example.org/openuniversitydata/municipio-residencia/Getafe> ;
+    estud:posee <http://www.example.org/openuniversitydata/provincia-residencia/Madrid> ;
+    estud:posee <http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> .
+    
+<http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
+    dct:identifier "025"^^xsd:string ;
+    univ:ofrece <http://www.example.org/openuniversitydata/titulacion/Grado-en-Ingenieria-Informatica> ;
+    univ:tieneAsociado <http://www.example.org/openuniversitydata/curso/2021-22> ;
+    org:hasSubOrganization <http://www.example.org/openuniversitydata/centro/ETSIINF> .
+
+<http://www.example.org/openuniversitydata/curso/2021-22> a univ:CursoAcademico .
+
+<http://www.example.org/openuniversitydata/titulacion/Grado-en-Ingenieria-Informatica> a estud:Titulacion ;
+    dct:identifier "2500397" ;
+    estud:tipoEstudio <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio/grado> .
+
+<http://www.example.org/openuniversitydata/centro/ETSIINF> a orgser:Centro ;
+    dct:identifier "28027114" ;
+    org:subOrganizationOf <http://www.example.org/openuniversitydata/universidad/UPM> .
+
+<http://www.example.org/openuniversitydata/curso/2018-19> a estud:CursoAcademicoInicio ;
+    a estud:CursoAcademicoAccesoSUE .
+
+<http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> a estud:PaisNacionalidad ;
+    a estud:PaisResidencia ;
+    a estud:PaisUnivProcedencia ;
+    dct:identifier "108" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
+    org:hasSite <http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> .
+
+<http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> a estud:ContinenteNacionalidad ;
+    a estud:ContinenteResidencia ;
+    a estud:ContinenteUnivProcedencia ;
+    dct:identifier "01" .
+
+<http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> a estud:AgregacionPaisesNacionalidad ;
+    a estud:AgregacionPaisesResidencia ;
+    a estud:AgregacionPaisesUnivProcedencia ;
+    dct:identifier "11" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> .
+
+<http://www.example.org/openuniversitydata/municipio-residencia/Getafe> a estud:MunicipioResidencia ;
+    a estud:MunicipioCurso ;
+    dct:identifier "065" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/provincia-residencia/Madrid> ;
+    org:hasSite <http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site> .
+
+<http://www.example.org/openuniversitydata/provincia-residencia/Madrid> a estud:ProvinciaResidencia ;
+    a estud:ProvinciaCurso ;
+    dct:identifier "28" ;
+    rdfs:subClassOf <http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> .
+
+<http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> a estud:ComunidadResidencia ;
+    a estud:ComunidadCurso ;
+    dct:identifier "13" .
+
+<http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> a geosparql:Feature ;
+    geosparql:hasGeometry <http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> .
+
+<http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> a geosparql:Point ;
+    geo:long "1.601554"^^xsd:double ;
+    geo:lat "42.546245"^^xsd:double ;
+    geosparql:asWKT "POINT (1.601554 42.546245)"^^geosparql:wktLiteral .
+
+<http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site> a geosparql:Feature ;
+    geosparql:hasGeometry <http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site/geometry> .
+
+<http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site/geometry> a geosparql:Point ;
+    geo:long "-3.732585"^^xsd:double ;
+    geo:lat "40.308263"^^xsd:double ;
+    geosparql:asWKT "POINT (-3.732585 40.308263)"^^geosparql:wktLiteral .
