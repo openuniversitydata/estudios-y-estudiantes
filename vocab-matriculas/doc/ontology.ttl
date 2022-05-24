@@ -1,0 +1,622 @@
+@prefix : <http://openuniversitydata/def#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://openuniversitydata/def#> .
+
+<http://openuniversitydata/def#> rdf:type owl:Ontology ;
+                                  <http://purl.org/dc/elements/1.1/creator> "Víctor Morcuende" ;
+                                  <http://purl.org/dc/elements/1.1/description> "Ontology code created by Chowlk" ;
+                                  <http://purl.org/dc/elements/1.1/title> "Matricula Ontology" ;
+                                  owl:versionInfo "0.0.3" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://openuniversitydata/def#ofrece
+:ofrece rdf:type owl:ObjectProperty ;
+        rdfs:domain :Universidad ;
+        rdfs:range <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> ;
+        rdfs:label "ofrece" .
+
+
+###  http://openuniversitydata/def#tieneAsociado
+:tieneAsociado rdf:type owl:ObjectProperty ;
+               rdfs:domain :Universidad ;
+               rdfs:range :CursoAcademico ;
+               rdfs:label "tiene asociado" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#accede
+<http://openuniversitydata/def/estudios-y-estudiantes#accede> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                              rdfs:range <http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoAccesoSUE> ;
+                                                              rdfs:label "accede" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#calificacionTesis
+<http://openuniversitydata/def/estudios-y-estudiantes#calificacionTesis> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                             owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis>
+                                                                                                           ]
+                                                                                                         ) ;
+                                                                                      rdf:type owl:Class
+                                                                                    ] ;
+                                                                         rdfs:label "calificacion tesis" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#dedicacion
+<http://openuniversitydata/def/estudios-y-estudiantes#dedicacion> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                      owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion>
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ] ;
+                                                                  rdfs:label "dedicacion" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#empieza
+<http://openuniversitydata/def/estudios-y-estudiantes#empieza> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                               rdfs:range <http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoInicio> ;
+                                                               rdfs:label "empieza" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#estudia
+<http://openuniversitydata/def/estudios-y-estudiantes#estudia> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                               rdfs:range :Universidad ;
+                                                               rdfs:label "estudia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#genero
+<http://openuniversitydata/def/estudios-y-estudiantes#genero> rdf:type owl:ObjectProperty ;
+                                                              rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                  owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/genero>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ] ;
+                                                              rdfs:label "genero" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#posee
+<http://openuniversitydata/def/estudios-y-estudiantes#posee> rdf:type owl:ObjectProperty ;
+                                                             rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                             rdfs:range <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#MunicipioCurso> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#MunicipioResidencia> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#PaisUnivProcedencia> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaCurso> ,
+                                                                        <http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaResidencia> ;
+                                                             rdfs:label "posee" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoEstudio> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> ;
+                                                                   rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                       owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio>
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ] ;
+                                                                   rdfs:label "tipo estudio" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#tipoTituloAccesoMaster
+<http://openuniversitydata/def/estudios-y-estudiantes#tipoTituloAccesoMaster> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                              rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                  owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                  owl:hasValue <http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master>
+                                                                                                                ]
+                                                                                                              ) ;
+                                                                                           rdf:type owl:Class
+                                                                                         ] ;
+                                                                              rdfs:label "tipo titulo acceso master" .
+
+
+###  http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> rdf:type owl:ObjectProperty ;
+                                                rdfs:domain <http://www.owl-ontologies.com/geosparql#Geometry> ;
+                                                rdfs:range xsd:wKTLiteral .
+
+
+###  http://www.owl-ontologies.com/geosparql#hasGeometry
+<http://www.owl-ontologies.com/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                      rdfs:domain <http://www.owl-ontologies.com/geosparql#Geometry> ;
+                                                      rdfs:range <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                      rdfs:label "has geometry" .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/org#hasSite
+<http://www.w3.org/ns/org#hasSite> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://www.w3.org/ns/org#Organization> ;
+                                   rdfs:range <http://www.w3.org/ns/org#Site> ;
+                                   rdfs:label "has site" .
+
+
+###  http://www.w3.org/ns/org#hasSubOrganization
+<http://www.w3.org/ns/org#hasSubOrganization> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain :Universidad ;
+                                              rdfs:label "has sub organization" .
+
+
+###  http://www.w3.org/ns/org#subOrganizationOf
+<http://www.w3.org/ns/org#subOrganizationOf> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://openuniversitydata/def/organizacion-y-servicios#Centro> ;
+                                             rdfs:range :Universidad ;
+                                             rdfs:label "sub organization of" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento
+<http://openuniversitydata/def/estudios-y-estudiantes#anioNacimiento> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                      rdfs:range xsd:integer ;
+                                                                      rdfs:label "anio nacimiento" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#indMencionIndustrial
+<http://openuniversitydata/def/estudios-y-estudiantes#indMencionIndustrial> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                            rdfs:range xsd:boolean ;
+                                                                            rdfs:label "ind mencion industrial" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#indMencionInternacional
+<http://openuniversitydata/def/estudios-y-estudiantes#indMencionInternacional> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                               rdfs:range xsd:boolean ;
+                                                                               rdfs:label "ind mencion internacional" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#indSeTitulaCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#indSeTitulaCurso> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                        rdfs:range xsd:boolean ;
+                                                                        rdfs:label "ind se titula curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#indTesisLeidaCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#indTesisLeidaCurso> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                          rdfs:range xsd:boolean ;
+                                                                          rdfs:label "ind tesis leida curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#notaMediaFinal
+<http://openuniversitydata/def/estudios-y-estudiantes#notaMediaFinal> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                      rdfs:range xsd:double ;
+                                                                      rdfs:label "nota media final" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numCreditosMat1Curso
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosMat1Curso> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                            rdfs:range xsd:integer ;
+                                                                            rdfs:label "num creditos mat1 curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numCreditosMat2Curso
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosMat2Curso> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                            rdfs:range xsd:integer ;
+                                                                            rdfs:label "num creditos mat2 curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numCreditosMat3OMasCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosMat3OMasCurso> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                rdfs:range xsd:integer ;
+                                                                                rdfs:label "num creditos mat3 o mas curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numCreditosNoPresCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosNoPresCurso> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                              rdfs:range xsd:integer ;
+                                                                              rdfs:label "num creditos no pres curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numCreditosPresCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#numCreditosPresCurso> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                            rdfs:range xsd:integer ;
+                                                                            rdfs:label "num creditos pres curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosMatCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosMatCurso> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                rdfs:range xsd:integer ;
+                                                                                rdfs:label "num total creditos mat curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosMatInicio
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosMatInicio> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                 rdfs:range xsd:integer ;
+                                                                                 rdfs:label "num total creditos mat inicio" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosNoSupCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosNoSupCurso> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                  rdfs:range xsd:integer ;
+                                                                                  rdfs:label "num total creditos no sup curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosPresInicio
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosPresInicio> rdf:type owl:DatatypeProperty ;
+                                                                                  rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                  rdfs:range xsd:integer ;
+                                                                                  rdfs:label "num total creditos pres inicio" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosRecConvCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosRecConvCurso> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                    rdfs:range xsd:integer ;
+                                                                                    rdfs:label "num total creditos rec conv curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosRecConvInicio
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosRecConvInicio> rdf:type owl:DatatypeProperty ;
+                                                                                     rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                     rdfs:range xsd:integer ;
+                                                                                     rdfs:label "num total creditos rec conv inicio" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosSupCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosSupCurso> rdf:type owl:DatatypeProperty ;
+                                                                                rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                rdfs:range xsd:integer ;
+                                                                                rdfs:label "num total creditos sup curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosSupInicio
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosSupInicio> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                 rdfs:range xsd:integer ;
+                                                                                 rdfs:label "num total creditos sup inicio" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosTransfInicio
+<http://openuniversitydata/def/estudios-y-estudiantes#numTotalCreditosTransfInicio> rdf:type owl:DatatypeProperty ;
+                                                                                    rdfs:domain <http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> ;
+                                                                                    rdfs:range xsd:integer ;
+                                                                                    rdfs:label "num total creditos transf inicio" .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Universidad ;
+                                      rdfs:range xsd:string ;
+                                      rdfs:label "identifier" .
+
+
+###  http://schema.org/birthDate
+<http://schema.org/birthDate> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/Person> ;
+                              rdfs:label "birth date" .
+
+
+###  http://schema.org/familyName
+<http://schema.org/familyName> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/Person> ;
+                               rdfs:label "family name" .
+
+
+###  http://schema.org/gender
+<http://schema.org/gender> rdf:type owl:DatatypeProperty ;
+                           rdfs:domain <http://schema.org/Person> ;
+                           rdfs:label "gender" .
+
+
+###  http://schema.org/givenName
+<http://schema.org/givenName> rdf:type owl:DatatypeProperty ;
+                              rdfs:domain <http://schema.org/Person> ;
+                              rdfs:label "given name" .
+
+
+###  http://schema.org/identifier
+<http://schema.org/identifier> rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://schema.org/Person> ;
+                               rdfs:label "identifier" .
+
+
+###  http://www.owl-ontologies.com/geo#lat
+<http://www.owl-ontologies.com/geo#lat> rdf:type owl:DatatypeProperty ;
+                                        rdfs:domain <http://www.owl-ontologies.com/geosparql#Point> ;
+                                        rdfs:range xsd:double ;
+                                        rdfs:label "lat" .
+
+
+###  http://www.owl-ontologies.com/geo#long
+<http://www.owl-ontologies.com/geo#long> rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain <http://www.owl-ontologies.com/geosparql#Point> ;
+                                         rdfs:range xsd:double ;
+                                         rdfs:label "long" .
+
+
+###  http://www.owl-ontologies.com/geosparql#asWKT
+<http://www.owl-ontologies.com/geosparql#asWKT> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://openuniversitydata/def#CursoAcademico
+:CursoAcademico rdf:type owl:Class ;
+                rdfs:label "Curso Academico" .
+
+
+###  http://openuniversitydata/def#Universidad
+:Universidad rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/org#Organization> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :ofrece ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             rdfs:label "Universidad" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad
+<http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesNacionalidad> rdf:type owl:Class ;
+                                                                                    rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> ;
+                                                                                    rdfs:label "Agregacion Paises Nacionalidad" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesResidencia
+<http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesResidencia> rdf:type owl:Class ;
+                                                                                  rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia> ;
+                                                                                  rdfs:label "Agregacion Paises Residencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesUnivProcedencia
+<http://openuniversitydata/def/estudios-y-estudiantes#AgregacionPaisesUnivProcedencia> rdf:type owl:Class ;
+                                                                                       rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia> ;
+                                                                                       rdfs:label "Agregacion Paises Univ Procedencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#ComunidadCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#ComunidadCurso> rdf:type owl:Class ;
+                                                                      rdfs:label "Comunidad Curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#ComunidadResidencia
+<http://openuniversitydata/def/estudios-y-estudiantes#ComunidadResidencia> rdf:type owl:Class ;
+                                                                           rdfs:label "Comunidad Residencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad
+<http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> rdf:type owl:Class ;
+                                                                              rdfs:label "Continente Nacionalidad" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia
+<http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia> rdf:type owl:Class ;
+                                                                            rdfs:label "Continente Residencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia
+<http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia> rdf:type owl:Class ;
+                                                                                 rdfs:label "Continente Univ Procedencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoAccesoSUE
+<http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoAccesoSUE> rdf:type owl:Class ;
+                                                                               rdfs:label "Curso Academico Acceso S U E" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoInicio
+<http://openuniversitydata/def/estudios-y-estudiantes#CursoAcademicoInicio> rdf:type owl:Class ;
+                                                                            rdfs:label "Curso Academico Inicio" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#Estudiante
+<http://openuniversitydata/def/estudios-y-estudiantes#Estudiante> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://schema.org/Person> ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://openuniversitydata/def/estudios-y-estudiantes#estudia> ;
+                                                                                    owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://openuniversitydata/def/estudios-y-estudiantes#accede> ;
+                                                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://openuniversitydata/def/estudios-y-estudiantes#empieza> ;
+                                                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://openuniversitydata/def/estudios-y-estudiantes#posee> ;
+                                                                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                  ] ;
+                                                                  rdfs:label "Estudiante" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#MunicipioCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#MunicipioCurso> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaCurso> ,
+                                                                                      <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                                      rdfs:label "Municipio Curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#MunicipioResidencia
+<http://openuniversitydata/def/estudios-y-estudiantes#MunicipioResidencia> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaResidencia> ,
+                                                                                           <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                                           rdfs:label "Municipio Residencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad
+<http://openuniversitydata/def/estudios-y-estudiantes#PaisNacionalidad> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteNacionalidad> ,
+                                                                                        <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                                        rdfs:label "Pais Nacionalidad" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia
+<http://openuniversitydata/def/estudios-y-estudiantes#PaisResidencia> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteResidencia> ,
+                                                                                      <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                                      rdfs:label "Pais Residencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#PaisUnivProcedencia
+<http://openuniversitydata/def/estudios-y-estudiantes#PaisUnivProcedencia> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ContinenteUnivProcedencia> ,
+                                                                                           <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                                                           rdfs:label "Pais Univ Procedencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaCurso
+<http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaCurso> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ComunidadCurso> ;
+                                                                      rdfs:label "Provincia Curso" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaResidencia
+<http://openuniversitydata/def/estudios-y-estudiantes#ProvinciaResidencia> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://openuniversitydata/def/estudios-y-estudiantes#ComunidadResidencia> ;
+                                                                           rdfs:label "Provincia Residencia" .
+
+
+###  http://openuniversitydata/def/estudios-y-estudiantes#Titulacion
+<http://openuniversitydata/def/estudios-y-estudiantes#Titulacion> rdf:type owl:Class ;
+                                                                  rdfs:label "Titulacion" .
+
+
+###  http://openuniversitydata/def/organizacion-y-servicios#Centro
+<http://openuniversitydata/def/organizacion-y-servicios#Centro> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://www.w3.org/ns/org#Organization> ;
+                                                                rdfs:label "Centro" .
+
+
+###  http://schema.org/Person
+<http://schema.org/Person> rdf:type owl:Class ;
+                           rdfs:label "Person" .
+
+
+###  http://www.owl-ontologies.com/geosparql#Feature
+<http://www.owl-ontologies.com/geosparql#Feature> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#SpatialObject> ;
+                                                  rdfs:label "Feature" .
+
+
+###  http://www.owl-ontologies.com/geosparql#Geometry
+<http://www.owl-ontologies.com/geosparql#Geometry> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#SpatialObject> ;
+                                                   rdfs:label "Geometry" .
+
+
+###  http://www.owl-ontologies.com/geosparql#Point
+<http://www.owl-ontologies.com/geosparql#Point> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#Geometry> ;
+                                                rdfs:label "Point" .
+
+
+###  http://www.owl-ontologies.com/geosparql#SpatialObject
+<http://www.owl-ontologies.com/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                        rdfs:label "Spatial Object" .
+
+
+###  http://www.w3.org/2001/XMLSchema#wKTLiteral
+xsd:wKTLiteral rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/org#Organization
+<http://www.w3.org/ns/org#Organization> rdf:type owl:Class ;
+                                        rdfs:label "Organization" .
+
+
+###  http://www.w3.org/ns/org#Site
+<http://www.w3.org/ns/org#Site> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://www.owl-ontologies.com/geosparql#Feature> ;
+                                rdfs:label "Site" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis
+<http://openuniversitydata/kos/estudios-y-estudiantes/calificacion-tesis> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion
+<http://openuniversitydata/kos/estudios-y-estudiantes/dedicacion> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/estudios-y-estudiantes/genero
+<http://openuniversitydata/kos/estudios-y-estudiantes/genero> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio
+<http://openuniversitydata/kos/estudios-y-estudiantes/tipo-estudio> rdf:type owl:NamedIndividual .
+
+
+###  http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master
+<http://openuniversitydata/kos/estudios-y-estudiantes/tipo-titulo-acceso-master> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.owl-ontologies.com/geosparql#asWKT> rdfs:label "as w k t" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
