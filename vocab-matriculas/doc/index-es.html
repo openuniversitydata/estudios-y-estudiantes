@@ -471,12 +471,12 @@ El propósito de este vocabulario es describir de forma semántica todo lo que h
          estud:empieza <<!---->http://www.example.org/openuniversitydata/curso/2018-19> ;
          estud:accede <<!---->http://www.example.org/openuniversitydata/curso/2018-19> ;
          estud:estudia <<!---->http://www.example.org/openuniversitydata/universidad/UPM> ;
-         estud:posee <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> ;
-         estud:posee <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
-         estud:posee <<!---->http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> ;
-         estud:posee <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe> ;
-         estud:posee <<!---->http://www.example.org/openuniversitydata/provincia-residencia/Madrid> ;
-         estud:posee <<!---->http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> .
+         estud:posee <<!---->http://www.example.org/openuniversitydata/pais/Espania> ;
+         estud:posee <<!---->http://www.example.org/openuniversitydata/continente/Europa> ;
+         estud:posee <<!---->http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> ;
+         estud:posee <<!---->http://www.example.org/openuniversitydata/municipio/Getafe> ;
+         estud:posee <<!---->http://www.example.org/openuniversitydata/provincia/Madrid> ;
+         estud:posee <<!---->http://www.example.org/openuniversitydata/comunidad/Comunidad-de-Madrid> .
          
       <<!---->http://www.example.org/openuniversitydata/universidad/UPM> a univ:Universidad ;
          dct:identifier "025"^^xsd:string ;
@@ -497,51 +497,51 @@ El propósito de este vocabulario es describir de forma semántica todo lo que h
       <<!---->http://www.example.org/openuniversitydata/curso/2018-19> a estud:CursoAcademicoInicio ;
          a estud:CursoAcademicoAccesoSUE .
 
-      <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania> a estud:PaisNacionalidad ;
+      <<!---->http://www.example.org/openuniversitydata/pais/Espania> a estud:PaisNacionalidad ;
          a estud:PaisResidencia ;
          a estud:PaisUnivProcedencia ;
          dct:identifier "108" ;
-         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> ;
-         org:hasSite <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> .
+         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente/Europa> ;
+         org:hasSite <<!---->http://www.example.org/openuniversitydata/pais/Espania/site> .
 
-      <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> a estud:ContinenteNacionalidad ;
+      <<!---->http://www.example.org/openuniversitydata/continente/Europa> a estud:ContinenteNacionalidad ;
          a estud:ContinenteResidencia ;
          a estud:ContinenteUnivProcedencia ;
          dct:identifier "01" .
 
-      <<!---->http://www.example.org/openuniversitydata/agregacion-paises-nacionalidad/Union-Europea> a estud:AgregacionPaisesNacionalidad ;
+      <<!---->http://www.example.org/openuniversitydata/agregacion-paises/Union-Europea> a estud:AgregacionPaisesNacionalidad ;
          a estud:AgregacionPaisesResidencia ;
          a estud:AgregacionPaisesUnivProcedencia ;
          dct:identifier "11" ;
-         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente-nacionalidad/Europa> .
+         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/continente/Europa> .
 
-      <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe> a estud:MunicipioResidencia ;
+      <<!---->http://www.example.org/openuniversitydata/municipio/Getafe> a estud:MunicipioResidencia ;
          a estud:MunicipioCurso ;
          dct:identifier "065" ;
-         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/provincia-residencia/Madrid> ;
-         org:hasSite <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site> .
+         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/provincia/Madrid> ;
+         org:hasSite <<!---->http://www.example.org/openuniversitydata/municipio/Getafe/site> .
 
-      <<!---->http://www.example.org/openuniversitydata/provincia-residencia/Madrid> a estud:ProvinciaResidencia ;
+      <<!---->http://www.example.org/openuniversitydata/provincia/Madrid> a estud:ProvinciaResidencia ;
          a estud:ProvinciaCurso ;
          dct:identifier "28" ;
-         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> .
+         rdfs:subClassOf <<!---->http://www.example.org/openuniversitydata/comunidad/Comunidad-de-Madrid> .
 
-      <<!---->http://www.example.org/openuniversitydata/comunidad-residencia/Comunidad-de-Madrid> a estud:ComunidadResidencia ;
+      <<!---->http://www.example.org/openuniversitydata/comunidad/Comunidad-de-Madrid> a estud:ComunidadResidencia ;
          a estud:ComunidadCurso ;
          dct:identifier "13" .
 
-      <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site> a geosparql:Feature ;
-         geosparql:hasGeometry <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> .
+      <<!---->http://www.example.org/openuniversitydata/pais/Espania/site> a geosparql:Feature ;
+         geosparql:hasGeometry <<!---->http://www.example.org/openuniversitydata/pais/Espania/site/geometry> .
 
-      <<!---->http://www.example.org/openuniversitydata/pais-nacionalidad/Espania/site/geometry> a geosparql:Point ;
+      <<!---->http://www.example.org/openuniversitydata/pais/Espania/site/geometry> a geosparql:Point ;
          geo:long "1.601554"^^xsd:double ;
          geo:lat "42.546245"^^xsd:double ;
          geosparql:asWKT "POINT (1.601554 42.546245)"^^geosparql:wktLiteral .
 
-      <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site> a geosparql:Feature ;
-         geosparql:hasGeometry <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site/geometry> .
+      <<!---->http://www.example.org/openuniversitydata/municipio/Getafe/site> a geosparql:Feature ;
+         geosparql:hasGeometry <<!---->http://www.example.org/openuniversitydata/municipio/Getafe/site/geometry> .
 
-      <<!---->http://www.example.org/openuniversitydata/municipio-residencia/Getafe/site/geometry> a geosparql:Point ;
+      <<!---->http://www.example.org/openuniversitydata/municipio/Getafe/site/geometry> a geosparql:Point ;
          geo:long "-3.732585"^^xsd:double ;
          geo:lat "40.308263"^^xsd:double ;
          geosparql:asWKT "POINT (-3.732585 40.308263)"^^geosparql:wktLiteral .
